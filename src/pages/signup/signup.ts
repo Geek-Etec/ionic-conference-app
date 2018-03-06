@@ -9,6 +9,7 @@ import { UserOptions } from '../../interfaces/user-options';
 
 import { TabsPage } from '../tabs-page/tabs-page';
 
+import { ThinkEventService } from '../../providers/thinkEvent-service';
 
 @Component({
   selector: 'page-user',
@@ -18,14 +19,19 @@ export class SignupPage {
   signup: UserOptions = { username: '', password: '' };
   submitted = false;
 
-  constructor(public navCtrl: NavController, public userData: UserData) {}
+  constructor(private thinkEventService: ThinkEventService,
+              public navCtrl: NavController, 
+              public userData: UserData) {}
 
   onSignup(form: NgForm) {
     this.submitted = true;
 
     if (form.valid) {
-      this.userData.signup(this.signup.username);
-      this.navCtrl.push(TabsPage);
+      this.thinkEventService.getToken().then((token: string) => {
+        console.log(token);
+        this.userData.signup(this.signup.username);
+        this.navCtrl.push(TabsPage);  
+      });
     }
   }
 }

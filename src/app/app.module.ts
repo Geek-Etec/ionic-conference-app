@@ -28,7 +28,8 @@ import { SupportPage } from '../pages/support/support';
 
 import { ConferenceData } from '../providers/conference-data';
 import { UserData } from '../providers/user-data';
-
+import { DbProvider } from '../providers/db-provider';
+import { ThinkEventService } from '../providers/thinkEvent-service';
 
 @NgModule({
   declarations: [
@@ -92,6 +93,8 @@ import { UserData } from '../providers/user-data';
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     ConferenceData,
     UserData,
+    DbProvider,
+    ThinkEventService,
     InAppBrowser,
     SplashScreen
   ]
