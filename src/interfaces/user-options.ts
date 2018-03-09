@@ -1,5 +1,11 @@
 
 export interface UserOptions {
-  username: string,
-  password: string
+  userName: string,
+  name?: string,
+  surname?: string,
+  emailAddress?: string,
+  isActive?: boolean,
+  roles?: Array<string>,
+  password: string,
+  token?: string
 }

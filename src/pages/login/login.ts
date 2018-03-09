@@ -16,7 +16,7 @@ import { SignupPage } from '../signup/signup';
   templateUrl: 'login.html'
 })
 export class LoginPage {
-  login: UserOptions = { username: '', password: '' };
+  login: UserOptions = { userName: '', password: '' };
   submitted = false;
 
   constructor(public navCtrl: NavController, public userData: UserData) { }
@@ -25,7 +25,7 @@ export class LoginPage {
     this.submitted = true;
 
     if (form.valid) {
-      this.userData.login(this.login.username);
+      this.userData.login(this.login.userName);
       this.navCtrl.push(TabsPage);
     }
   }

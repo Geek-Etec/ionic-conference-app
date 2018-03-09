@@ -22,16 +22,43 @@ export class ThinkEventService {
 
   getToken() {
     return new Promise((resolve: any, reject: any) => {
-        this.http.post(this.baseApiUrl + "TokenAuth/Authenticate", {
-            userNameOrEmailAddress: "geeketec",
-            password: "G33ker123"
-        })
-          .map(res => res.json())
-          ._catch(error => reject(error.json()))
-          .subscribe((res: any) => {
-            this.dbProvider.set("token", res.result.accessToken);
-            resolve(res.result.accessToken);
-          });
+      this.http.post(this.baseApiUrl + "TokenAuth/Authenticate", {
+        userNameOrEmailAddress: "geeketec",
+        password: "G33ker123"
+      })
+        .map(res => res.json())
+        ._catch(error => reject(error.json()))
+        .subscribe((res: any) => {
+          this.dbProvider.set("token", res.result.accessToken);
+          resolve(res.result.accessToken);
+        });
+    });
+  }
+
+  userCreate(user: any) {
+    return new Promise((resolve: any, reject: any) => {
+      this.headers = new Headers({
+        'Authorization': 'Bearer ' + user.token
       });
+
+      this.options = new RequestOptions({ headers: this.headers });
+
+      this.http.post(this.baseApiUrl + "services/app/User/Create", {
+        "userName": user.userName,
+        "name": user.name,
+        "surname": user.surname,
+        "emailAddress": user.emailAddress,
+        "isActive": true,
+        "roleNames": [
+          "User"
+        ],
+        "password": user.password
+      }, this.options)
+        .map(res => res.json())
+        ._catch(error => reject(error.json()))
+        .subscribe((res: any) => {
+          resolve(res.data);
+        });
+    })
   }
 }
