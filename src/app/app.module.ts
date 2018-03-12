@@ -30,6 +30,7 @@ import { ConferenceData } from '../providers/conference-data';
 import { UserData } from '../providers/user-data';
 import { DbProvider } from '../providers/db-provider';
 import { ThinkEventService } from '../providers/thinkEvent-service';
+import { LoadingUtils } from '../utils/loading';
 
 @NgModule({
   declarations: [
@@ -95,6 +96,7 @@ import { ThinkEventService } from '../providers/thinkEvent-service';
     UserData,
     DbProvider,
     ThinkEventService,
+    LoadingUtils,
     InAppBrowser,
     SplashScreen
   ]

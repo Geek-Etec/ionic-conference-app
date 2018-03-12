@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
-import { NavController, LoadingController, Loading } from 'ionic-angular';
+import { NavController, LoadingController } from 'ionic-angular';
 
 import { UserData } from '../../providers/user-data';
 
@@ -11,11 +11,13 @@ import { TabsPage } from '../tabs-page/tabs-page';
 
 import { ThinkEventService } from '../../providers/thinkEvent-service';
 
+import { LoadingUtils } from '../../utils/loading';
+
 @Component({
   selector: 'page-user',
   templateUrl: 'signup.html'
 })
-export class SignupPage {
+export class SignupPage extends LoadingUtils {
   signup: UserOptions = { 
     userName: '', 
     name: '',
@@ -29,12 +31,13 @@ export class SignupPage {
     token: '' 
   };
   submitted = false;
-  loading: Loading;
 
   constructor(private thinkEventService: ThinkEventService,
               public navCtrl: NavController, 
-              private loadingCtrl: LoadingController,
-              public userData: UserData) {}
+              loadingCtrl: LoadingController,
+              public userData: UserData) {
+    super(loadingCtrl);
+  }
 
   onSignup(form: NgForm) {
     this.showLoading();
@@ -56,13 +59,5 @@ export class SignupPage {
         console.log(ex);
       }
     }
-  }
-
-  showLoading() {
-    this.loading = this.loadingCtrl.create({
-      content: 'Por favor aguarde...',
-      dismissOnPageChange: true
-    });
-    this.loading.present();
   }
 }
