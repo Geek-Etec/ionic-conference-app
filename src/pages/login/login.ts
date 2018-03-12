@@ -12,21 +12,25 @@ import { SignupPage } from '../signup/signup';
 
 import { ThinkEventService } from '../../providers/thinkEvent-service';
 
-import { LoadingUtils } from '../../utils/loading';
+import { LoginBase } from '../../providers/login-base';
 
 @Component({
   selector: 'page-user',
   templateUrl: 'login.html'
 })
-export class LoginPage extends LoadingUtils {
+export class LoginPage extends LoginBase {
   login: UserOptions = { userName: '', password: '' };
-  submitted = false;
+  submitted = false;  
 
   constructor(private thinkEventService: ThinkEventService,
               loadingCtrl: LoadingController,
               public navCtrl: NavController, 
               public userData: UserData) { 
     super(loadingCtrl);
+
+    let ciphertext = this.encrypt("AES", "my message", "secret key 123");
+    console.log(ciphertext);
+    console.log(this.decrypt("AES", ciphertext, "secret key 123"));
   }
 
   onLogin(form: NgForm) {
