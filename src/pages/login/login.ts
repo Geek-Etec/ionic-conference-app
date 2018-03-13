@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
-import { NavController, LoadingController } from 'ionic-angular';
+import { NavController, AlertController, LoadingController } from 'ionic-angular';
 
 import { UserData } from '../../providers/user-data';
 
@@ -12,25 +12,27 @@ import { SignupPage } from '../signup/signup';
 
 import { ThinkEventService } from '../../providers/thinkEvent-service';
 
-import { LoginBase } from '../../providers/login-base';
+import { AuthBase } from '../../providers/auth-base';
 
 @Component({
   selector: 'page-user',
   templateUrl: 'login.html'
 })
-export class LoginPage extends LoginBase {
+export class LoginPage extends AuthBase {
   login: UserOptions = { userName: '', password: '' };
   submitted = false;  
 
   constructor(private thinkEventService: ThinkEventService,
               loadingCtrl: LoadingController,
+              alertCtrl: AlertController,
               public navCtrl: NavController, 
               public userData: UserData) { 
-    super(loadingCtrl);
+    super(loadingCtrl, alertCtrl);
 
-    let ciphertext = this.encrypt("AES", "my message", "secret key 123");
-    console.log(ciphertext);
-    console.log(this.decrypt("AES", ciphertext, "secret key 123"));
+    // Exemplo de criptografia usada na senha
+    // let ciphertext = this.encrypt("AES", "my message", "secret key 123");
+    // console.log(ciphertext);
+    // console.log(this.decrypt("AES", ciphertext, "secret key 123"));
   }
 
   onLogin(form: NgForm) {
@@ -39,11 +41,16 @@ export class LoginPage extends LoginBase {
     this.submitted = true;
 
     if (form.valid) {
-      try {
+      try {        
+        this.login.password = this.encrypt("AES", this.login.password, "scrt-key-" + this.login.userName);
         this.thinkEventService.login(this.login).then(() => {
           this.userData.login(this.login.userName);
           this.loading.dismiss();
           this.navCtrl.push(TabsPage);    
+        })
+        .catch((res: any) => {
+          this.loading.dismiss();
+          this.show(res.error.message, res.error.details);          
         });
       } catch (ex) {
         this.loading.dismiss();

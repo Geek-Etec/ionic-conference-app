@@ -31,7 +31,7 @@ import { UserData } from '../providers/user-data';
 import { DbProvider } from '../providers/db-provider';
 import { ThinkEventService } from '../providers/thinkEvent-service';
 import { LoadingUtils } from '../utils/loading';
-import { LoginBase } from '../providers/login-base';
+import { AuthBase } from '../providers/auth-base';
 
 @NgModule({
   declarations: [
@@ -98,7 +98,7 @@ import { LoginBase } from '../providers/login-base';
     DbProvider,
     ThinkEventService,
     LoadingUtils,
-    LoginBase,
+    AuthBase,
     InAppBrowser,
     SplashScreen
   ]
