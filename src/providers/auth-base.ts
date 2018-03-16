@@ -14,9 +14,9 @@ export class AuthBase implements ILoadingUtils, ICryptoUtils {
         this.alertCtrl = _alertCtrl;
     }
 
-    public encrypt(type: string, message: string, key: string): string {
-        let bytes = CryptoJS[type].encrypt(message, key);
-        return bytes.toString();
+    public encrypt(type: string, text: string, key: string): string {
+        let json = CryptoJS[type].encrypt(text, key);
+        return json.toString();
     }
 
     public decrypt(type: string, ciphertext: string, key: string) {
