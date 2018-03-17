@@ -3,7 +3,7 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>About</ion-title>
+    <ion-title>Sobre</ion-title>
     <ion-buttons end>
       <button ion-button icon-only (click)="presentPopover($event)">
         <ion-icon name="more"></ion-icon>
@@ -17,35 +17,28 @@
     <img src="assets/img/ionic-logo-white.svg" alt="ionic logo">
   </div>
   <div padding class="about-info">
-    <h4>Ionic Conference</h4>
+    <h4>Geek Etec</h4>
 
     <ion-list no-lines>
       <ion-item>
         <ion-icon name="calendar" item-start></ion-icon>
-        <ion-label>Date</ion-label>
-        <ion-datetime displayFormat="MMM DD, YYYY" max="2056" [(ngModel)]="conferenceDate"></ion-datetime>
+        <ion-label>Datas</ion-label>
+        <ion-datetime displayFormat="DD/MM/YYYY" max="2056" [(ngModel)]="conferenceDate"></ion-datetime>
+        <ion-datetime displayFormat="DD/MM/YYYY" max="2056" [(ngModel)]="conferenceDate2"></ion-datetime>
       </ion-item>
 
       <ion-item>
         <ion-icon name="pin" item-start></ion-icon>
-        <ion-label>Location</ion-label>
+        <ion-label>Local</ion-label>
         <ion-select>
-          <ion-option value="madison" selected>Madison, WI</ion-option>
-          <ion-option value="austin">Austin, TX</ion-option>
-          <ion-option value="chicago">Chicago, IL</ion-option>
-          <ion-option value="seattle">Seattle, WA</ion-option>
+          <ion-option value="madison" selected>IBC, Presidente Prudente, SP</ion-option>
         </ion-select>
       </ion-item>
     </ion-list>
 
     <p>
-      The Ionic Conference is a one-day conference featuring talks from the
-      Ionic team. It is focused on Ionic applications being built with
-      Ionic 2. This includes migrating apps from Ionic 1 to Ionic 2,
-      Angular concepts, Webpack, Sass, and many other technologies used
-      in Ionic 2. Tickets are completely sold out, and we’re expecting
-      more than 1000 developers – making this the largest Ionic
-      conference ever!
+       O Geek Etec é um evento de cultura pop para Presidente Prudente e região. 
+       Dias para você ir e levar toda a sua família. Isso inclui a presença de Youtubers como Isa Garzo, Sakura Prongs e Satty. Com o tema Harry Potter, apresentação de bandas e grupos de vários gêneros musicais, Jogos com o nosso mascote e muitas outras atrações. A entrada é totalmente gratuíta - vai perder isso!?
     </p>
   </div>
 </ion-content>
