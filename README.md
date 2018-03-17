@@ -1,6 +1,6 @@
-# Ionic Conference Application
+# Geek Etec App
 
-This is purely a demo of Ionic with TypeScript. It is still in development.
+Esta é basicamente uma aplicação feita em Ionic com TypeScript. Ainda está em desenvolvimento.
 
 
 ## Important!
@@ -109,12 +109,12 @@ ionic-conference-app/
 |    |    ├── img/
 |    |
 |    |-- pages/                          * Contains all of our pages
-│    │    ├── about/                     * About tab page
+│    │    ├── about/                     * Sobre tab page
 │    │    │    ├── about.html            * AboutPage template
 │    │    │    └── about.ts              * AboutPage code
 │    │    │    └── about.scss            * AboutPage stylesheet
 │    │    │
-│    │    ├── account/                   * Account page
+│    │    ├── account/                   * Conta page
 │    │    │    ├── account.html          * AccountPage template
 │    │    │    └── account.ts            * AccountPage code
 │    │    │    └── account.scss          * AccountPage stylesheet
@@ -124,12 +124,12 @@ ionic-conference-app/
 │    │    │    └── login.ts              * LoginPage code
 │    │    │    └── login.scss            * LoginPage stylesheet
 │    │    │
-│    │    │── map/                       * Map tab page
+│    │    │── map/                       * Estandes tab page
 │    │    │    ├── map.html              * MapPage template
 │    │    │    └── map.ts                * MapPage code
 │    │    │    └── map.scss              * MapPage stylesheet
 │    │    │
-│    │    │── schedule/                  * Schedule tab page
+│    │    │── schedule/                  * Programação tab page
 │    │    │    ├── schedule.html         * SchedulePage template
 │    │    │    └── schedule.ts           * SchedulePage code
 │    │    │    └── schedule.scss         * SchedulePage stylesheet
@@ -143,26 +143,26 @@ ionic-conference-app/
 │    │    │    ├── session-detail.html   * SessionDetailPage template
 │    │    │    └── session-detail.ts     * SessionDetailPage code
 │    │    │
-│    │    │── signup/                    * Signup page
+│    │    │── signup/                    * Cadastre-se page
 │    │    │    ├── signup.html           * SignupPage template
 │    │    │    └── signup.ts             * SignupPage code
 │    │    │
-│    │    │── speaker-detail/            * Speaker Detail page
+│    │    │── speaker-detail/            * Atrações Detail page
 │    │    │    ├── speaker-detail.html   * SpeakerDetailPage template
 │    │    │    └── speaker-detail.ts     * SpeakerDetailPage code
 │    │    │    └── speaker-detail.scss   * SpeakerDetailPage stylesheet
 │    │    │
-│    │    │── speaker-list/              * Speakers tab page
+│    │    │── speaker-list/              * Atrações tab page
 │    │    │    ├── speaker-list.html     * SpeakerListPage template
 │    │    │    └── speaker-list.ts       * SpeakerListPage code
 │    │    │    └── speaker-list.scss     * SpeakerListPage stylesheet
 |    |    |
-│    │    │── support/                   * Support page
+│    │    │── support/                   * Suporte page
 │    │    │    ├── support.html          * SupportPage template
 │    │    │    └── support.ts            * SupportPage code
 │    │    │    └── support.scss          * SupportPage stylesheet
 │    │    │
-│    │    │── tabs/                      * Tabs page
+│    │    │── tabs/                      * Abas page
 │    │    │    ├── tabs.html             * TabsPage template
 │    │    │    └── tabs.ts               * TabsPage code
 │    │    │
