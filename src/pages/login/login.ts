@@ -41,9 +41,13 @@ export class LoginPage extends AuthBase {
     this.submitted = true;
 
     if (form.valid) {
-      try {        
-        this.login.password = this.encrypt("AES", this.login.password, "scrt-key-" + this.login.userName);
-        this.thinkEventService.login(this.login).then(() => {
+      try {       
+        let userDTO: UserOptions = { userName: '', password: '' };
+        
+        userDTO.password = this.encrypt("AES", this.login.password, "scrt-key-" + this.login.userName);
+        userDTO.userName = this.login.userName;
+                
+        this.thinkEventService.login(userDTO).then(() => {
           this.userData.login(this.login.userName);
           this.loading.dismiss();
           this.navCtrl.push(TabsPage);    

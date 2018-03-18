@@ -147,12 +147,12 @@ ionic-conference-app/
 │    │    │    ├── signup.html           * SignupPage template
 │    │    │    └── signup.ts             * SignupPage code
 │    │    │
-│    │    │── speaker-detail/            * Atrações Detail page
+│    │    │── speaker-detail/            * Feed Detail page
 │    │    │    ├── speaker-detail.html   * SpeakerDetailPage template
 │    │    │    └── speaker-detail.ts     * SpeakerDetailPage code
 │    │    │    └── speaker-detail.scss   * SpeakerDetailPage stylesheet
 │    │    │
-│    │    │── speaker-list/              * Atrações tab page
+│    │    │── speaker-list/              * Feed tab page
 │    │    │    ├── speaker-list.html     * SpeakerListPage template
 │    │    │    └── speaker-list.ts       * SpeakerListPage code
 │    │    │    └── speaker-list.scss     * SpeakerListPage stylesheet

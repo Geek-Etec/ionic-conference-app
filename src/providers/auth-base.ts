@@ -15,7 +15,9 @@ export class AuthBase implements ILoadingUtils, ICryptoUtils {
     }
 
     public encrypt(type: string, text: string, key: string): string {
-        let json = CryptoJS[type].encrypt(text, key);
+        let options: any = { mode: CryptoJS.mode.CBC, padding: CryptoJS.pad.Pkcs7 };
+        key = CryptoJS.enc.Utf8.parse(key);
+        let json = CryptoJS[type].encrypt(text, key.toString().toUpperCase(), options);
         return json.toString();
     }
 
