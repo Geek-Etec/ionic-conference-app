@@ -142,7 +142,7 @@ export class ConferenceData {
 
   getTracks() {
     return this.load().map((data: any) => {
-      return data.tracks.sort();
+      return data.tracks.map(prop => prop.title).sort();
     });
   }
 

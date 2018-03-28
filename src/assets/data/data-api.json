@@ -15,7 +15,18 @@
                                 "timeEnd": "10:30 am",
                                 "location": "ESTACIONAMENTO",
                                 "tracks": [
-                                    "Naruto"
+                                    {
+                                        "sessionId": "1dcc1999-96a0-4c62-161f-08d590f875ed",
+                                        "title": "Naruto",
+                                        "isDeleted": false,
+                                        "deleterUserId": null,
+                                        "deletionTime": null,
+                                        "lastModificationTime": null,
+                                        "lastModifierUserId": null,
+                                        "creationTime": "2018-03-23T20:00:59.5446281",
+                                        "creatorUserId": 3,
+                                        "id": "f2736977-a7eb-47d3-97d1-08d590f8cc3b"
+                                    }
                                 ],
                                 "isDeleted": false,
                                 "deleterUserId": null,
