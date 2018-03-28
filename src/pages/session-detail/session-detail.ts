@@ -19,11 +19,11 @@ export class SessionDetailPage {
     this.dataProvider.load().subscribe((data: any) => {
       if (
         data &&
-        data.schedule &&
-        data.schedule[0] &&
-        data.schedule[0].groups
+        data.items &&
+        data.items[0] &&
+        data.items[0].groups
       ) {
-        for (const group of data.schedule[0].groups) {
+        for (const group of data.items[0].groups) {
           if (group && group.sessions) {
             for (const session of group.sessions) {
               if (session && session.id === this.navParams.data.sessionId) {
