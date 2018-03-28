@@ -24,6 +24,21 @@ export class ConferenceData {
     }
   }
 
+  loadFeed(): any {
+    if (this.data.speakers) {
+      return Observable.of(this.data);
+    } else {
+      return this.http.get('assets/data/data-api-feed.json')
+        .map(this.processFeed, this);
+    }
+  }
+
+  processFeed(data: any) {
+    this.data.speakers = data.json().result["speakers"];
+
+    return this.data;
+  }
+
   processData(data: any) {
     // just some good 'ol JS fun with objects and arrays
     // build up the data by linking speakers to sessions
@@ -131,7 +146,7 @@ export class ConferenceData {
   }
 
   getSpeakers() {
-    return this.load().map((data: any) => {
+    return this.loadFeed().map((data: any) => {
       return data.speakers.sort((a: any, b: any) => {
         let aName = a.name.split(' ').pop();
         let bName = b.name.split(' ').pop();
