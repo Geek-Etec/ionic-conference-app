@@ -33,6 +33,21 @@ export class ConferenceData {
     }
   }
 
+  loadMap(): any {
+    if (this.data.map) {
+      return Observable.of(this.data);
+    } else {
+      return this.http.get('assets/data/data-api-map.json')
+        .map(this.processMap, this);
+    }
+  }
+
+  processMap(data: any) {
+    this.data.map = data.json().result["map"];
+
+    return this.data;
+  }
+
   processFeed(data: any) {
     this.data.speakers = data.json().result["speakers"];
 
@@ -162,7 +177,7 @@ export class ConferenceData {
   }
 
   getMap() {
-    return this.load().map((data: any) => {
+    return this.loadMap().map((data: any) => {
       return data.map;
     });
   }
