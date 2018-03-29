@@ -9,7 +9,7 @@ export class DbProvider {
         });
     }
 
-    get(key: string): any {
+    get(key: string): Promise<string> {
         return this.storage.get(key);
     }
 

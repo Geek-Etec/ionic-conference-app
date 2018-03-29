@@ -48,16 +48,18 @@ export class SignupPage extends AuthBase {
     if (form.valid) {
       try{
         this.thinkEventService.getToken().then((token: string) => {
-          this.signup.token = token;
-          this.signup.password = this.encrypt("AES", this.signup.password, "scrt-key-" + this.signup.userName);
-          this.thinkEventService.userCreate(this.signup).then(() => {
-            this.userData.signup(this.signup.userName);
-            this.loading.dismiss();
-            this.navCtrl.push(TabsPage);
-          }).catch((res: any) => {
-            this.loading.dismiss();
-            this.show(res.error.message, res.error.details);    
-          });  
+          this.userData.setToken(token).then(() => {
+            this.signup.token = token;
+            this.signup.password = this.encrypt("AES", this.signup.password, "scrt-key-" + this.signup.userName);
+            this.thinkEventService.userCreate(this.signup).then(() => {
+              this.userData.signup(this.signup.userName);
+              this.loading.dismiss();
+              this.navCtrl.push(TabsPage);
+            }).catch((res: any) => {
+              this.loading.dismiss();
+              this.show(res.error.message, res.error.details);    
+            });  
+          });
         });  
       } catch (ex) {
         this.loading.dismiss();

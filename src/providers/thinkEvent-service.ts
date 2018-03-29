@@ -22,8 +22,15 @@ export class ThinkEventService {
 
   }
 
-  getToken() {
+  getToken(force?: boolean) {
     return new Promise((resolve: any, reject: any) => {
+      if (!force){
+        this.dbProvider.get("token").then((token: string) => {
+          if (token.length > 0)
+            resolve(token);
+        })
+      }
+
       this.http.post(this.baseApiUrl + "TokenAuth/Authenticate", {
         userNameOrEmailAddress: "geeketec",
         password: "G33ker123"

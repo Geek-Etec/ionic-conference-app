@@ -12,25 +12,26 @@ import { ThinkEventService } from './thinkEvent-service';
 
 @Injectable()
 export class ConferenceData {
+  baseApiUrl: string = "https://api-thinkevent.azurewebsites.net/api/";
   data: any;
 
   constructor(public http: Http, public user: UserData, private thinkEventService: ThinkEventService) {
 
   }
 
-  load(): any {
+  load(force?: boolean): any {
     return new Promise((resolve: any) => {
       if (this.data) {
         resolve(this.data);
       } else {
-        this.thinkEventService.getToken().then((token: string) => {
+        this.thinkEventService.getToken(force).then((token: string) => {
           let headers = new Headers({
             'Authorization': 'Bearer ' + token
           });
 
           let options = new RequestOptions({ headers: headers });
 
-          this.http.get('https://api-thinkevent.azurewebsites.net/api/services/app/Schedule/GetListAsync', options)
+          this.http.get(this.baseApiUrl + 'services/app/Schedule/GetListAsync', options)
             .map(this.processData, this)
             .subscribe((data: any) => {
               resolve(data);
@@ -112,31 +113,38 @@ export class ConferenceData {
   getTimeline(dayIndex: number, queryText = '', excludeTracks: any[] = [], segment = 'all') {
     return new Promise((resolve: any) => {
       this.load().then((data: any) => {
-        let day = data.items[dayIndex];
-        day.shownSessions = 0;
-
-        queryText = queryText.toLowerCase().replace(/,|\.|-/g, ' ');
-        let queryWords = queryText.split(' ').filter(w => !!w.trim().length);
-
-        day.groups.forEach((group: any) => {
-          group.hide = true;
-
-          group.sessions.forEach((session: any) => {
-            // check if this session should show or not
-            this.filterSession(session, queryWords, excludeTracks, segment);
-
-            if (!session.hide) {
-              // if this session is not hidden then this group should show
-              group.hide = false;
-              day.shownSessions++;
-            }
-          });
-
+        resolve(this.getDay(data, dayIndex, queryText, excludeTracks, segment));
+      }).catch(() => {
+        this.load(true).then((data: any) => {
+          resolve(this.getDay(data, dayIndex, queryText, excludeTracks, segment));
         });
-
-        resolve(day);
       });
     });
+  }
+
+  getDay(data: any, dayIndex: number, queryText = '', excludeTracks: any[] = [], segment = 'all'): any {
+    let day = data.items[dayIndex];
+    day.shownSessions = 0;
+
+    queryText = queryText.toLowerCase().replace(/,|\.|-/g, ' ');
+    let queryWords = queryText.split(' ').filter(w => !!w.trim().length);
+
+    day.groups.forEach((group: any) => {
+      group.hide = true;
+
+      group.sessions.forEach((session: any) => {
+        // check if this session should show or not
+        this.filterSession(session, queryWords, excludeTracks, segment);
+
+        if (!session.hide) {
+          // if this session is not hidden then this group should show
+          group.hide = false;
+          day.shownSessions++;
+        }
+      });
+    });
+
+    return day;
   }
 
   filterSession(session: any, queryWords: string[], excludeTracks: any[], segment: string) {
