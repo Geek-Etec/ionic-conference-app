@@ -16,7 +16,7 @@ export class SessionDetailPage {
   ) {}
 
   ionViewWillEnter() {
-    this.dataProvider.load().subscribe((data: any) => {
+    this.dataProvider.load().then((data: any) => {
       if (
         data &&
         data.items &&

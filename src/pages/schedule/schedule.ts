@@ -46,7 +46,7 @@ export class SchedulePage {
   ) {}
 
   ionViewDidLoad() {
-    this.app.setTitle('Schedule');
+    this.app.setTitle('Programação');
     this.updateSchedule();
   }
 
@@ -54,7 +54,7 @@ export class SchedulePage {
     // Close any open sliding items when the schedule updates
     this.scheduleList && this.scheduleList.closeSlidingItems();
 
-    this.confData.getTimeline(this.dayIndex, this.queryText, this.excludeTracks, this.segment).subscribe((data: any) => {
+    this.confData.getTimeline(this.dayIndex, this.queryText, this.excludeTracks, this.segment).then((data: any) => {
       this.shownSessions = data.shownSessions;
       this.groups = data.groups;
     });
@@ -149,7 +149,7 @@ export class SchedulePage {
   }
 
   doRefresh(refresher: Refresher) {
-    this.confData.getTimeline(this.dayIndex, this.queryText, this.excludeTracks, this.segment).subscribe((data: any) => {
+    this.confData.getTimeline(this.dayIndex, this.queryText, this.excludeTracks, this.segment).then((data: any) => {
       this.shownSessions = data.shownSessions;
       this.groups = data.groups;
 

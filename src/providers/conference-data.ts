@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { Http } from '@angular/http';
+import { Http, Headers, RequestOptions } from '@angular/http';
 
 import { UserData } from './user-data';
 
@@ -8,20 +8,36 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/observable/of';
 
+import { ThinkEventService } from './thinkEvent-service';
 
 @Injectable()
 export class ConferenceData {
   data: any;
 
-  constructor(public http: Http, public user: UserData) { }
+  constructor(public http: Http, public user: UserData, private thinkEventService: ThinkEventService) {
+
+  }
 
   load(): any {
-    if (this.data) {
-      return Observable.of(this.data);
-    } else {
-      return this.http.get('assets/data/data-api.json')
-        .map(this.processData, this);
-    }
+    return new Promise((resolve: any) => {
+      if (this.data) {
+        resolve(this.data);
+      } else {
+        this.thinkEventService.getToken().then((token: string) => {
+          let headers = new Headers({
+            'Authorization': 'Bearer ' + token
+          });
+
+          let options = new RequestOptions({ headers: headers });
+
+          this.http.get('https://api-thinkevent.azurewebsites.net/api/services/app/Schedule/GetListAsync', options)
+            .map(this.processData, this)
+            .subscribe((data: any) => {
+              resolve(data);
+            })
+        });
+      }
+    });
   }
 
   loadFeed(): any {
@@ -94,30 +110,32 @@ export class ConferenceData {
   }
 
   getTimeline(dayIndex: number, queryText = '', excludeTracks: any[] = [], segment = 'all') {
-    return this.load().map((data: any) => {
-      let day = data.items[dayIndex];
-      day.shownSessions = 0;
+    return new Promise((resolve: any) => {
+      this.load().then((data: any) => {
+        let day = data.items[dayIndex];
+        day.shownSessions = 0;
 
-      queryText = queryText.toLowerCase().replace(/,|\.|-/g, ' ');
-      let queryWords = queryText.split(' ').filter(w => !!w.trim().length);
+        queryText = queryText.toLowerCase().replace(/,|\.|-/g, ' ');
+        let queryWords = queryText.split(' ').filter(w => !!w.trim().length);
 
-      day.groups.forEach((group: any) => {
-        group.hide = true;
+        day.groups.forEach((group: any) => {
+          group.hide = true;
 
-        group.sessions.forEach((session: any) => {
-          // check if this session should show or not
-          this.filterSession(session, queryWords, excludeTracks, segment);
+          group.sessions.forEach((session: any) => {
+            // check if this session should show or not
+            this.filterSession(session, queryWords, excludeTracks, segment);
 
-          if (!session.hide) {
-            // if this session is not hidden then this group should show
-            group.hide = false;
-            day.shownSessions++;
-          }
+            if (!session.hide) {
+              // if this session is not hidden then this group should show
+              group.hide = false;
+              day.shownSessions++;
+            }
+          });
+
         });
 
+        resolve(day);
       });
-
-      return day;
     });
   }
 
@@ -171,7 +189,7 @@ export class ConferenceData {
   }
 
   getTracks() {
-    return this.load().map((data: any) => {
+    return this.load().then((data: any) => {
       return data.tracks.map(prop => prop.title).sort();
     });
   }
