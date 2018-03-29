@@ -76,7 +76,7 @@
     <preference name="FadeSplashScreenDuration" value="300" />
     <preference name="ShowSplashScreenSpinner" value="false" />
     <preference name="AutoHideSplashScreen" value="false" />
-    <preference name="SplashScreenDelay" value="25000" />
+    <preference name="SplashScreenDelay" value="35000" />
     <preference name="SplashShowOnlyFirstTime" value="false" />
     <engine name="android" spec="^6.4.0" />
     <engine name="ios" spec="^4.5.2" />
