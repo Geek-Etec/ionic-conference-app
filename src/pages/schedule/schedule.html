@@ -24,7 +24,7 @@
     <ion-searchbar color="primary"
                    [(ngModel)]="queryText"
                    (ionInput)="updateSchedule()"
-                   placeholder="Search">
+                   placeholder="Pesquisa">
     </ion-searchbar>
   </ion-toolbar>
 </ion-header>
@@ -40,7 +40,7 @@
 
       <ion-item-divider sticky>
         <ion-label>
-          {{group.time}}
+          {{confDate}} {{group.time}}
         </ion-label>
       </ion-item-divider>
 
@@ -57,10 +57,10 @@
 
         <ion-item-options>
           <button ion-button color="favorite" (click)="addFavorite(slidingItem, session)" *ngIf="segment === 'all'">
-            Favorite
+            Favorito
           </button>
           <button ion-button color="danger" (click)="removeFavorite(slidingItem, session, 'Remove Favorite')" *ngIf="segment === 'favorites'">
-            Remove
+            Remover
           </button>
         </ion-item-options>
 
@@ -71,7 +71,7 @@
   </ion-list>
 
   <ion-list-header [hidden]="shownSessions > 0">
-      No Sessions Found
+    Nenhuma sessão encontrada
   </ion-list-header>
 
   <ion-fab bottom right #fab>

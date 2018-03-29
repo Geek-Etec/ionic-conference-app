@@ -14,12 +14,13 @@ import { UserData } from '../../providers/user-data';
 import { SessionDetailPage } from '../session-detail/session-detail';
 import { ScheduleFilterPage } from '../schedule-filter/schedule-filter';
 
+import { ThinkEventBase } from '../../providers/think-event-base';
 
 @Component({
   selector: 'page-schedule',
   templateUrl: 'schedule.html'
 })
-export class SchedulePage {
+export class SchedulePage extends ThinkEventBase {
   // the list is a child of the schedule page
   // @ViewChild('scheduleList') gets a reference to the list
   // with the variable #scheduleList, `read: List` tells it to return
@@ -43,20 +44,28 @@ export class SchedulePage {
     public toastCtrl: ToastController,
     public confData: ConferenceData,
     public user: UserData,
-  ) {}
+  ) {
+    super(loadingCtrl, alertCtrl);
+  }
 
   ionViewDidLoad() {
     this.app.setTitle('Programação');
     this.updateSchedule();
   }
 
-  updateSchedule() {
+  updateSchedule() {    
     // Close any open sliding items when the schedule updates
     this.scheduleList && this.scheduleList.closeSlidingItems();
+
+    this.showLoading();
 
     this.confData.getTimeline(this.dayIndex, this.queryText, this.excludeTracks, this.segment).then((data: any) => {
       this.shownSessions = data.shownSessions;
       this.groups = data.groups;
+      this.confDate = data.date.substring(8, 10) + "/" + data.date.substring(5, 7) + "/" + data.date.substring(0, 4);
+      this.loading.dismiss();
+    }).catch(() => {
+      this.loading.dismiss();
     });
   }
 
@@ -85,14 +94,14 @@ export class SchedulePage {
     if (this.user.hasFavorite(sessionData.name)) {
       // woops, they already favorited it! What shall we do!?
       // prompt them to remove it
-      this.removeFavorite(slidingItem, sessionData, 'Favorite already added');
+      this.removeFavorite(slidingItem, sessionData, 'Favorito já adicionado');
     } else {
       // remember this session as a user favorite
       this.user.addFavorite(sessionData.name);
 
       // create an alert instance
       let alert = this.alertCtrl.create({
-        title: 'Favorite Added',
+        title: 'Favorito Adicionado',
         buttons: [{
           text: 'OK',
           handler: () => {
@@ -110,10 +119,10 @@ export class SchedulePage {
   removeFavorite(slidingItem: ItemSliding, sessionData: any, title: string) {
     let alert = this.alertCtrl.create({
       title: title,
-      message: 'Would you like to remove this session from your favorites?',
+      message: 'Gostaria de remover esta sessão dos seus favoritos?',
       buttons: [
         {
-          text: 'Cancel',
+          text: 'Cancelar',
           handler: () => {
             // they clicked the cancel button, do not remove the session
             // close the sliding item and hide the option buttons
@@ -121,7 +130,7 @@ export class SchedulePage {
           }
         },
         {
-          text: 'Remove',
+          text: 'Remover',
           handler: () => {
             // they want to remove this session from their favorites
             this.user.removeFavorite(sessionData.name);
@@ -139,7 +148,7 @@ export class SchedulePage {
 
   openSocial(network: string, fab: FabContainer) {
     let loading = this.loadingCtrl.create({
-      content: `Posting to ${network}`,
+      content: `Postando para ${network}`,
       duration: (Math.random() * 1000) + 500
     });
     loading.onWillDismiss(() => {
@@ -159,7 +168,7 @@ export class SchedulePage {
         refresher.complete();
 
         const toast = this.toastCtrl.create({
-          message: 'Sessions have been updated.',
+          message: 'As sessões foram atualizadas.',
           duration: 3000
         });
         toast.present();
