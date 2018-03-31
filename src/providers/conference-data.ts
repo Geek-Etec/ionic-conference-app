@@ -10,34 +10,63 @@ import 'rxjs/add/observable/of';
 
 import { ThinkEventService } from './thinkEvent-service';
 
+import { DbProvider } from './db-provider';
+
 @Injectable()
 export class ConferenceData {
   baseApiUrl: string = "https://api-thinkevent.azurewebsites.net/api/";
   data: any;
 
-  constructor(public http: Http, public user: UserData, private thinkEventService: ThinkEventService) {
+  constructor(public http: Http,
+    public user: UserData,
+    private thinkEventService: ThinkEventService,
+    private dbProvider: DbProvider) {
 
   }
 
-  load(force?: boolean): any {
+  checkVersion(force?: boolean) {
     return new Promise((resolve: any) => {
-      if (this.data) {
-        resolve(this.data);
-      } else {
+      this.dbProvider.get("schedulingVersion").then((version: string) => {
         this.thinkEventService.getToken(force).then((token: string) => {
           let headers = new Headers({
             'Authorization': 'Bearer ' + token
           });
-
+  
           let options = new RequestOptions({ headers: headers });
+  
+          this.thinkEventService.getVersion(options).then((versionServer: string) => {
+            this.dbProvider.set("schedulingVersion", versionServer);
 
-          this.http.get(this.baseApiUrl + 'services/app/Schedule/GetListAsync', options)
-            .map(this.processData, this)
-            .subscribe((data: any) => {
-              resolve(data);
-            })
+            resolve(Number(versionServer) > Number(version));   
+          }).catch(() => {
+            this.checkVersion(true);
+          });
         });
-      }
+      });  
+    });
+  }
+
+  load(force?: boolean): any {
+    return new Promise((resolve: any) => {
+      this.checkVersion(force).then((refresh: boolean) => {
+        if (!refresh && this.data) {
+          resolve(this.data);
+        } else {
+          this.thinkEventService.getToken(force).then((token: string) => {
+            let headers = new Headers({
+              'Authorization': 'Bearer ' + token
+            });
+  
+            let options = new RequestOptions({ headers: headers });
+  
+            this.http.get(this.baseApiUrl + 'services/app/Schedule/GetListAsync', options)
+              .map(this.processData, this)
+              .subscribe((data: any) => {
+                resolve(data);
+              })
+          });
+        }          
+      });
     });
   }
 

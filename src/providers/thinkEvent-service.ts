@@ -22,6 +22,14 @@ export class ThinkEventService {
 
   }
 
+  getVersion(options: RequestOptions) {
+    return new Promise((resolve: any) => {
+      this.http.get(this.baseApiUrl + "services/app/Schedule/GetVersion", options).subscribe((response: any) => {
+        resolve(response.result);
+      })
+    });
+  }
+
   getToken(force?: boolean) {
     return new Promise((resolve: any, reject: any) => {
       if (!force){
