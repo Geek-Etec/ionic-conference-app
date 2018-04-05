@@ -37,7 +37,7 @@ export class ConferenceData {
           this.thinkEventService.getVersion(options).then((versionServer: string) => {
             this.dbProvider.set("schedulingVersion", versionServer);
 
-            resolve(Number(versionServer) > Number(version));   
+            resolve(Number(versionServer || 0) > Number(version || 0));   
           }).catch(() => {
             this.checkVersion(true);
           });

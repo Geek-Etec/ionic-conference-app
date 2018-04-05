@@ -25,7 +25,7 @@ export class ThinkEventService {
   getVersion(options: RequestOptions) {
     return new Promise((resolve: any) => {
       this.http.get(this.baseApiUrl + "services/app/Schedule/GetVersion", options).subscribe((response: any) => {
-        resolve(response.result);
+        resolve(response.json().result);
       })
     });
   }
