@@ -2,21 +2,31 @@
     "result": {
         "map": [
             {
-                "name": "Monona Terrace Convention Center",
-                "lat": 43.071584,
-                "lng": -89.380120,
+                "name": "IBC - Centro de Eventos",
+                "lat": -22.114808,
+                "lng": -51.3792586
+            },
+            {
+                "name": "Inova - Impressora 3D",
+                "lat": -22.114910,
+                "lng": -51.378950
+            },
+            {
+                "name": "Inova - Realidade Aumentada",
+                "lat": -22.114910,
+                "lng": -51.378850,
                 "center": true
             },
             {
-                "name": "Ionic HQ",
-                "lat": 43.074395,
-                "lng": -89.381056
+                "name": "Inova - Cursos",
+                "lat": -22.114810,
+                "lng": -51.378850
             },
             {
-                "name": "Afterparty - Brocach Irish Pub",
-                "lat": 43.07336,
-                "lng": -89.38335
-            }
+                "name": "Inova - Palestras",
+                "lat": -22.114810,
+                "lng": -51.378950
+            }                                                                                                
         ]
     },
     "targetUrl": null,
