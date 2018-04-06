@@ -14,7 +14,7 @@ export class SpeakerDetailPage {
   }
 
   ionViewWillEnter() {
-    this.dataProvider.load().subscribe((data: any) => {
+    this.dataProvider.loadFeed().subscribe((data: any) => {
       if (data && data.speakers) {
         for (const speaker of data.speakers) {
           if (speaker && speaker.id === this.navParams.data.speakerId) {

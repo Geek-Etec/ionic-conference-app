@@ -2,13 +2,13 @@
     "result": {
         "speakers": [
             {
-                "name": "Burt Bear",
+                "name": "G'ki",
                 "profilePic": "assets/img/speakers/bear.jpg",
-                "twitter": "ionicframework",
-                "about": "Burt is a Bear.",
-                "location": "Everywhere",
-                "email": "burt@example.com",
-                "phone": "+1-541-754-3010",
+                "twitter": "g_ki_",
+                "about": "Sou o G'ki mascote do evento Geek Etec, um dos melhores eventos da cultura Geek.",
+                "location": "Planeta Terra",
+                "email": "g.ki.geeketec@gmail.com",
+                "phone": "+55 (11) 99657-1302",
                 "id": "1"
             },
             {

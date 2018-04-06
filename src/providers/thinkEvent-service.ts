@@ -46,8 +46,8 @@ export class ThinkEventService {
         .map(res => res.json())
         ._catch(error => reject(error.json()))
         .subscribe((res: any) => {
-          this.dbProvider.set("token", res.result.accessToken);
-          resolve(res.result.accessToken);
+          this.dbProvider.set("token", res.result.accessToken || "");
+          resolve(res.result.accessToken || "");
         });
     });
   }
@@ -61,8 +61,8 @@ export class ThinkEventService {
         .map(res => res.json())
         ._catch(error => reject(error.json()))
         .subscribe((res: any) => {
-          this.dbProvider.set("token", res.result.accessToken);
-          resolve(res.result.accessToken);
+          this.dbProvider.set("token", res.result.accessToken || "");
+          resolve(res.result.accessToken || "");
         });
     });
   }
