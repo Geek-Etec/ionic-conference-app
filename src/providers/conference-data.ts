@@ -41,6 +41,9 @@ export class ConferenceData {
           }).catch(() => {
             this.checkVersion(true);
           });
+        })
+        .catch(() => {
+          resolve(false);
         });
       });  
     });
@@ -66,6 +69,8 @@ export class ConferenceData {
               })
           });
         }          
+      }).catch(() => {
+        resolve(this.data);
       });
     });
   }
