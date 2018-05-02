@@ -24,14 +24,24 @@ export class ThinkEventService {
 
   getVersion(options: RequestOptions) {
     return new Promise((resolve: any) => {
-      this.http.get(this.baseApiUrl + "services/app/Schedule/GetVersion", options).subscribe((response: any) => {
-        resolve(response.json().result);
-      })
+      try {
+        this.http.get(this.baseApiUrl + "services/app/Schedule/GetVersion", options)
+        .subscribe(
+          data => resolve(data.json().result),
+          err => { 
+            console.log(err)
+            resolve(false);
+          }         
+        );
+      } catch (error) {
+        console.log(error);
+        resolve(false);
+      }
     });
   }
 
   getToken(force?: boolean) {
-    return new Promise((resolve: any, reject: any) => {
+    return new Promise((resolve: any) => {
       if (!force){
         this.dbProvider.get("token").then((token: string) => {
           if (token.length > 0)
@@ -44,7 +54,7 @@ export class ThinkEventService {
         password: "G33ker123"
       })
         .map(res => res.json())
-        ._catch(error => reject(error.json()))
+        ._catch(resolve(false))
         .subscribe((res: any) => {
           this.dbProvider.set("token", res.result.accessToken || "");
           resolve(res.result.accessToken || "");

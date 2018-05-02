@@ -25,7 +25,7 @@ export class MapPage {
 
         let map = new google.maps.Map(mapEle, {
           center: mapData.find((d: any) => d.center),
-          zoom: 18,
+          zoom: 20,
           mapTypeId: 'satellite'          
         });
 

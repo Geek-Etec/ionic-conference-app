@@ -43,7 +43,9 @@ export class ConferenceData {
           });
         })
         .catch(() => {
-          resolve(false);
+          this.loadSchedule().map((resData: any) => {
+            resolve(resData);  
+          });
         });
       });  
     });
@@ -64,9 +66,15 @@ export class ConferenceData {
   
             this.http.get(this.baseApiUrl + 'services/app/Schedule/GetListAsync', options)
               .map(this.processData, this)
-              .subscribe((data: any) => {
-                resolve(data);
-              })
+              .subscribe(
+                data => resolve(data),
+                err => { 
+                  console.log(err)
+                  this.loadSchedule().map((resData: any) => {
+                    resolve(resData);
+                  });
+                }                   
+              )
           });
         }          
       }).catch(() => {
@@ -85,7 +93,7 @@ export class ConferenceData {
   }
 
   loadMap(): any {
-    if (this.data.map) {
+    if (this.data != undefined && this.data.map) {
       return Observable.of(this.data);
     } else {
       return this.http.get('assets/data/data-api-map.json')
@@ -93,7 +101,19 @@ export class ConferenceData {
     }
   }
 
+  loadSchedule() : any {
+    if (this.data) {
+      return Observable.of(this.data);
+    } else {
+      return this.http.get('assets/data/data-api.json')
+        .map(this.processData, this);
+    }    
+  }
+
   processMap(data: any) {
+    if (this.data === undefined)
+      this.data = {};
+
     this.data.map = data.json().result["map"];
 
     return this.data;
@@ -147,10 +167,22 @@ export class ConferenceData {
   getTimeline(dayIndex: number, queryText = '', excludeTracks: any[] = [], segment = 'all') {
     return new Promise((resolve: any) => {
       this.load().then((data: any) => {
-        resolve(this.getDay(data, dayIndex, queryText, excludeTracks, segment));
+        if (!data) {
+          this.loadSchedule().map((resData: any) => {
+            resolve(this.getDay(resData, dayIndex, queryText, excludeTracks, segment));  
+          });
+        } else {
+          resolve(this.getDay(data, dayIndex, queryText, excludeTracks, segment));  
+        }      
       }).catch(() => {
         this.load(true).then((data: any) => {
-          resolve(this.getDay(data, dayIndex, queryText, excludeTracks, segment));
+          if (!data) {
+            this.loadSchedule().map((resData: any) => {
+              resolve(this.getDay(resData, dayIndex, queryText, excludeTracks, segment));  
+            });
+          } else {
+            resolve(this.getDay(data, dayIndex, queryText, excludeTracks, segment));
+          }
         });
       });
     });

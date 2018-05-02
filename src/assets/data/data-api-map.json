@@ -7,6 +7,16 @@
                 "lng": -51.3792586
             },
             {
+                "name": "Fatec PP",
+                "lat": -22.115010,
+                "lng": -51.378850
+            },
+            {
+                "name": "Etec Arruda Mello",
+                "lat": -22.115010,
+                "lng": -51.378950
+            },
+            {
                 "name": "Inova Prudente",
                 "lat": -22.114910,
                 "lng": -51.378950
@@ -26,7 +36,28 @@
                 "name": "Dacho Restaurante",
                 "lat": -22.114810,
                 "lng": -51.378950
-            }                                                                                                
+            },
+            {
+                "name": "Moviecom Pres Prudente",
+                "lat": -22.114710,
+                "lng": -51.378950
+            },
+            {
+                "name": "Assim",
+                "lat": -22.114710,
+                "lng": -51.378850,
+                "center": true
+            },
+            {
+                "name": "Unicesumar",
+                "lat": -22.114610,
+                "lng": -51.378850
+            },
+            {
+                "name": "IBL",
+                "lat": -22.114610,
+                "lng": -51.378950
+            }                                                                                                              
         ]
     },
     "targetUrl": null,
