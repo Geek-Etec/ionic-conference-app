@@ -51,10 +51,10 @@ export class ThinkEventService {
 
       this.http.post(this.baseApiUrl + "TokenAuth/Authenticate", {
         userNameOrEmailAddress: "geeketec",
-        password: "G33ker123"
+        password: "G33ker123",
+        tenantId: 2
       })
         .map(res => res.json())
-        ._catch(resolve(false))
         .subscribe((res: any) => {
           this.dbProvider.set("token", res.result.accessToken || "");
           resolve(res.result.accessToken || "");
