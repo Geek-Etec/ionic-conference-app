@@ -84,7 +84,7 @@ export class ConferenceData {
   }
 
   loadFeed(): any {
-    if (this.data.speakers) {
+    if (this.data.speakers !== undefined && this.data.speakers.length > 0) {
       return Observable.of(this.data);
     } else {
       return this.http.get('assets/data/data-api-feed.json')
