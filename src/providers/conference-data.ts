@@ -174,7 +174,7 @@ export class ConferenceData {
   getTimeline(dayIndex: number, queryText = '', excludeTracks: any[] = [], segment = 'all') {
     return new Promise((resolve: any) => {
       this.load().then((data: any) => {
-        if (!data) {
+        if (data !== undefined && data.length > 0) {
           this.loadSchedule().map((resData: any) => {
             resolve(this.getDay(resData, dayIndex, queryText, excludeTracks, segment));  
           });
@@ -183,7 +183,7 @@ export class ConferenceData {
         }      
       }).catch(() => {
         this.load(true).then((data: any) => {
-          if (!data) {
+          if (data !== undefined && data.length > 0) {
             this.loadSchedule().map((resData: any) => {
               resolve(this.getDay(resData, dayIndex, queryText, excludeTracks, segment));  
             });
