@@ -150,9 +150,16 @@ export class ConferenceData {
             });
           }
 
-          if (session.tracks) {
+          if (session !== undefined && session.tracks.length > 0) {
             session.tracks.forEach((track: any) => {
-              if (this.data.tracks.indexOf(track) < 0) {
+              if (this.data === undefined)
+                this.data = {};
+              
+              if (this.data.tracks === undefined)
+                this.data.tracks = [];
+
+              if (this.data.tracks.length === 0 || 
+                  this.data.tracks.filter((t) => t.title === track.title).length === 0) {
                 this.data.tracks.push(track);
               }
             });
@@ -231,8 +238,8 @@ export class ConferenceData {
     // if any of the sessions tracks are not in the
     // exclude tracks then this session passes the track test
     let matchesTracks = false;
-    session.tracks.forEach((trackName: string) => {
-      if (excludeTracks.indexOf(trackName) === -1) {
+    session.tracks.forEach((trackName: any) => {
+      if (excludeTracks.indexOf(trackName.title) === -1) {
         matchesTracks = true;
       }
     });
