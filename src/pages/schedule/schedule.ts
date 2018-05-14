@@ -1,6 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 
-import { AlertController, App, FabContainer, ItemSliding, List, ModalController, NavController, ToastController, LoadingController, Refresher } from 'ionic-angular';
+import { AlertController, App, FabContainer, ItemSliding, List, ModalController, NavController, ToastController, LoadingController, Refresher, NavParams } from 'ionic-angular';
 
 /*
   To learn how to use third party libs in an
@@ -27,7 +27,6 @@ export class SchedulePage extends ThinkEventBase {
   // the List and not a reference to the element
   @ViewChild('scheduleList', { read: List }) scheduleList: List;
 
-  dayIndex = 0;
   queryText = '';
   segment = 'all';
   excludeTracks: any = [];
@@ -44,6 +43,7 @@ export class SchedulePage extends ThinkEventBase {
     public toastCtrl: ToastController,
     public confData: ConferenceData,
     public user: UserData,
+    public navParams: NavParams
   ) {
     super(loadingCtrl, alertCtrl);
   }
@@ -53,16 +53,16 @@ export class SchedulePage extends ThinkEventBase {
     this.updateSchedule();
   }
 
-  updateSchedule() {    
+  updateSchedule() {
     // Close any open sliding items when the schedule updates
     this.scheduleList && this.scheduleList.closeSlidingItems();
 
     this.showLoading();
 
-    this.confData.getTimeline(this.dayIndex, this.queryText, this.excludeTracks, this.segment).then((data: any) => {
+    this.confData.getTimelineDay(this.navParams.data.day, this.queryText, this.excludeTracks, this.segment).then((data: any) => {
       this.shownSessions = data.shownSessions;
       this.groups = data.groups;
-      this.confDate = data.date.substring(8, 10) + "/" + data.date.substring(5, 7) + "/" + data.date.substring(0, 4);
+      this.confDate = data.date;
       this.loading.dismiss();
     }).catch(() => {
       this.loading.dismiss();
@@ -158,9 +158,10 @@ export class SchedulePage extends ThinkEventBase {
   }
 
   doRefresh(refresher: Refresher) {
-    this.confData.getTimeline(this.dayIndex, this.queryText, this.excludeTracks, this.segment).then((data: any) => {
+    this.confData.getTimelineDay(this.navParams.data.day, this.queryText, this.excludeTracks, this.segment).then((data: any) => {
       this.shownSessions = data.shownSessions;
       this.groups = data.groups;
+      this.confDate = data.date;
 
       // simulate a network request that would take longer
       // than just pulling from out local json file

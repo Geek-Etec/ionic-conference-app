@@ -16,6 +16,7 @@ import { PopoverPage } from '../pages/about-popover/about-popover';
 import { AccountPage } from '../pages/account/account';
 import { LoginPage } from '../pages/login/login';
 import { MapPage } from '../pages/map/map';
+import { EventPage } from '../pages/event/event';
 import { SchedulePage } from '../pages/schedule/schedule';
 import { ScheduleFilterPage } from '../pages/schedule-filter/schedule-filter';
 import { SessionDetailPage } from '../pages/session-detail/session-detail';
@@ -42,6 +43,7 @@ import { ThinkEventBase } from '../providers/think-event-base';
     LoginPage,
     MapPage,
     PopoverPage,
+    EventPage,
     SchedulePage,
     ScheduleFilterPage,
     SessionDetailPage,
@@ -58,6 +60,7 @@ import { ThinkEventBase } from '../providers/think-event-base';
     IonicModule.forRoot(ConferenceApp, {}, {
       links: [
         { component: TabsPage, name: 'TabsPage', segment: 'tabs-page' },
+        { component: EventPage, name: 'Event', segment: 'event' },
         { component: SchedulePage, name: 'Schedule', segment: 'schedule' },
         { component: SessionDetailPage, name: 'SessionDetail', segment: 'sessionDetail/:sessionId' },
         { component: ScheduleFilterPage, name: 'ScheduleFilter', segment: 'scheduleFilter' },
@@ -82,6 +85,7 @@ import { ThinkEventBase } from '../providers/think-event-base';
     LoginPage,
     MapPage,
     PopoverPage,
+    EventPage,
     SchedulePage,
     ScheduleFilterPage,
     SessionDetailPage,

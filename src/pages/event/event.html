@@ -1,0 +1,50 @@
+<ion-header>
+    <ion-navbar no-border-bottom>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>     
+      <ion-title>Selecione um Dia</ion-title> 
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content>
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+      <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+  
+    <ion-list #EventList [hidden]="shownDays === 0">
+      <ion-item-group *ngFor="let day of days">    
+        <ion-item-sliding>  
+          <button ion-item (click)="goToEventDetail(day)">
+            <h3>{{day.date}}</h3>
+            <p>
+                Geek Etec 2018 no IBC
+            </p>            
+          </button>
+  
+          <ion-item-options>
+            <button ion-button color="favorite" (click)="addFavorite(slidingItem, session)" *ngIf="segment === 'all'">
+              Favorito
+            </button>
+            <button ion-button color="danger" (click)="removeFavorite(slidingItem, session, 'Remover Favorito')" *ngIf="segment === 'favorites'">
+              Remover
+            </button>
+          </ion-item-options>  
+        </ion-item-sliding>  
+      </ion-item-group>  
+    </ion-list>
+  
+    <ion-list-header [hidden]="shownDays > 0">
+      Nenhum evento encontrado
+    </ion-list-header>
+  
+    <ion-fab bottom right #fab>
+      <button ion-fab><ion-icon name="share"></ion-icon></button>
+      <ion-fab-list side="top">
+        <button ion-fab color="vimeo" (click)="openSocial('Vimeo', fab)"><ion-icon name="logo-vimeo"></ion-icon></button>
+        <button ion-fab color="google" (click)="openSocial('Google+', fab)"><ion-icon name="logo-googleplus"></ion-icon></button>
+        <button ion-fab color="twitter" (click)="openSocial('Twitter', fab)"><ion-icon name="logo-twitter"></ion-icon></button>
+        <button ion-fab color="facebook" (click)="openSocial('Facebook', fab)"><ion-icon name="logo-facebook"></ion-icon></button>
+      </ion-fab-list>
+    </ion-fab>
+  </ion-content>

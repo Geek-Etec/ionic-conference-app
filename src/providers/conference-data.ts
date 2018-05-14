@@ -67,7 +67,13 @@ export class ConferenceData {
             this.http.get(this.baseApiUrl + 'services/app/Schedule/GetListAsync', options)
               .map(this.processData, this)
               .subscribe(
-                data => resolve(data),
+                data => {
+                  for(let i : number = 0; i < data.items.length; i++){
+                    data.items[i].date = data.items[i].date.substring(8, 10) + "/" + data.items[i].date.substring(5, 7) + "/" + data.items[i].date.substring(0, 4);
+                  }                  
+
+                  resolve(data)
+                },
                 err => { 
                   console.log(err)
                   this.loadSchedule().map((resData: any) => {
@@ -171,32 +177,60 @@ export class ConferenceData {
     return this.data;
   }
 
-  getTimeline(dayIndex: number, queryText = '', excludeTracks: any[] = [], segment = 'all') {
+  getTimelineDay(day: any, queryText = '', excludeTracks: any[] = [], segment = 'all') {
     return new Promise((resolve: any) => {
       this.load().then((data: any) => {
         if (data !== undefined && data.length > 0) {
           this.loadSchedule().map((resData: any) => {
-            resolve(this.getDay(resData, dayIndex, queryText, excludeTracks, segment));  
+            resolve(this.getDay(resData, day, queryText, excludeTracks, segment));  
           });
         } else {
-          resolve(this.getDay(data, dayIndex, queryText, excludeTracks, segment));  
+          resolve(this.getDay(data, day, queryText, excludeTracks, segment));  
         }      
       }).catch(() => {
         this.load(true).then((data: any) => {
           if (data !== undefined && data.length > 0) {
             this.loadSchedule().map((resData: any) => {
-              resolve(this.getDay(resData, dayIndex, queryText, excludeTracks, segment));  
+              resolve(this.getDay(resData, day, queryText, excludeTracks, segment));  
             });
           } else {
-            resolve(this.getDay(data, dayIndex, queryText, excludeTracks, segment));
+            resolve(this.getDay(data, day, queryText, excludeTracks, segment));
           }
         });
       });
     });
   }
 
-  getDay(data: any, dayIndex: number, queryText = '', excludeTracks: any[] = [], segment = 'all'): any {
-    let day = data.items[dayIndex];
+  getTimeline(queryText = '', excludeTracks: any[] = [], segment = 'all') {
+    return new Promise((resolve: any) => {
+      this.load().then((data: any) => {
+        if (data !== undefined && data.length > 0) {
+          this.loadSchedule().map((resData: any) => {
+            resolve(this.getDays(resData, queryText, excludeTracks, segment));  
+          });
+        } else {
+          resolve(this.getDays(data, queryText, excludeTracks, segment));  
+        }      
+      }).catch(() => {
+        this.load(true).then((data: any) => {
+          if (data !== undefined && data.length > 0) {
+            this.loadSchedule().map((resData: any) => {
+              resolve(this.getDays(resData, queryText, excludeTracks, segment));  
+            });
+          } else {
+            resolve(this.getDays(data, queryText, excludeTracks, segment));
+          }
+        });
+      });
+    });
+  }
+
+  getDay(data: any, day: any, queryText = '', excludeTracks: any[] = [], segment = 'all'): any {
+    if (day !== undefined)
+      day = data.items.find(item => item.date === day.date);
+    else 
+      day = data.items[0];
+
     day.shownSessions = 0;
 
     queryText = queryText.toLowerCase().replace(/,|\.|-/g, ' ');
@@ -216,6 +250,35 @@ export class ConferenceData {
         }
       });
     });
+
+    return day;
+  }  
+
+  getDays(data: any, queryText = '', excludeTracks: any[] = [], segment = 'all'): any {
+    let day: any[] = [];
+
+    for (let dayIndex = 0; dayIndex < data.items.length; dayIndex++){
+      day.push(data.items[dayIndex]);
+      day[dayIndex].shownSessions = 0;
+  
+      queryText = queryText.toLowerCase().replace(/,|\.|-/g, ' ');
+      let queryWords = queryText.split(' ').filter(w => !!w.trim().length);
+  
+      day[dayIndex].groups.forEach((group: any) => {
+        group.hide = true;
+  
+        group.sessions.forEach((session: any) => {
+          // check if this session should show or not
+          this.filterSession(session, queryWords, excludeTracks, segment);
+  
+          if (!session.hide) {
+            // if this session is not hidden then this group should show
+            group.hide = false;
+            day[dayIndex].shownSessions++;
+          }
+        });
+      });
+    }
 
     return day;
   }
