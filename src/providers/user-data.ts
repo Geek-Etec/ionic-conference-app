@@ -42,6 +42,14 @@ export class UserData {
     this.events.publish('user:signup');
   };
 
+  set(userData: any) {
+    this.storage.set('userData', userData);
+  }
+
+  get() : any {
+    return this.storage.get('userData');
+  }
+
   logout(): void {
     this.storage.remove(this.HAS_LOGGED_IN);
     this.storage.remove('username');

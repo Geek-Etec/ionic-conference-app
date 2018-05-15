@@ -52,6 +52,12 @@ export class SignupPage extends AuthBase {
             this.signup.token = token;
             this.signup.password = this.encrypt("AES", this.signup.password, "scrt-key-" + this.signup.userName);
             this.thinkEventService.userCreate(this.signup).then(() => {
+              this.userData.set({
+                userName: this.signup.userName,
+                name: this.signup.name,
+                surname: this.signup.surname,
+                emailAddress: this.signup.emailAddress
+              });
               this.userData.signup(this.signup.userName);
               this.loading.dismiss();
               this.navCtrl.push(TabsPage);

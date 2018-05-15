@@ -3,6 +3,7 @@ import { NgForm } from '@angular/forms';
 
 import { AlertController, NavController, ToastController } from 'ionic-angular';
 
+import { UserData } from '../../providers/user-data';
 
 @Component({
   selector: 'page-user',
@@ -10,13 +11,17 @@ import { AlertController, NavController, ToastController } from 'ionic-angular';
 })
 export class SupportPage {
 
+  url: string = "http://func.thinkam.net/api/";
+  productId: string = "c5c33004-525d-4048-918c-dc077a3833dc";
+
   submitted: boolean = false;
   supportMessage: string;
 
   constructor(
     public navCtrl: NavController,
     public alertCtrl: AlertController,
-    public toastCtrl: ToastController
+    public toastCtrl: ToastController,
+    private userData: UserData,
   ) {
 
   }
@@ -30,6 +35,17 @@ export class SupportPage {
   }
 
   submit(form: NgForm) {
+    //Verifica se o usuário está logado
+    this.userData.get().then((user: any) => {
+      if (user === undefined || user === null){
+        let error = this.toastCtrl.create({
+          message: 'Para solicitar um suporte é necessário criar uma conta de usuário.',
+          duration: 3000
+        });
+        error.present();
+      }
+    });
+
     this.submitted = true;
 
     if (form.valid) {
