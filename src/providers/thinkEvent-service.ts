@@ -13,6 +13,7 @@ import { UserOptions } from '../interfaces/user-options';
 @Injectable()
 export class ThinkEventService {
   baseApiUrl: string = "https://api-thinkevent.azurewebsites.net/api/";
+  tenantId: number = 2;
 
   headers: Headers;
   options: RequestOptions;
@@ -52,7 +53,7 @@ export class ThinkEventService {
       this.http.post(this.baseApiUrl + "TokenAuth/Authenticate", {
         userNameOrEmailAddress: "geeketec",
         password: "G33ker123",
-        tenantId: 2
+        tenantId: this.tenantId
       })
         .map(res => res.json())
         .subscribe((res: any) => {
@@ -94,7 +95,9 @@ export class ThinkEventService {
         "roleNames": [
           "User"
         ],
-        "password": user.password
+        "password": user.password,
+        "fullname": user.fullname,
+        "tenantId": this.tenantId
       }, this.options)
         .map(res => res.json())
         ._catch(error => reject(error.json()))

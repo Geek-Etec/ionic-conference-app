@@ -40,18 +40,25 @@ export class SignupPage extends AuthBase {
     super(loadingCtrl, alertCtrl);
   }
 
-  onSignup(form: NgForm) {
+  onSignup(form: NgForm, force: boolean = false) {
     this.showLoading();
 
     this.submitted = true;
 
     if (form.valid) {
       try{
-        this.thinkEventService.getToken().then((token: string) => {
+        this.thinkEventService.getToken(force).then((token: string) => {
           this.userData.setToken(token).then(() => {
-            this.signup.token = token;
-            this.signup.password = this.encrypt("AES", this.signup.password, "scrt-key-" + this.signup.userName);
-            this.thinkEventService.userCreate(this.signup).then(() => {
+            let password: string = this.encrypt("AES", this.signup.password, "scrt-key-" + this.signup.userName);
+            this.thinkEventService.userCreate({
+              userName: this.signup.userName,
+              name: this.signup.name,
+              surname: this.signup.surname,
+              emailAddress: this.signup.emailAddress,
+              password: password,
+              fullname: this.signup.name + ' ' + this.signup.surname,
+              token: token
+            }).then(() => {
               this.userData.set({
                 userName: this.signup.userName,
                 name: this.signup.name,
@@ -63,7 +70,11 @@ export class SignupPage extends AuthBase {
               this.navCtrl.push(TabsPage);
             }).catch((res: any) => {
               this.loading.dismiss();
-              this.show(res.error.message, res.error.details);    
+
+              if (res.unAuthorizedRequest)
+                this.onSignup(form, true);
+              else
+                this.show(res.error.message, res.error.details);    
             });  
           });
         });  
