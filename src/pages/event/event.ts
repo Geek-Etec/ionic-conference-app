@@ -151,7 +151,6 @@ export class EventPage extends ThinkEventBase {
                 this.days = [];
 
             for (let index: number = 0; index < data.length; index++) {
-                data[index].date = data[index].date.substring(8, 10) + "/" + data[index].date.substring(5, 7) + "/" + data[index].date.substring(0, 4);
                 this.days.push(data[index]);
                 this.shownDays++;
             }
