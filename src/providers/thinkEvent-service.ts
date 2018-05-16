@@ -14,6 +14,8 @@ import { UserOptions } from '../interfaces/user-options';
 export class ThinkEventService {
   baseApiUrl: string = "https://api-thinkevent.azurewebsites.net/api/";
   tenantId: number = 2;
+  urlBaseFuncThinkAMAPI: string = "http://func.thinkam.net/api/";
+  productId: string = "c5c33004-525d-4048-918c-dc077a3833dc";
 
   headers: Headers;
   options: RequestOptions;
@@ -27,13 +29,13 @@ export class ThinkEventService {
     return new Promise((resolve: any) => {
       try {
         this.http.get(this.baseApiUrl + "services/app/Schedule/GetVersion", options)
-        .subscribe(
-          data => resolve(data.json().result),
-          err => { 
-            console.log(err)
-            resolve(false);
-          }         
-        );
+          .subscribe(
+            data => resolve(data.json().result),
+            err => {
+              console.log(err)
+              resolve(false);
+            }
+          );
       } catch (error) {
         console.log(error);
         resolve(false);
@@ -41,9 +43,24 @@ export class ThinkEventService {
     });
   }
 
+  sendEmail(model: any) {
+    return new Promise((resolve: any) => {
+      this.http.post(this.urlBaseFuncThinkAMAPI + "email", {
+        "fromEmail": model.fromEmail,
+        "toEmail": model.toEmail,
+        "subject": model.subject,
+        "message": model.message,
+        "isImportant": model.isImportant
+      }).subscribe((res: any) => {
+        console.log(res);
+        resolve(true);
+      });
+    });
+  }
+
   getToken(force?: boolean) {
     return new Promise((resolve: any) => {
-      if (!force){
+      if (!force) {
         this.dbProvider.get("token").then((token: string) => {
           if (token.length > 0)
             resolve(token);

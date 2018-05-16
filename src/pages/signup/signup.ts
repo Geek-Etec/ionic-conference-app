@@ -63,6 +63,7 @@ export class SignupPage extends AuthBase {
                 userName: this.signup.userName,
                 name: this.signup.name,
                 surname: this.signup.surname,
+                fullname: this.signup.name + ' ' + this.signup.surname,                
                 emailAddress: this.signup.emailAddress
               });
               this.userData.signup(this.signup.userName);

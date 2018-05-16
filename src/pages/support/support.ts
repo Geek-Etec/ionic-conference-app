@@ -4,16 +4,13 @@ import { NgForm } from '@angular/forms';
 import { AlertController, NavController, ToastController } from 'ionic-angular';
 
 import { UserData } from '../../providers/user-data';
+import { ThinkEventService } from '../../providers/thinkEvent-service';
 
 @Component({
   selector: 'page-user',
   templateUrl: 'support.html'
 })
 export class SupportPage {
-
-  url: string = "http://func.thinkam.net/api/";
-  productId: string = "c5c33004-525d-4048-918c-dc077a3833dc";
-
   submitted: boolean = false;
   supportMessage: string;
 
@@ -22,16 +19,13 @@ export class SupportPage {
     public alertCtrl: AlertController,
     public toastCtrl: ToastController,
     private userData: UserData,
+    private thinkEventService: ThinkEventService
   ) {
 
   }
 
   ionViewDidEnter() {
-    let toast = this.toastCtrl.create({
-      message: 'Isso não envia realmente uma solicitação de suporte.',
-      duration: 3000
-    });
-    toast.present();
+
   }
 
   submit(form: NgForm) {
@@ -43,21 +37,29 @@ export class SupportPage {
           duration: 3000
         });
         error.present();
+      } else {
+        this.submitted = true;
+
+        if (form.valid) {    
+          this.thinkEventService.sendEmail(          {
+            fromEmail: "'" + user.fullname + "' <" + user.emailAddress + ">",
+            toEmail : "geeketec@hotmail.com",
+            subject : "Aplicativo",
+            message : this.supportMessage,
+            isImportant : "true"          
+          });
+
+          this.supportMessage = '';
+          this.submitted = false;
+    
+          let toast = this.toastCtrl.create({
+            message: 'Sua solicitação de suporte foi enviada.',
+            duration: 3000
+          });
+          toast.present();
+        }          
       }
     });
-
-    this.submitted = true;
-
-    if (form.valid) {
-      this.supportMessage = '';
-      this.submitted = false;
-
-      let toast = this.toastCtrl.create({
-        message: 'Sua solicitação de suporte foi enviada.',
-        duration: 3000
-      });
-      toast.present();
-    }
   }
 
   // If the user enters text in the support question and then navigates
