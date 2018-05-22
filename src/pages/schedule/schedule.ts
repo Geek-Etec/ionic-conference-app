@@ -86,7 +86,7 @@ export class SchedulePage extends ThinkEventBase {
     // go to the session detail page
     // and pass in the session data
 
-    this.navCtrl.push(SessionDetailPage, { sessionId: sessionData.id, name: sessionData.name });
+    this.navCtrl.push(SessionDetailPage, { sessionId: sessionData.id, name: sessionData.name, day: this.navParams.data.day });
   }
 
   addFavorite(slidingItem: ItemSliding, sessionData: any) {

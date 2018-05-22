@@ -51,41 +51,50 @@ export class ConferenceData {
     });
   }
 
-  load(force?: boolean): any {
+  load(force?: boolean, isLocal?: boolean, day?: any): any {
     return new Promise((resolve: any) => {
-      this.checkVersion(force).then((refresh: boolean) => {
-        if (!refresh && this.data) {
-          resolve(this.data);
-        } else {
-          this.thinkEventService.getToken(force).then((token: string) => {
-            let headers = new Headers({
-              'Authorization': 'Bearer ' + token
+      if (isLocal) {
+        let data: any = {
+          items : this.data.items.find(item => item.date === day.date)
+        };
+        
+        resolve(data);
+      }
+      else {
+        this.checkVersion(force).then((refresh: boolean) => {
+          if (!refresh && this.data) {
+            resolve(this.data);
+          } else {
+            this.thinkEventService.getToken(force).then((token: string) => {
+              let headers = new Headers({
+                'Authorization': 'Bearer ' + token
+              });
+    
+              let options = new RequestOptions({ headers: headers });
+    
+              this.http.get(this.baseApiUrl + 'services/app/Schedule/GetListAsync', options)
+                .map(this.processData, this)
+                .subscribe(
+                  data => {
+                    for(let i : number = 0; i < data.items.length; i++){
+                      data.items[i].date = data.items[i].date.substring(8, 10) + "/" + data.items[i].date.substring(5, 7) + "/" + data.items[i].date.substring(0, 4);
+                    }                  
+  
+                    resolve(data)
+                  },
+                  err => { 
+                    console.log(err)
+                    this.loadSchedule().map((resData: any) => {
+                      resolve(resData);
+                    });
+                  }                   
+                )
             });
-  
-            let options = new RequestOptions({ headers: headers });
-  
-            this.http.get(this.baseApiUrl + 'services/app/Schedule/GetListAsync', options)
-              .map(this.processData, this)
-              .subscribe(
-                data => {
-                  for(let i : number = 0; i < data.items.length; i++){
-                    data.items[i].date = data.items[i].date.substring(8, 10) + "/" + data.items[i].date.substring(5, 7) + "/" + data.items[i].date.substring(0, 4);
-                  }                  
-
-                  resolve(data)
-                },
-                err => { 
-                  console.log(err)
-                  this.loadSchedule().map((resData: any) => {
-                    resolve(resData);
-                  });
-                }                   
-              )
-          });
-        }          
-      }).catch(() => {
-        resolve(this.data);
-      });
+          }          
+        }).catch(() => {
+          resolve(this.data);
+        });          
+      }
     });
   }
 

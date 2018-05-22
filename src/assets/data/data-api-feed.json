@@ -143,7 +143,18 @@
                 "email": "g.ki.geeketec@gmail.com",
                 "phone": "+55 (11) 99657-1302",
                 "id": "13"
-            }
+            },
+            {
+                "name": "G'ki",
+                "profilePic": "assets/img/speakers/gki.jpg",
+                "twitter": "g_ki_",
+                "title": "Visite o estande do IBL!",
+                "about": "No Geek Etec 2018 visite o estande do IBL!!! \n \n #geek #geeketec #etec #arrudamello #etecarrudamello #idioma",
+                "location": "IBC Presidente Prudente",
+                "email":"g.ki.geeketec@gmail.com",
+                "phone":"+55 (18) 99125-1919",
+                "id":"14"
+            }            
         ]
     },
     "targetUrl": null,

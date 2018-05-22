@@ -62,7 +62,7 @@ export class ThinkEventService {
     return new Promise((resolve: any) => {
       if (!force) {
         this.dbProvider.get("token").then((token: string) => {
-          if (token.length > 0)
+          if (token != null && token.length > 0)
             resolve(token);
         })
       }

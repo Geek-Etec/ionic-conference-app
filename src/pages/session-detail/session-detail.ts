@@ -16,14 +16,14 @@ export class SessionDetailPage {
   ) {}
 
   ionViewWillEnter() {
-    this.dataProvider.load().then((data: any) => {
+    this.dataProvider.load(false, true, this.navParams.data.day).then((data: any) => {
       if (
         data &&
         data.items &&
-        data.items[0] &&
-        data.items[0].groups
+        data.items &&
+        data.items.groups
       ) {
-        for (const group of data.items[0].groups) {
+        for (const group of data.items.groups) {
           if (group && group.sessions) {
             for (const session of group.sessions) {
               if (session && session.id === this.navParams.data.sessionId) {
