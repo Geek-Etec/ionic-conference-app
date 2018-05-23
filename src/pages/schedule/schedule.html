@@ -74,7 +74,7 @@
     Nenhuma sessão encontrada
   </ion-list-header>
 
-  <ion-fab bottom right #fab>
+  <ion-fab [hidden]="!isAndroid" bottom right #fab>
     <button ion-fab><ion-icon name="share"></ion-icon></button>
     <ion-fab-list side="top">
       <button ion-fab color="whatsapp" (click)="openSocial('Whatsapp', fab)"><ion-icon name="logo-whatsapp"></ion-icon></button>

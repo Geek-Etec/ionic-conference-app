@@ -99,7 +99,7 @@ export class ConferenceData {
   }
 
   loadFeed(): any {
-    if (this.data.speakers !== undefined && this.data.speakers.length > 0) {
+    if (this.data !== undefined && this.data !== null && this.data.speakers !== undefined && this.data.speakers.length > 0) {
       return Observable.of(this.data);
     } else {
       return this.http.get('assets/data/data-api-feed.json')
@@ -221,7 +221,7 @@ export class ConferenceData {
           resolve(this.getDays(data, queryText, excludeTracks, segment));  
         }      
       }).catch(() => {
-        this.load(true).then((data: any) => {
+        this.load(false, true).then((data: any) => {
           if (data !== undefined && data.length > 0) {
             this.loadSchedule().map((resData: any) => {
               resolve(this.getDays(resData, queryText, excludeTracks, segment));  

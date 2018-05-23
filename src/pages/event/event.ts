@@ -48,11 +48,12 @@ export class EventPage extends ThinkEventBase {
     shownDays: number = 0;
     groups: any = [];
     confDate: string;
+    isAndroid: boolean = this.platform.is('android');
 
     constructor(
         public alertCtrl: AlertController,
-        public app: App,
         public loadingCtrl: LoadingController,
+        public app: App,
         public modalCtrl: ModalController,
         public navCtrl: NavController,
         public toastCtrl: ToastController,
@@ -166,104 +167,94 @@ export class EventPage extends ThinkEventBase {
                         let base64File: string = data.toString();
 
                         if (network === "Facebook") {
-                            if (this.platform.is('ios')) {
-                                app = 'facebook://';
-                            } else if (this.platform.is('android')) {
+                            if (this.platform.is('android')) {
                                 app = 'com.facebook.android';
-                            }
 
-                            this.appAvailability.check(app)
-                                .then(
-                                    (yes: boolean) => {
-                                        console.log(app + ' is available')
+                                this.appAvailability.check(app)
+                                    .then(
+                                        (yes: boolean) => {
+                                            if (yes)
+                                                console.log(app + ' is available');
 
-                                        this.message(`Postando para ${network}`, fab);
+                                            this.message(`Postando para ${network}`, fab);
 
-                                        if (yes)
                                             this.socialSharing.shareViaFacebook(msg, base64File, null);
-                                    },
-                                    (no: string) => {
-                                        console.log(app + ' is NOT available')
+                                        },
+                                        (no: string) => {
+                                            console.log(app + ' is NOT available')
 
-                                        if (no === "")
-                                            this.message(`Ooops... Você não tem o ${network} instalado, faça a instalação e tente novamente.`, fab);
-                                    });
-
+                                            if (no === "")
+                                                this.message(`Ooops... Você não tem o ${network} instalado, faça a instalação e tente novamente.`, fab);
+                                        });
+                            } 
                         }
 
                         if (network === "Twitter") {
-                            if (this.platform.is('ios')) {
-                                app = 'twitter://';
-                            } else if (this.platform.is('android')) {
+                            if (this.platform.is('android')) {
                                 app = 'com.twitter.android';
-                            }
 
-                            this.appAvailability.check(app)
-                                .then(
-                                    (yes: boolean) => {
-                                        console.log(app + ' is available')
+                                this.appAvailability.check(app)
+                                    .then(
+                                        (yes: boolean) => {
+                                            if (yes)
+                                                console.log(app + ' is available');
 
-                                        this.message(`Postando para ${network}`, fab);
+                                            this.message(`Postando para ${network}`, fab);
 
-                                        if (yes)
                                             this.socialSharing.shareViaTwitter(msg, base64File, null);
-                                    },
-                                    (no: string) => {
-                                        console.log(app + ' is NOT available')
+                                        },
+                                        (no: string) => {
+                                            console.log(app + ' is NOT available')
 
-                                        if (no === "")
-                                            this.message(`Ooops... Você não tem o ${network} instalado, faça a instalação e tente novamente.`, fab);
-                                    });
+                                            if (no === "")
+                                                this.message(`Ooops... Você não tem o ${network} instalado, faça a instalação e tente novamente.`, fab);
+                                        });
+                            }
                         }
 
                         if (network === "Instagram") {
-                            if (this.platform.is('ios')) {
-                                app = 'instagram://';
-                            } else if (this.platform.is('android')) {
+                            if (this.platform.is('android')) {
                                 app = 'com.instagram.android';
-                            }
 
-                            this.appAvailability.check(app)
-                                .then(
-                                    (yes: boolean) => {
-                                        console.log(app + ' is available')
+                                this.appAvailability.check(app)
+                                    .then(
+                                        (yes: boolean) => {
+                                            if (yes)
+                                                console.log(app + ' is available');
 
-                                        this.message(`Postando para ${network}`, fab);
+                                            this.message(`Postando para ${network}`, fab);
 
-                                        if (yes)
                                             this.socialSharing.shareViaInstagram(msg, base64File);
-                                    },
-                                    (no: string) => {
-                                        console.log(app + ' is NOT available')
+                                        },
+                                        (no: string) => {
+                                            console.log(app + ' is NOT available')
 
-                                        if (no === "")
-                                            this.message(`Ooops... Você não tem o ${network} instalado, faça a instalação e tente novamente.`, fab);
-                                    });
+                                            if (no === "")
+                                                this.message(`Ooops... Você não tem o ${network} instalado, faça a instalação e tente novamente.`, fab);
+                                        });
+                            }
                         }
 
                         if (network === "Whatsapp") {
-                            if (this.platform.is('ios')) {
-                                app = 'whatsapp://';
-                            } else if (this.platform.is('android')) {
+                            if (this.platform.is('android')) {
                                 app = 'com.whatsapp';
-                            }
 
-                            this.appAvailability.check(app)
-                                .then(
-                                    (yes: boolean) => {
-                                        console.log(app + ' is available')
+                                this.appAvailability.check(app)
+                                    .then(
+                                        () => {
+                                            console.log(app + ' is available')
 
-                                        this.message(`Postando para ${network}`, fab);
+                                            this.message(`Postando para ${network}`, fab);
 
-                                        if (yes)
                                             this.socialSharing.shareViaWhatsApp(msg, base64File, null);
-                                    },
-                                    (no: string) => {
-                                        console.log(app + ' is NOT available')
+                                        },
+                                        (no: string) => {
+                                            console.log(app + ' is NOT available')
 
-                                        if (no === "")
-                                            this.message(`Ooops... Você não tem o ${network} instalado, faça a instalação e tente novamente.`, fab);
-                                    });
+                                            if (no === "")
+                                                this.message(`Ooops... Você não tem o ${network} instalado, faça a instalação e tente novamente.`, fab);
+                                        });
+                            }
                         }
                     }
                 );
