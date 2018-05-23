@@ -1,8 +1,14 @@
 {
-  "name": "ionic-conference-app",
+  "name": "geeketec",
   "app_id": "",
-  "type": "ionic-angular",
+  "type": "geeketec",
   "integrations": {
     "cordova": {}
-  }
+  },
+  "proxies": [
+    {
+      "path": "/api",
+      "proxyUrl": "https://api-thinkevent.azurewebsites.net/api"
+    }
+  ]
 }
