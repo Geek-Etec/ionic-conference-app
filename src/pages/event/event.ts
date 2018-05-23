@@ -15,6 +15,10 @@ import { SchedulePage } from '../schedule/schedule';
 
 import { ThinkEventBase } from '../../providers/think-event-base';
 
+import { SocialSharing } from '@ionic-native/social-sharing';
+
+import { FilePath } from '@ionic-native/file-path';
+
 @Component({
     selector: 'page-event',
     templateUrl: 'event.html'
@@ -42,6 +46,8 @@ export class EventPage extends ThinkEventBase {
         public toastCtrl: ToastController,
         public confData: ConferenceData,
         public user: UserData,
+        private socialSharing: SocialSharing,
+        private filePath: FilePath
     ) {
         super(loadingCtrl, alertCtrl);
     }
@@ -134,6 +140,8 @@ export class EventPage extends ThinkEventBase {
     }
 
     openSocial(network: string, fab: FabContainer) {
+        let msg: string = "GEEK ETEC 2018 nos dias 26 e 27 de Maio, no IBC de Pres. Prudente - Post via App do #GeekEtec";
+
         let loading = this.loadingCtrl.create({
             content: `Postando para ${network}`,
             duration: (Math.random() * 1000) + 500
@@ -142,6 +150,53 @@ export class EventPage extends ThinkEventBase {
             fab.close();
         });
         loading.present();
+
+        let path: string = 'file:///android_asset/www/assets/img/ica-slidebox-img-1.png';
+
+        this.filePath.resolveNativePath(path)
+            .then((filePath: string) => {
+                this.convertToBase64(filePath, 'image/png').then(
+                    data => {
+                        let base64File: string = data.toString();
+
+                        if (network === "Facebook") {
+                            this.socialSharing.shareViaFacebook(msg, base64File, null);
+                        }
+
+                        if (network === "Twitter") {
+                            this.socialSharing.shareViaTwitter(msg, base64File, null);
+                        }
+
+                        if (network === "Instagram") {
+                            this.socialSharing.shareViaInstagram(msg, base64File);
+                        }
+
+                        if (network === "Whatsapp") {
+                            this.socialSharing.shareViaWhatsApp(msg, base64File, null);
+                        }
+                    }
+                );
+            })
+            .catch(err => console.log(err));
+    }
+
+    convertToBase64(url, outputFormat) {
+        return new Promise((resolve) => {
+            let img = new Image();
+            img.crossOrigin = 'Anonymous';
+            img.onload = function () {
+                let canvas = <HTMLCanvasElement>document.createElement('CANVAS'),
+                    ctx = canvas.getContext('2d'),
+                    dataURL;
+                canvas.height = img.height;
+                canvas.width = img.width;
+                ctx.drawImage(img, 0, 0);
+                dataURL = canvas.toDataURL(outputFormat);
+                canvas = null;
+                resolve(dataURL);
+            };
+            img.src = url;
+        });
     }
 
     doRefresh(refresher: Refresher) {
