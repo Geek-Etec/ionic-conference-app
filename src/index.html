@@ -1,30 +1,44 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="pt-br" dir="ltr">
 
 <head>
   <meta charset="UTF-8">
-  <title>Ionic Conference App</title>
+  <title>Geek Etec 2018</title>
   <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta name="format-detection" content="telephone=no">
   <meta name="msapplication-tap-highlight" content="no">
+
+  <script>
+    (function () {
+      if ('registerElement' in document &&
+        'import' in document.createElement('link') &&
+        'content' in document.createElement('template')) {
+        // platform is good!
+      } else {
+        // polyfill the platform!
+        var e = document.createElement('script');
+        e.src = '/bower_components/webcomponentsjs/webcomponents-lite.min.js';
+        document.body.appendChild(e);
+      }
+    })();
+  </script>
 
   <link rel="icon" type="image/x-icon" href="assets/icon/favicon.ico">
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#387ef5">
 
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <link rel="apple-touch-icon" href="assets/img/appicon.png">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="apple-touch-icon" href="assets/img/logo128x128.png">
 
-  <script>    
-    //  if ('serviceWorker' in navigator) {
-    //    navigator.serviceWorker.register('service-worker.js')
-    //      .then(() => console.log('service worker installed'))
-    //      .catch(err => console.log('Error', err));
-    //  }     
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(() => console.log('service worker installed'))
+        .catch(err => console.log('Error', err));
+    }
   </script>
-
-  <link href="build/main.css" rel="stylesheet">
-
+  <link href="build/main.css?v=0.0.1" rel="stylesheet">
 </head>
 
 <body>
@@ -32,19 +46,33 @@
   <!-- Ionic's root component and where the app will load -->
   <ion-app></ion-app>
 
-  <script src="cordova.js"></script>
-
   <!-- The polyfills js is generated during the build process -->
-  <script src="build/polyfills.js"></script>
+  <script src="build/polyfills.js?v=0.0.1"></script>
 
   <!-- The bundle js is generated during the build process -->
-  <script src="build/vendor.js"></script>
+  <script src="build/vendor.js?v=0.0.1"></script>
 
   <!-- The bundle js is generated during the build process -->
-  <script src="build/main.js"></script>
+  <script src="build/main.js?v=0.0.1"></script>
 
   <!-- google maps script is loaded last as to not block rendering -->
   <script async defer src="https://maps.googleapis.com/maps/api/js"></script>
+
+
+  <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyCNMXyANR5u_CZ3LBZh1OT0Dj5di-h6Wns",
+      authDomain: "geek-etec.firebaseapp.com",
+      databaseURL: "https://geek-etec.firebaseio.com",
+      projectId: "geek-etec",
+      storageBucket: "geek-etec.appspot.com",
+      messagingSenderId: "173195581232"
+    };
+    firebase.initializeApp(config);
+
+  </script>
 
 </body>
 

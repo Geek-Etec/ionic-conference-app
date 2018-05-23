@@ -1,6 +1,18 @@
 import { Component, ViewChild } from '@angular/core';
 
-import { AlertController, App, FabContainer, ItemSliding, List, ModalController, NavController, ToastController, LoadingController, Refresher } from 'ionic-angular';
+import {
+    AlertController,
+    App,
+    FabContainer,
+    ItemSliding,
+    List,
+    ModalController,
+    NavController,
+    ToastController,
+    LoadingController,
+    Refresher,
+    Platform
+} from 'ionic-angular';
 
 /*
   To learn how to use third party libs in an
@@ -14,6 +26,10 @@ import { UserData } from '../../providers/user-data';
 import { SchedulePage } from '../schedule/schedule';
 
 import { ThinkEventBase } from '../../providers/think-event-base';
+
+import { SocialSharing } from '@ionic-native/social-sharing';
+import { FilePath } from '@ionic-native/file-path';
+import { AppAvailability } from '@ionic-native/app-availability';
 
 @Component({
     selector: 'page-event',
@@ -42,6 +58,10 @@ export class EventPage extends ThinkEventBase {
         public toastCtrl: ToastController,
         public confData: ConferenceData,
         public user: UserData,
+        private socialSharing: SocialSharing,
+        private filePath: FilePath,
+        private appAvailability: AppAvailability,
+        private platform: Platform
     ) {
         super(loadingCtrl, alertCtrl);
     }
@@ -134,14 +154,151 @@ export class EventPage extends ThinkEventBase {
     }
 
     openSocial(network: string, fab: FabContainer) {
+        let msg: string = "GEEK ETEC 2018 nos dias 26 e 27 de Maio, no IBC de Pres. Prudente - Post via App do #GeekEtec";
+
+        let path: string = 'file:///android_asset/www/assets/img/ica-slidebox-img-1.png';
+        let app;
+
+        this.filePath.resolveNativePath(path)
+            .then((filePath: string) => {
+                this.convertToBase64(filePath, 'image/png').then(
+                    data => {
+                        let base64File: string = data.toString();
+
+                        if (network === "Facebook") {
+                            if (this.platform.is('ios')) {
+                                app = 'facebook://';
+                            } else if (this.platform.is('android')) {
+                                app = 'com.facebook.android';
+                            }
+
+                            this.appAvailability.check(app)
+                                .then(
+                                    (yes: boolean) => {
+                                        console.log(app + ' is available')
+
+                                        this.message(`Postando para ${network}`, fab);
+
+                                        if (yes)
+                                            this.socialSharing.shareViaFacebook(msg, base64File, null);
+                                    },
+                                    (no: string) => {
+                                        console.log(app + ' is NOT available')
+
+                                        if (no === "")
+                                            this.message(`Ooops... Você não tem o ${network} instalado, faça a instalação e tente novamente.`, fab);
+                                    });
+
+                        }
+
+                        if (network === "Twitter") {
+                            if (this.platform.is('ios')) {
+                                app = 'twitter://';
+                            } else if (this.platform.is('android')) {
+                                app = 'com.twitter.android';
+                            }
+
+                            this.appAvailability.check(app)
+                                .then(
+                                    (yes: boolean) => {
+                                        console.log(app + ' is available')
+
+                                        this.message(`Postando para ${network}`, fab);
+
+                                        if (yes)
+                                            this.socialSharing.shareViaTwitter(msg, base64File, null);
+                                    },
+                                    (no: string) => {
+                                        console.log(app + ' is NOT available')
+
+                                        if (no === "")
+                                            this.message(`Ooops... Você não tem o ${network} instalado, faça a instalação e tente novamente.`, fab);
+                                    });
+                        }
+
+                        if (network === "Instagram") {
+                            if (this.platform.is('ios')) {
+                                app = 'instagram://';
+                            } else if (this.platform.is('android')) {
+                                app = 'com.instagram.android';
+                            }
+
+                            this.appAvailability.check(app)
+                                .then(
+                                    (yes: boolean) => {
+                                        console.log(app + ' is available')
+
+                                        this.message(`Postando para ${network}`, fab);
+
+                                        if (yes)
+                                            this.socialSharing.shareViaInstagram(msg, base64File);
+                                    },
+                                    (no: string) => {
+                                        console.log(app + ' is NOT available')
+
+                                        if (no === "")
+                                            this.message(`Ooops... Você não tem o ${network} instalado, faça a instalação e tente novamente.`, fab);
+                                    });
+                        }
+
+                        if (network === "Whatsapp") {
+                            if (this.platform.is('ios')) {
+                                app = 'whatsapp://';
+                            } else if (this.platform.is('android')) {
+                                app = 'com.whatsapp';
+                            }
+
+                            this.appAvailability.check(app)
+                                .then(
+                                    (yes: boolean) => {
+                                        console.log(app + ' is available')
+
+                                        this.message(`Postando para ${network}`, fab);
+
+                                        if (yes)
+                                            this.socialSharing.shareViaWhatsApp(msg, base64File, null);
+                                    },
+                                    (no: string) => {
+                                        console.log(app + ' is NOT available')
+
+                                        if (no === "")
+                                            this.message(`Ooops... Você não tem o ${network} instalado, faça a instalação e tente novamente.`, fab);
+                                    });
+                        }
+                    }
+                );
+            })
+            .catch(err => console.log(err));
+    }
+
+    message(msg: string, fab: FabContainer) {
         let loading = this.loadingCtrl.create({
-            content: `Postando para ${network}`,
-            duration: (Math.random() * 1000) + 500
+            content: msg,
+            duration: 5000
         });
         loading.onWillDismiss(() => {
             fab.close();
         });
         loading.present();
+    }
+
+    convertToBase64(url, outputFormat) {
+        return new Promise((resolve) => {
+            let img = new Image();
+            img.crossOrigin = 'Anonymous';
+            img.onload = function () {
+                let canvas = <HTMLCanvasElement>document.createElement('CANVAS'),
+                    ctx = canvas.getContext('2d'),
+                    dataURL;
+                canvas.height = img.height;
+                canvas.width = img.width;
+                ctx.drawImage(img, 0, 0);
+                dataURL = canvas.toDataURL(outputFormat);
+                canvas = null;
+                resolve(dataURL);
+            };
+            img.src = url;
+        });
     }
 
     doRefresh(refresher: Refresher) {

@@ -46,6 +46,1212 @@
                         "creationTime": "2018-03-23T19:53:20.4311416",
                         "creatorUserId": 3,
                         "id": "fd4b7c21-d67d-4cd9-09ee-08d590f7ab88"
+                    },
+                    {
+                        "scheduleId": "dd1ce8b8-d92f-4028-00df-08d590f72661",
+                        "time": "10:30 am",
+                        "sessions": [
+                            {
+                                "groupId": "134db709-e28f-45de-07e5-08d596a27f03",
+                                "name": "Corrida Naruto",
+                                "timeStart": "10:30 am",
+                                "timeEnd": "11:00 am",
+                                "location": "AO REDOR DO IBC",
+                                "tracks": [
+                                    {
+                                        "sessionId": "2a38b2a3-adc3-492c-79de-08d596a5bc9c",
+                                        "title": "Naruto",
+                                        "isDeleted": false,
+                                        "deleterUserId": null,
+                                        "deletionTime": null,
+                                        "lastModificationTime": null,
+                                        "lastModifierUserId": null,
+                                        "creationTime": "2018-03-31T01:26:10.2999658",
+                                        "creatorUserId": 3,
+                                        "id": "7ff6ab64-e460-478a-5b45-08d596a66271"
+                                    }
+                                ],
+                                "isDeleted": false,
+                                "deleterUserId": null,
+                                "deletionTime": null,
+                                "lastModificationTime": null,
+                                "lastModifierUserId": null,
+                                "creationTime": "2018-03-31T01:21:32.0495672",
+                                "creatorUserId": 3,
+                                "id": "2a38b2a3-adc3-492c-79de-08d596a5bc9c"
+                            }
+                        ],
+                        "isDeleted": false,
+                        "deleterUserId": null,
+                        "deletionTime": null,
+                        "lastModificationTime": null,
+                        "lastModifierUserId": null,
+                        "creationTime": "2018-03-31T00:58:20.2144206",
+                        "creatorUserId": 3,
+                        "id": "134db709-e28f-45de-07e5-08d596a27f03"
+                    },
+                    {
+                        "scheduleId": "dd1ce8b8-d92f-4028-00df-08d590f72661",
+                        "time": "11:00 am",
+                        "sessions": [
+                            {
+                                "groupId": "0612b27e-77f6-4bcf-53b9-08d596b65950",
+                                "name": "Abertura IBC, boas vindas e premiação da Corrida Naruto",
+                                "timeStart": "11:00 am",
+                                "timeEnd": "11:20 am",
+                                "location": "PALCO",
+                                "tracks": [
+                                    {
+                                        "sessionId": "24435ea8-cf24-4a55-1cab-08d596b6c14e",
+                                        "title": "Naruto",
+                                        "isDeleted": false,
+                                        "deleterUserId": null,
+                                        "deletionTime": null,
+                                        "lastModificationTime": null,
+                                        "lastModifierUserId": null,
+                                        "creationTime": "2018-03-31T03:24:12.4332789",
+                                        "creatorUserId": 3,
+                                        "id": "8d5c4a3f-b218-4714-d1df-08d596b6dfb8"
+                                    },
+                                    {
+                                        "sessionId": "24435ea8-cf24-4a55-1cab-08d596b6c14e",
+                                        "title": "Abertura",
+                                        "isDeleted": false,
+                                        "deleterUserId": null,
+                                        "deletionTime": null,
+                                        "lastModificationTime": null,
+                                        "lastModifierUserId": null,
+                                        "creationTime": "2018-05-14T08:32:04.8985545",
+                                        "creatorUserId": 12,
+                                        "id": "574e15df-ca9e-4f16-b068-08d5b974f4f9"
+                                    }
+                                ],
+                                "isDeleted": false,
+                                "deleterUserId": null,
+                                "deletionTime": null,
+                                "lastModificationTime": null,
+                                "lastModifierUserId": null,
+                                "creationTime": "2018-03-31T03:23:21.4035672",
+                                "creatorUserId": 3,
+                                "id": "24435ea8-cf24-4a55-1cab-08d596b6c14e"
+                            }
+                        ],
+                        "isDeleted": false,
+                        "deleterUserId": null,
+                        "deletionTime": null,
+                        "lastModificationTime": null,
+                        "lastModifierUserId": null,
+                        "creationTime": "2018-03-31T03:20:26.9044309",
+                        "creatorUserId": 3,
+                        "id": "0612b27e-77f6-4bcf-53b9-08d596b65950"
+                    },
+                    {
+                        "scheduleId": "dd1ce8b8-d92f-4028-00df-08d590f72661",
+                        "time": "11:15 am",
+                        "sessions": [
+                            {
+                                "groupId": "e855e829-0d4a-4c1a-fb9b-08d5b9487dd3",
+                                "name": "Show - Kinoglass",
+                                "timeStart": "11:15 am",
+                                "timeEnd": "12:10 am",
+                                "location": "PALCO",
+                                "tracks": [
+                                    {
+                                        "sessionId": "5fa9e83d-57ab-45f3-9c48-08d5b948d6d0",
+                                        "title": "Show",
+                                        "isDeleted": false,
+                                        "deleterUserId": null,
+                                        "deletionTime": null,
+                                        "lastModificationTime": null,
+                                        "lastModifierUserId": null,
+                                        "creationTime": "2018-05-14T03:16:10.7717668",
+                                        "creatorUserId": 12,
+                                        "id": "4d8961f4-79e4-47d1-4ce0-08d5b9490ace"
+                                    }
+                                ],
+                                "isDeleted": false,
+                                "deleterUserId": null,
+                                "deletionTime": null,
+                                "lastModificationTime": null,
+                                "lastModifierUserId": null,
+                                "creationTime": "2018-05-14T03:14:43.5496623",
+                                "creatorUserId": 12,
+                                "id": "5fa9e83d-57ab-45f3-9c48-08d5b948d6d0"
+                            }
+                        ],
+                        "isDeleted": false,
+                        "deleterUserId": null,
+                        "deletionTime": null,
+                        "lastModificationTime": null,
+                        "lastModifierUserId": null,
+                        "creationTime": "2018-05-14T03:12:14.2492364",
+                        "creatorUserId": 12,
+                        "id": "e855e829-0d4a-4c1a-fb9b-08d5b9487dd3"
+                    },
+                    {
+                        "scheduleId": "dd1ce8b8-d92f-4028-00df-08d590f72661",
+                        "time": "12:00 am",
+                        "sessions": [
+                            {
+                                "groupId": "06a62d02-b493-4dad-beac-08d5b94dd20f",
+                                "name": "Campeonato CS:GO X1",
+                                "timeStart": "12:00 am",
+                                "timeEnd": "08:30 pm",
+                                "location": "ESPAÇO INFORMÁTICA - ETEC ARRUDA MELLO",
+                                "tracks": [
+                                    {
+                                        "sessionId": "0a4f3989-c8b3-45f4-1d95-08d5b94e820b",
+                                        "title": "Campeonato",
+                                        "isDeleted": false,
+                                        "deleterUserId": null,
+                                        "deletionTime": null,
+                                        "lastModificationTime": null,
+                                        "lastModifierUserId": null,
+                                        "creationTime": "2018-05-14T03:57:49.0634696",
+                                        "creatorUserId": 12,
+                                        "id": "297751db-1620-4df5-6f94-08d5b94edbea"
+                                    }
+                                ],
+                                "isDeleted": false,
+                                "deleterUserId": null,
+                                "deletionTime": null,
+                                "lastModificationTime": null,
+                                "lastModifierUserId": null,
+                                "creationTime": "2018-05-14T03:55:18.3070152",
+                                "creatorUserId": 12,
+                                "id": "0a4f3989-c8b3-45f4-1d95-08d5b94e820b"
+                            }
+                        ],
+                        "isDeleted": false,
+                        "deleterUserId": null,
+                        "deletionTime": null,
+                        "lastModificationTime": null,
+                        "lastModifierUserId": null,
+                        "creationTime": "2018-05-14T03:50:23.0505027",
+                        "creatorUserId": 12,
+                        "id": "06a62d02-b493-4dad-beac-08d5b94dd20f"
+                    },
+                    {
+                        "scheduleId": "dd1ce8b8-d92f-4028-00df-08d590f72661",
+                        "time": "12:15 am",
+                        "sessions": [
+                            {
+                                "groupId": "c14f321f-5622-4166-1545-08d5b95c49b9",
+                                "name": "Show - Resília",
+                                "timeStart": "12:15 am",
+                                "timeEnd": "01:10 pm",
+                                "location": "PALCO",
+                                "tracks": [
+                                    {
+                                        "sessionId": "3d7794a9-9e2a-49f6-94a0-08d5b95ca570",
+                                        "title": "Show",
+                                        "isDeleted": false,
+                                        "deleterUserId": null,
+                                        "deletionTime": null,
+                                        "lastModificationTime": null,
+                                        "lastModifierUserId": null,
+                                        "creationTime": "2018-05-14T05:37:02.2496003",
+                                        "creatorUserId": 12,
+                                        "id": "774f1f02-1618-4b5f-016b-08d5b95cb847"
+                                    }
+                                ],
+                                "isDeleted": false,
+                                "deleterUserId": null,
+                                "deletionTime": null,
+                                "lastModificationTime": null,
+                                "lastModifierUserId": null,
+                                "creationTime": "2018-05-14T05:36:30.6455733",
+                                "creatorUserId": 12,
+                                "id": "3d7794a9-9e2a-49f6-94a0-08d5b95ca570"
+                            }
+                        ],
+                        "isDeleted": false,
+                        "deleterUserId": null,
+                        "deletionTime": null,
+                        "lastModificationTime": null,
+                        "lastModifierUserId": null,
+                        "creationTime": "2018-05-14T05:33:56.7419137",
+                        "creatorUserId": 12,
+                        "id": "c14f321f-5622-4166-1545-08d5b95c49b9"
+                    },
+                    {
+                        "scheduleId": "dd1ce8b8-d92f-4028-00df-08d590f72661",
+                        "time": "01:00 pm",
+                        "sessions": [
+                            {
+                                "groupId": "b20daacf-a1b8-4f68-1546-08d5b95c49b9",
+                                "name": "Campeonato Card Game Yu-Gi-Oh",
+                                "timeStart": "01:00 pm",
+                                "timeEnd": "03:55 pm",
+                                "location": "ESPAÇO CARD GAME",
+                                "tracks": [
+                                    {
+                                        "sessionId": "dcba46dd-a69f-4cf7-94a1-08d5b95ca570",
+                                        "title": "Campeonato",
+                                        "isDeleted": false,
+                                        "deleterUserId": null,
+                                        "deletionTime": null,
+                                        "lastModificationTime": null,
+                                        "lastModifierUserId": null,
+                                        "creationTime": "2018-05-14T05:44:24.9183942",
+                                        "creatorUserId": 12,
+                                        "id": "d73590f4-6922-4568-016c-08d5b95cb847"
+                                    },
+                                    {
+                                        "sessionId": "dcba46dd-a69f-4cf7-94a1-08d5b95ca570",
+                                        "title": "Card Game",
+                                        "isDeleted": false,
+                                        "deleterUserId": null,
+                                        "deletionTime": null,
+                                        "lastModificationTime": null,
+                                        "lastModifierUserId": null,
+                                        "creationTime": "2018-05-14T05:44:39.8754818",
+                                        "creatorUserId": 12,
+                                        "id": "30cc180d-138d-4627-016d-08d5b95cb847"
+                                    }
+                                ],
+                                "isDeleted": false,
+                                "deleterUserId": null,
+                                "deletionTime": null,
+                                "lastModificationTime": null,
+                                "lastModifierUserId": null,
+                                "creationTime": "2018-05-14T05:43:18.7259564",
+                                "creatorUserId": 12,
+                                "id": "dcba46dd-a69f-4cf7-94a1-08d5b95ca570"
+                            },
+                            {
+                                "groupId": "b20daacf-a1b8-4f68-1546-08d5b95c49b9",
+                                "name": "Campeonato Just Dance",
+                                "timeStart": "01:00 pm",
+                                "timeEnd": "08:30 pm",
+                                "location": "ESPAÇO FATEC JOGOS",
+                                "tracks": [
+                                    {
+                                        "sessionId": "17b3b11f-e010-49f3-94a2-08d5b95ca570",
+                                        "title": "Just Dance",
+                                        "isDeleted": false,
+                                        "deleterUserId": null,
+                                        "deletionTime": null,
+                                        "lastModificationTime": null,
+                                        "lastModifierUserId": null,
+                                        "creationTime": "2018-05-14T05:50:58.5065224",
+                                        "creatorUserId": 12,
+                                        "id": "05c3d949-5cbf-481a-016e-08d5b95cb847"
+                                    },
+                                    {
+                                        "sessionId": "17b3b11f-e010-49f3-94a2-08d5b95ca570",
+                                        "title": "Campeonato",
+                                        "isDeleted": false,
+                                        "deleterUserId": null,
+                                        "deletionTime": null,
+                                        "lastModificationTime": null,
+                                        "lastModifierUserId": null,
+                                        "creationTime": "2018-05-14T05:51:08.476341",
+                                        "creatorUserId": 12,
+                                        "id": "de616e37-6253-4afa-016f-08d5b95cb847"
+                                    }
+                                ],
+                                "isDeleted": false,
+                                "deleterUserId": null,
+                                "deletionTime": null,
+                                "lastModificationTime": null,
+                                "lastModifierUserId": null,
+                                "creationTime": "2018-05-14T05:50:21.6531864",
+                                "creatorUserId": 12,
+                                "id": "17b3b11f-e010-49f3-94a2-08d5b95ca570"
+                            },
+                            {
+                                "groupId": "b20daacf-a1b8-4f68-1546-08d5b95c49b9",
+                                "name": "Campeonato FIFA",
+                                "timeStart": "01:00 pm",
+                                "timeEnd": "08:30 pm",
+                                "location": "ESPAÇO FATEC JOGOS",
+                                "tracks": [
+                                    {
+                                        "sessionId": "fe3fd482-cb45-4d79-94a3-08d5b95ca570",
+                                        "title": "Campeonato",
+                                        "isDeleted": false,
+                                        "deleterUserId": null,
+                                        "deletionTime": null,
+                                        "lastModificationTime": null,
+                                        "lastModifierUserId": null,
+                                        "creationTime": "2018-05-14T05:58:02.0810686",
+                                        "creatorUserId": 12,
+                                        "id": "41c9ea07-d56d-42dd-0170-08d5b95cb847"
+                                    },
+                                    {
+                                        "sessionId": "fe3fd482-cb45-4d79-94a3-08d5b95ca570",
+                                        "title": "FIFA",
+                                        "isDeleted": false,
+                                        "deleterUserId": null,
+                                        "deletionTime": null,
+                                        "lastModificationTime": null,
+                                        "lastModifierUserId": null,
+                                        "creationTime": "2018-05-14T05:58:09.2186365",
+                                        "creatorUserId": 12,
+                                        "id": "4de9caa7-3ead-467c-0171-08d5b95cb847"
+                                    }
+                                ],
+                                "isDeleted": false,
+                                "deleterUserId": null,
+                                "deletionTime": null,
+                                "lastModificationTime": null,
+                                "lastModifierUserId": null,
+                                "creationTime": "2018-05-14T05:57:35.6135575",
+                                "creatorUserId": 12,
+                                "id": "fe3fd482-cb45-4d79-94a3-08d5b95ca570"
+                            },
+                            {
+                                "groupId": "b20daacf-a1b8-4f68-1546-08d5b95c49b9",
+                                "name": "Oficina 'Desenho com Caneta Esferográfica' - Carlos Cristiano",
+                                "timeStart": "01:00 pm",
+                                "timeEnd": "02:25 pm",
+                                "location": "ESPAÇO DESENHO",
+                                "tracks": [
+                                    {
+                                        "sessionId": "0461963f-f7c7-4434-94a4-08d5b95ca570",
+                                        "title": "Desenho",
+                                        "isDeleted": false,
+                                        "deleterUserId": null,
+                                        "deletionTime": null,
+                                        "lastModificationTime": null,
+                                        "lastModifierUserId": null,
+                                        "creationTime": "2018-05-14T06:02:00.7690236",
+                                        "creatorUserId": 12,
+                                        "id": "b4d28e2b-9efb-49a3-0172-08d5b95cb847"
+                                    }
+                                ],
+                                "isDeleted": false,
+                                "deleterUserId": null,
+                                "deletionTime": null,
+                                "lastModificationTime": null,
+                                "lastModifierUserId": null,
+                                "creationTime": "2018-05-14T06:01:06.3094469",
+                                "creatorUserId": 12,
+                                "id": "0461963f-f7c7-4434-94a4-08d5b95ca570"
+                            }
+                        ],
+                        "isDeleted": false,
+                        "deleterUserId": null,
+                        "deletionTime": null,
+                        "lastModificationTime": null,
+                        "lastModifierUserId": null,
+                        "creationTime": "2018-05-14T05:39:23.4699913",
+                        "creatorUserId": 12,
+                        "id": "b20daacf-a1b8-4f68-1546-08d5b95c49b9"
+                    },
+                    {
+                        "scheduleId": "dd1ce8b8-d92f-4028-00df-08d590f72661",
+                        "time": "01:15 pm",
+                        "sessions": [
+                            {
+                                "groupId": "d88feb32-4e61-455c-1547-08d5b95c49b9",
+                                "name": "Apresentação Medieval - Clã Alaisiagae",
+                                "timeStart": "01:15 pm",
+                                "timeEnd": "01:55 pm",
+                                "location": "PALCO",
+                                "tracks": [
+                                    {
+                                        "sessionId": "765920ea-3b3d-480b-94a5-08d5b95ca570",
+                                        "title": "Medieval",
+                                        "isDeleted": false,
+                                        "deleterUserId": null,
+                                        "deletionTime": null,
+                                        "lastModificationTime": null,
+                                        "lastModifierUserId": null,
+                                        "creationTime": "2018-05-14T06:07:28.8254488",
+                                        "creatorUserId": 12,
+                                        "id": "b937e18d-e3c4-495b-0173-08d5b95cb847"
+                                    }
+                                ],
+                                "isDeleted": false,
+                                "deleterUserId": null,
+                                "deletionTime": null,
+                                "lastModificationTime": null,
+                                "lastModifierUserId": null,
+                                "creationTime": "2018-05-14T06:06:17.8006142",
+                                "creatorUserId": 12,
+                                "id": "765920ea-3b3d-480b-94a5-08d5b95ca570"
+                            }
+                        ],
+                        "isDeleted": false,
+                        "deleterUserId": null,
+                        "deletionTime": null,
+                        "lastModificationTime": null,
+                        "lastModifierUserId": null,
+                        "creationTime": "2018-05-14T06:04:51.7803859",
+                        "creatorUserId": 12,
+                        "id": "d88feb32-4e61-455c-1547-08d5b95c49b9"
+                    },
+                    {
+                        "scheduleId": "dd1ce8b8-d92f-4028-00df-08d590f72661",
+                        "time": "02:00 pm",
+                        "sessions": [
+                            {
+                                "groupId": "1a8c4f9c-5849-46ae-1548-08d5b95c49b9",
+                                "name": "Apresentação - Star Call",
+                                "timeStart": "02:00 pm",
+                                "timeEnd": "02:10 pm",
+                                "location": "PALCO",
+                                "tracks": [
+                                    {
+                                        "sessionId": "031e97ae-b574-40b8-94a6-08d5b95ca570",
+                                        "title": "Star Call",
+                                        "isDeleted": false,
+                                        "deleterUserId": null,
+                                        "deletionTime": null,
+                                        "lastModificationTime": null,
+                                        "lastModifierUserId": null,
+                                        "creationTime": "2018-05-14T06:32:07.0155013",
+                                        "creatorUserId": 12,
+                                        "id": "a3ecaf4e-50d7-4e88-0174-08d5b95cb847"
+                                    }
+                                ],
+                                "isDeleted": false,
+                                "deleterUserId": null,
+                                "deletionTime": null,
+                                "lastModificationTime": null,
+                                "lastModifierUserId": null,
+                                "creationTime": "2018-05-14T06:30:28.7037879",
+                                "creatorUserId": 12,
+                                "id": "031e97ae-b574-40b8-94a6-08d5b95ca570"
+                            }
+                        ],
+                        "isDeleted": false,
+                        "deleterUserId": null,
+                        "deletionTime": null,
+                        "lastModificationTime": null,
+                        "lastModifierUserId": null,
+                        "creationTime": "2018-05-14T06:29:16.2627032",
+                        "creatorUserId": 12,
+                        "id": "1a8c4f9c-5849-46ae-1548-08d5b95c49b9"
+                    },
+                    {
+                        "scheduleId": "dd1ce8b8-d92f-4028-00df-08d590f72661",
+                        "time": "02:15 pm",
+                        "sessions": [
+                            {
+                                "groupId": "acd3359e-5bd7-4047-1549-08d5b95c49b9",
+                                "name": "Apresentação - The Geekzen",
+                                "timeStart": "02:15 pm",
+                                "timeEnd": "02:25 pm",
+                                "location": "PALCO",
+                                "tracks": [
+                                    {
+                                        "sessionId": "d1b03e83-95b4-4279-94a7-08d5b95ca570",
+                                        "title": "The Geekzens",
+                                        "isDeleted": false,
+                                        "deleterUserId": null,
+                                        "deletionTime": null,
+                                        "lastModificationTime": null,
+                                        "lastModifierUserId": null,
+                                        "creationTime": "2018-05-14T06:39:38.1200932",
+                                        "creatorUserId": 12,
+                                        "id": "aaa2dfcf-ad55-42bd-0175-08d5b95cb847"
+                                    }
+                                ],
+                                "isDeleted": false,
+                                "deleterUserId": null,
+                                "deletionTime": null,
+                                "lastModificationTime": null,
+                                "lastModifierUserId": null,
+                                "creationTime": "2018-05-14T06:38:23.2457039",
+                                "creatorUserId": 12,
+                                "id": "d1b03e83-95b4-4279-94a7-08d5b95ca570"
+                            }
+                        ],
+                        "isDeleted": false,
+                        "deleterUserId": null,
+                        "deletionTime": null,
+                        "lastModificationTime": null,
+                        "lastModifierUserId": null,
+                        "creationTime": "2018-05-14T06:36:51.9558933",
+                        "creatorUserId": 12,
+                        "id": "acd3359e-5bd7-4047-1549-08d5b95c49b9"
+                    },
+                    {
+                        "scheduleId": "dd1ce8b8-d92f-4028-00df-08d590f72661",
+                        "time": "02:30 pm",
+                        "sessions": [
+                            {
+                                "groupId": "ac6276e1-239e-4a01-154a-08d5b95c49b9",
+                                "name": "Concurso de Desenho",
+                                "timeStart": "02:30 pm",
+                                "timeEnd": "04:25 pm",
+                                "location": "ESPAÇO DESENHO",
+                                "tracks": [
+                                    {
+                                        "sessionId": "cacaaadd-6753-4e02-94a8-08d5b95ca570",
+                                        "title": "Desenho",
+                                        "isDeleted": false,
+                                        "deleterUserId": null,
+                                        "deletionTime": null,
+                                        "lastModificationTime": null,
+                                        "lastModifierUserId": null,
+                                        "creationTime": "2018-05-14T06:43:37.2210995",
+                                        "creatorUserId": 12,
+                                        "id": "2b5d7737-6b3f-49a4-0176-08d5b95cb847"
+                                    }
+                                ],
+                                "isDeleted": false,
+                                "deleterUserId": null,
+                                "deletionTime": null,
+                                "lastModificationTime": null,
+                                "lastModifierUserId": null,
+                                "creationTime": "2018-05-14T06:43:09.3961701",
+                                "creatorUserId": 12,
+                                "id": "cacaaadd-6753-4e02-94a8-08d5b95ca570"
+                            },
+                            {
+                                "groupId": "ac6276e1-239e-4a01-154a-08d5b95c49b9",
+                                "name": "Minuto com o Autor - Lançamento Livro Profs. Unesp",
+                                "timeStart": "02:30 pm",
+                                "timeEnd": "02:35 pm",
+                                "location": "PALCO",
+                                "tracks": [
+                                    {
+                                        "sessionId": "99651776-988c-4c08-94a9-08d5b95ca570",
+                                        "title": "Livro",
+                                        "isDeleted": false,
+                                        "deleterUserId": null,
+                                        "deletionTime": null,
+                                        "lastModificationTime": null,
+                                        "lastModifierUserId": null,
+                                        "creationTime": "2018-05-14T06:49:15.6363546",
+                                        "creatorUserId": 12,
+                                        "id": "09c5d9db-00cc-4f9b-0177-08d5b95cb847"
+                                    }
+                                ],
+                                "isDeleted": false,
+                                "deleterUserId": null,
+                                "deletionTime": null,
+                                "lastModificationTime": null,
+                                "lastModifierUserId": null,
+                                "creationTime": "2018-05-14T06:47:46.8772856",
+                                "creatorUserId": 12,
+                                "id": "99651776-988c-4c08-94a9-08d5b95ca570"
+                            }
+                        ],
+                        "isDeleted": false,
+                        "deleterUserId": null,
+                        "deletionTime": null,
+                        "lastModificationTime": null,
+                        "lastModifierUserId": null,
+                        "creationTime": "2018-05-14T06:40:43.9613323",
+                        "creatorUserId": 12,
+                        "id": "ac6276e1-239e-4a01-154a-08d5b95c49b9"
+                    },
+                    {
+                        "scheduleId": "dd1ce8b8-d92f-4028-00df-08d590f72661",
+                        "time": "02:40 pm",
+                        "sessions": [
+                            {
+                                "groupId": "a28c2846-b14d-42e4-154b-08d5b95c49b9",
+                                "name": "Minuto com o Autor - José Luiz da Silva Ribeiro - Livro 'Seven Maps - A Cúpula da Caveira'",
+                                "timeStart": "02:40 pm",
+                                "timeEnd": "02:45 pm",
+                                "location": "PALCO",
+                                "tracks": [
+                                    {
+                                        "sessionId": "b46a72c7-20f6-45c0-94aa-08d5b95ca570",
+                                        "title": "Livro",
+                                        "isDeleted": false,
+                                        "deleterUserId": null,
+                                        "deletionTime": null,
+                                        "lastModificationTime": null,
+                                        "lastModifierUserId": null,
+                                        "creationTime": "2018-05-14T06:52:09.7882207",
+                                        "creatorUserId": 12,
+                                        "id": "9d06323f-cef6-4080-0178-08d5b95cb847"
+                                    }
+                                ],
+                                "isDeleted": false,
+                                "deleterUserId": null,
+                                "deletionTime": null,
+                                "lastModificationTime": null,
+                                "lastModifierUserId": null,
+                                "creationTime": "2018-05-14T06:51:44.2403274",
+                                "creatorUserId": 12,
+                                "id": "b46a72c7-20f6-45c0-94aa-08d5b95ca570"
+                            }
+                        ],
+                        "isDeleted": false,
+                        "deleterUserId": null,
+                        "deletionTime": null,
+                        "lastModificationTime": null,
+                        "lastModifierUserId": null,
+                        "creationTime": "2018-05-14T06:50:14.3664645",
+                        "creatorUserId": 12,
+                        "id": "a28c2846-b14d-42e4-154b-08d5b95c49b9"
+                    },
+                    {
+                        "scheduleId": "dd1ce8b8-d92f-4028-00df-08d590f72661",
+                        "time": "02:50 pm",
+                        "sessions": [
+                            {
+                                "groupId": "ca1411f8-0095-44a6-154c-08d5b95c49b9",
+                                "name": "Ilusionismo & Hipnose Criativa - Ben Hur",
+                                "timeStart": "02:50 pm",
+                                "timeEnd": "03:25 pm",
+                                "location": "PALCO",
+                                "tracks": [
+                                    {
+                                        "sessionId": "4d887a95-2650-4c83-94ab-08d5b95ca570",
+                                        "title": "Ben Hur",
+                                        "isDeleted": false,
+                                        "deleterUserId": null,
+                                        "deletionTime": null,
+                                        "lastModificationTime": null,
+                                        "lastModifierUserId": null,
+                                        "creationTime": "2018-05-14T06:55:30.0515166",
+                                        "creatorUserId": 12,
+                                        "id": "6d7eb72b-6eb4-4a59-0179-08d5b95cb847"
+                                    }
+                                ],
+                                "isDeleted": false,
+                                "deleterUserId": null,
+                                "deletionTime": null,
+                                "lastModificationTime": null,
+                                "lastModifierUserId": null,
+                                "creationTime": "2018-05-14T06:54:39.8039817",
+                                "creatorUserId": 12,
+                                "id": "4d887a95-2650-4c83-94ab-08d5b95ca570"
+                            }
+                        ],
+                        "isDeleted": false,
+                        "deleterUserId": null,
+                        "deletionTime": null,
+                        "lastModificationTime": null,
+                        "lastModifierUserId": null,
+                        "creationTime": "2018-05-14T06:53:09.6560072",
+                        "creatorUserId": 12,
+                        "id": "ca1411f8-0095-44a6-154c-08d5b95c49b9"
+                    },
+                    {
+                        "scheduleId": "dd1ce8b8-d92f-4028-00df-08d590f72661",
+                        "time": "03:30 pm",
+                        "sessions": [
+                            {
+                                "groupId": "bf210373-8c02-455f-154d-08d5b95c49b9",
+                                "name": "Apresentação - Dream Night",
+                                "timeStart": "03:30 pm",
+                                "timeEnd": "03:45 pm",
+                                "location": "PALCO",
+                                "tracks": [
+                                    {
+                                        "sessionId": "738eaca3-1b88-4ae3-94ac-08d5b95ca570",
+                                        "title": "Dream Night",
+                                        "isDeleted": false,
+                                        "deleterUserId": null,
+                                        "deletionTime": null,
+                                        "lastModificationTime": null,
+                                        "lastModifierUserId": null,
+                                        "creationTime": "2018-05-14T07:03:58.3645613",
+                                        "creatorUserId": 12,
+                                        "id": "959f15a6-da54-4d04-017a-08d5b95cb847"
+                                    }
+                                ],
+                                "isDeleted": false,
+                                "deleterUserId": null,
+                                "deletionTime": null,
+                                "lastModificationTime": null,
+                                "lastModifierUserId": null,
+                                "creationTime": "2018-05-14T07:03:29.72385",
+                                "creatorUserId": 12,
+                                "id": "738eaca3-1b88-4ae3-94ac-08d5b95ca570"
+                            }
+                        ],
+                        "isDeleted": false,
+                        "deleterUserId": null,
+                        "deletionTime": null,
+                        "lastModificationTime": null,
+                        "lastModifierUserId": null,
+                        "creationTime": "2018-05-14T07:02:16.4272069",
+                        "creatorUserId": 12,
+                        "id": "bf210373-8c02-455f-154d-08d5b95c49b9"
+                    },
+                    {
+                        "scheduleId": "dd1ce8b8-d92f-4028-00df-08d590f72661",
+                        "time": "03:50 pm",
+                        "sessions": [
+                            {
+                                "groupId": "4625b3d9-aaa6-4919-154e-08d5b95c49b9",
+                                "name": "Premiação Concurso Superdentinho",
+                                "timeStart": "03:50 pm",
+                                "timeEnd": "03:55 pm",
+                                "location": "PALCO",
+                                "tracks": [
+                                    {
+                                        "sessionId": "76ec54e3-cd13-42c6-94ad-08d5b95ca570",
+                                        "title": "Superdentinho",
+                                        "isDeleted": false,
+                                        "deleterUserId": null,
+                                        "deletionTime": null,
+                                        "lastModificationTime": null,
+                                        "lastModifierUserId": null,
+                                        "creationTime": "2018-05-14T07:08:12.7142954",
+                                        "creatorUserId": 12,
+                                        "id": "e1164bef-843a-4034-017b-08d5b95cb847"
+                                    }
+                                ],
+                                "isDeleted": false,
+                                "deleterUserId": null,
+                                "deletionTime": null,
+                                "lastModificationTime": null,
+                                "lastModifierUserId": null,
+                                "creationTime": "2018-05-14T07:07:46.9140888",
+                                "creatorUserId": 12,
+                                "id": "76ec54e3-cd13-42c6-94ad-08d5b95ca570"
+                            }
+                        ],
+                        "isDeleted": false,
+                        "deleterUserId": null,
+                        "deletionTime": null,
+                        "lastModificationTime": null,
+                        "lastModifierUserId": null,
+                        "creationTime": "2018-05-14T07:05:56.0373609",
+                        "creatorUserId": 12,
+                        "id": "4625b3d9-aaa6-4919-154e-08d5b95c49b9"
+                    },
+                    {
+                        "scheduleId": "dd1ce8b8-d92f-4028-00df-08d590f72661",
+                        "time": "04:00 pm",
+                        "sessions": [
+                            {
+                                "groupId": "78a6b5f1-c561-4f0e-154f-08d5b95c49b9",
+                                "name": "Campeonato Card Game Pokemon",
+                                "timeStart": "04:00 pm",
+                                "timeEnd": "08:30 pm",
+                                "location": "ESPAÇO CARD GAME",
+                                "tracks": [
+                                    {
+                                        "sessionId": "80826634-2d9f-4fde-94ae-08d5b95ca570",
+                                        "title": "Card Game",
+                                        "isDeleted": false,
+                                        "deleterUserId": null,
+                                        "deletionTime": null,
+                                        "lastModificationTime": null,
+                                        "lastModifierUserId": null,
+                                        "creationTime": "2018-05-14T07:12:04.3646259",
+                                        "creatorUserId": 12,
+                                        "id": "909d52bd-645c-4c30-017c-08d5b95cb847"
+                                    }
+                                ],
+                                "isDeleted": false,
+                                "deleterUserId": null,
+                                "deletionTime": null,
+                                "lastModificationTime": null,
+                                "lastModifierUserId": null,
+                                "creationTime": "2018-05-14T07:11:26.0994675",
+                                "creatorUserId": 12,
+                                "id": "80826634-2d9f-4fde-94ae-08d5b95ca570"
+                            },
+                            {
+                                "groupId": "78a6b5f1-c561-4f0e-154f-08d5b95c49b9",
+                                "name": "Show - Killer Season",
+                                "timeStart": "04:00 pm",
+                                "timeEnd": "04:55 pm",
+                                "location": "PALCO",
+                                "tracks": [
+                                    {
+                                        "sessionId": "63f237e2-0d26-4e56-94af-08d5b95ca570",
+                                        "title": "Show",
+                                        "isDeleted": false,
+                                        "deleterUserId": null,
+                                        "deletionTime": null,
+                                        "lastModificationTime": null,
+                                        "lastModifierUserId": null,
+                                        "creationTime": "2018-05-14T07:14:43.7102169",
+                                        "creatorUserId": 12,
+                                        "id": "6c28d2e5-029b-4243-017d-08d5b95cb847"
+                                    }
+                                ],
+                                "isDeleted": false,
+                                "deleterUserId": null,
+                                "deletionTime": null,
+                                "lastModificationTime": null,
+                                "lastModifierUserId": null,
+                                "creationTime": "2018-05-14T07:14:08.0403996",
+                                "creatorUserId": 12,
+                                "id": "63f237e2-0d26-4e56-94af-08d5b95ca570"
+                            }
+                        ],
+                        "isDeleted": false,
+                        "deleterUserId": null,
+                        "deletionTime": null,
+                        "lastModificationTime": null,
+                        "lastModifierUserId": null,
+                        "creationTime": "2018-05-14T07:09:33.8441202",
+                        "creatorUserId": 12,
+                        "id": "78a6b5f1-c561-4f0e-154f-08d5b95c49b9"
+                    },
+                    {
+                        "scheduleId": "dd1ce8b8-d92f-4028-00df-08d590f72661",
+                        "time": "04:30 pm",
+                        "sessions": [
+                            {
+                                "groupId": "11e3c198-33f1-4671-1550-08d5b95c49b9",
+                                "name": "Oficina 'Desenhando Caricaturas' -  Jhonatan Freire",
+                                "timeStart": "04:30 pm",
+                                "timeEnd": "08:55 pm",
+                                "location": "ESPAÇO DESENHO",
+                                "tracks": [
+                                    {
+                                        "sessionId": "9ba49016-ee5a-4f3d-94b0-08d5b95ca570",
+                                        "title": "Desenho",
+                                        "isDeleted": false,
+                                        "deleterUserId": null,
+                                        "deletionTime": null,
+                                        "lastModificationTime": null,
+                                        "lastModifierUserId": null,
+                                        "creationTime": "2018-05-14T07:18:48.2779847",
+                                        "creatorUserId": 12,
+                                        "id": "9aecf588-8cdf-489e-017e-08d5b95cb847"
+                                    }
+                                ],
+                                "isDeleted": false,
+                                "deleterUserId": null,
+                                "deletionTime": null,
+                                "lastModificationTime": null,
+                                "lastModifierUserId": null,
+                                "creationTime": "2018-05-14T07:18:24.9068878",
+                                "creatorUserId": 12,
+                                "id": "9ba49016-ee5a-4f3d-94b0-08d5b95ca570"
+                            }
+                        ],
+                        "isDeleted": false,
+                        "deleterUserId": null,
+                        "deletionTime": null,
+                        "lastModificationTime": null,
+                        "lastModifierUserId": null,
+                        "creationTime": "2018-05-14T07:16:15.6899575",
+                        "creatorUserId": 12,
+                        "id": "11e3c198-33f1-4671-1550-08d5b95c49b9"
+                    },
+                    {
+                        "scheduleId": "dd1ce8b8-d92f-4028-00df-08d590f72661",
+                        "time": "05:00 pm",
+                        "sessions": [
+                            {
+                                "groupId": "d5cf7a18-7497-43db-1551-08d5b95c49b9",
+                                "name": "Premiações dos Campeonatos",
+                                "timeStart": "05:00 pm",
+                                "timeEnd": "05:25 pm",
+                                "location": "PALCO",
+                                "tracks": [
+                                    {
+                                        "sessionId": "5141da8a-73d5-40d0-94b1-08d5b95ca570",
+                                        "title": "Campeonato",
+                                        "isDeleted": false,
+                                        "deleterUserId": null,
+                                        "deletionTime": null,
+                                        "lastModificationTime": null,
+                                        "lastModifierUserId": null,
+                                        "creationTime": "2018-05-14T07:22:11.8513534",
+                                        "creatorUserId": 12,
+                                        "id": "1b562183-e9b3-44e8-017f-08d5b95cb847"
+                                    }
+                                ],
+                                "isDeleted": false,
+                                "deleterUserId": null,
+                                "deletionTime": null,
+                                "lastModificationTime": null,
+                                "lastModifierUserId": null,
+                                "creationTime": "2018-05-14T07:21:27.6515847",
+                                "creatorUserId": 12,
+                                "id": "5141da8a-73d5-40d0-94b1-08d5b95ca570"
+                            }
+                        ],
+                        "isDeleted": false,
+                        "deleterUserId": null,
+                        "deletionTime": null,
+                        "lastModificationTime": null,
+                        "lastModifierUserId": null,
+                        "creationTime": "2018-05-14T07:20:14.2753244",
+                        "creatorUserId": 12,
+                        "id": "d5cf7a18-7497-43db-1551-08d5b95c49b9"
+                    },
+                    {
+                        "scheduleId": "dd1ce8b8-d92f-4028-00df-08d590f72661",
+                        "time": "05:30 pm",
+                        "sessions": [
+                            {
+                                "groupId": "f491d0f6-6794-4491-1552-08d5b95c49b9",
+                                "name": "Apresentação - The Geekzens",
+                                "timeStart": "05:30 pm",
+                                "timeEnd": "06:55 pm",
+                                "location": "PALCO",
+                                "tracks": [
+                                    {
+                                        "sessionId": "21be6385-dc5c-4e49-94b2-08d5b95ca570",
+                                        "title": "The Geekzens",
+                                        "isDeleted": false,
+                                        "deleterUserId": null,
+                                        "deletionTime": null,
+                                        "lastModificationTime": null,
+                                        "lastModifierUserId": null,
+                                        "creationTime": "2018-05-14T07:25:45.6669131",
+                                        "creatorUserId": 12,
+                                        "id": "cf2b9eeb-a9fd-4c8e-0180-08d5b95cb847"
+                                    }
+                                ],
+                                "isDeleted": false,
+                                "deleterUserId": null,
+                                "deletionTime": null,
+                                "lastModificationTime": null,
+                                "lastModifierUserId": null,
+                                "creationTime": "2018-05-14T07:25:15.0095077",
+                                "creatorUserId": 12,
+                                "id": "21be6385-dc5c-4e49-94b2-08d5b95ca570"
+                            }
+                        ],
+                        "isDeleted": false,
+                        "deleterUserId": null,
+                        "deletionTime": null,
+                        "lastModificationTime": null,
+                        "lastModifierUserId": null,
+                        "creationTime": "2018-05-14T07:24:03.7216577",
+                        "creatorUserId": 12,
+                        "id": "f491d0f6-6794-4491-1552-08d5b95c49b9"
+                    },
+                    {
+                        "scheduleId": "dd1ce8b8-d92f-4028-00df-08d590f72661",
+                        "time": "06:00 pm",
+                        "sessions": [
+                            {
+                                "groupId": "5938adc6-6bec-4ecd-1553-08d5b95c49b9",
+                                "name": "Concurso - Cospobre",
+                                "timeStart": "06:00 pm",
+                                "timeEnd": "06:25 pm",
+                                "location": "PALCO",
+                                "tracks": [
+                                    {
+                                        "sessionId": "6acb3a1e-7e72-4634-94b3-08d5b95ca570",
+                                        "title": "Concurso",
+                                        "isDeleted": false,
+                                        "deleterUserId": null,
+                                        "deletionTime": null,
+                                        "lastModificationTime": null,
+                                        "lastModifierUserId": null,
+                                        "creationTime": "2018-05-14T07:29:22.2548976",
+                                        "creatorUserId": 12,
+                                        "id": "5fe1f670-7f2a-40bf-0181-08d5b95cb847"
+                                    }
+                                ],
+                                "isDeleted": false,
+                                "deleterUserId": null,
+                                "deletionTime": null,
+                                "lastModificationTime": null,
+                                "lastModifierUserId": null,
+                                "creationTime": "2018-05-14T07:28:42.0052902",
+                                "creatorUserId": 12,
+                                "id": "6acb3a1e-7e72-4634-94b3-08d5b95ca570"
+                            }
+                        ],
+                        "isDeleted": false,
+                        "deleterUserId": null,
+                        "deletionTime": null,
+                        "lastModificationTime": null,
+                        "lastModifierUserId": null,
+                        "creationTime": "2018-05-14T07:27:49.6695253",
+                        "creatorUserId": 12,
+                        "id": "5938adc6-6bec-4ecd-1553-08d5b95c49b9"
+                    },
+                    {
+                        "scheduleId": "dd1ce8b8-d92f-4028-00df-08d590f72661",
+                        "time": "06:30 pm",
+                        "sessions": [
+                            {
+                                "groupId": "8b4a253d-5ed2-4cca-1554-08d5b95c49b9",
+                                "name": "Concurso - Cosplay Masculino e Feminino",
+                                "timeStart": "06:30 pm",
+                                "timeEnd": "07:40 pm",
+                                "location": "PALCO",
+                                "tracks": [
+                                    {
+                                        "sessionId": "19d9f483-263a-4369-94b4-08d5b95ca570",
+                                        "title": "Concurso",
+                                        "isDeleted": false,
+                                        "deleterUserId": null,
+                                        "deletionTime": null,
+                                        "lastModificationTime": null,
+                                        "lastModifierUserId": null,
+                                        "creationTime": "2018-05-14T07:32:10.4201291",
+                                        "creatorUserId": 12,
+                                        "id": "9f4ae843-71bf-433c-0182-08d5b95cb847"
+                                    }
+                                ],
+                                "isDeleted": false,
+                                "deleterUserId": null,
+                                "deletionTime": null,
+                                "lastModificationTime": null,
+                                "lastModifierUserId": null,
+                                "creationTime": "2018-05-14T07:31:47.5152516",
+                                "creatorUserId": 12,
+                                "id": "19d9f483-263a-4369-94b4-08d5b95ca570"
+                            }
+                        ],
+                        "isDeleted": false,
+                        "deleterUserId": null,
+                        "deletionTime": null,
+                        "lastModificationTime": null,
+                        "lastModifierUserId": null,
+                        "creationTime": "2018-05-14T07:30:03.7844324",
+                        "creatorUserId": 12,
+                        "id": "8b4a253d-5ed2-4cca-1554-08d5b95c49b9"
+                    },
+                    {
+                        "scheduleId": "dd1ce8b8-d92f-4028-00df-08d590f72661",
+                        "time": "07:45 pm",
+                        "sessions": [
+                            {
+                                "groupId": "26dd283e-61cf-4710-1555-08d5b95c49b9",
+                                "name": "Show - Taiko - Grupo Sansey",
+                                "timeStart": "07:45 pm",
+                                "timeEnd": "08:40 pm",
+                                "location": "PALCO",
+                                "tracks": [
+                                    {
+                                        "sessionId": "ee9ed612-6ad5-4ea4-94b5-08d5b95ca570",
+                                        "title": "Show",
+                                        "isDeleted": false,
+                                        "deleterUserId": null,
+                                        "deletionTime": null,
+                                        "lastModificationTime": null,
+                                        "lastModifierUserId": null,
+                                        "creationTime": "2018-05-14T07:34:58.447265",
+                                        "creatorUserId": 12,
+                                        "id": "90beb990-c2a8-48c9-0183-08d5b95cb847"
+                                    },
+                                    {
+                                        "sessionId": "ee9ed612-6ad5-4ea4-94b5-08d5b95ca570",
+                                        "title": "Taiko",
+                                        "isDeleted": false,
+                                        "deleterUserId": null,
+                                        "deletionTime": null,
+                                        "lastModificationTime": null,
+                                        "lastModifierUserId": null,
+                                        "creationTime": "2018-05-14T07:35:08.1505253",
+                                        "creatorUserId": 12,
+                                        "id": "8e3ac1cc-0420-4467-0184-08d5b95cb847"
+                                    }
+                                ],
+                                "isDeleted": false,
+                                "deleterUserId": null,
+                                "deletionTime": null,
+                                "lastModificationTime": null,
+                                "lastModifierUserId": null,
+                                "creationTime": "2018-05-14T07:34:16.7721289",
+                                "creatorUserId": 12,
+                                "id": "ee9ed612-6ad5-4ea4-94b5-08d5b95ca570"
+                            }
+                        ],
+                        "isDeleted": false,
+                        "deleterUserId": null,
+                        "deletionTime": null,
+                        "lastModificationTime": null,
+                        "lastModifierUserId": null,
+                        "creationTime": "2018-05-14T07:33:01.1651028",
+                        "creatorUserId": 12,
+                        "id": "26dd283e-61cf-4710-1555-08d5b95c49b9"
+                    },
+                    {
+                        "scheduleId": "dd1ce8b8-d92f-4028-00df-08d590f72661",
+                        "time": "08:45 pm",
+                        "sessions": [
+                            {
+                                "groupId": "c8cf00ed-4c78-4d55-1556-08d5b95c49b9",
+                                "name": "Premiações dos Campeonatos",
+                                "timeStart": "08:45 pm",
+                                "timeEnd": "08:55 pm",
+                                "location": "PALCO",
+                                "tracks": [
+                                    {
+                                        "sessionId": "519de993-e57a-4d20-94b6-08d5b95ca570",
+                                        "title": "Campeonato",
+                                        "isDeleted": false,
+                                        "deleterUserId": null,
+                                        "deletionTime": null,
+                                        "lastModificationTime": null,
+                                        "lastModifierUserId": null,
+                                        "creationTime": "2018-05-14T07:38:30.5465656",
+                                        "creatorUserId": 12,
+                                        "id": "a4a52c70-99ee-4b54-0185-08d5b95cb847"
+                                    }
+                                ],
+                                "isDeleted": false,
+                                "deleterUserId": null,
+                                "deletionTime": null,
+                                "lastModificationTime": null,
+                                "lastModifierUserId": null,
+                                "creationTime": "2018-05-14T07:37:54.2077564",
+                                "creatorUserId": 12,
+                                "id": "519de993-e57a-4d20-94b6-08d5b95ca570"
+                            }
+                        ],
+                        "isDeleted": false,
+                        "deleterUserId": null,
+                        "deletionTime": null,
+                        "lastModificationTime": null,
+                        "lastModifierUserId": null,
+                        "creationTime": "2018-05-14T07:35:58.0135055",
+                        "creatorUserId": 12,
+                        "id": "c8cf00ed-4c78-4d55-1556-08d5b95c49b9"
+                    },
+                    {
+                        "scheduleId": "dd1ce8b8-d92f-4028-00df-08d590f72661",
+                        "time": "09:00 pm",
+                        "sessions": [
+                            {
+                                "groupId": "2aec0378-c1dc-4125-1557-08d5b95c49b9",
+                                "name": "Agradecimentos, Avisos e Encerramento do Primeiro Dia",
+                                "timeStart": "09:00 pm",
+                                "timeEnd": "09:05 pm",
+                                "location": "PALCO",
+                                "tracks": [
+                                    {
+                                        "sessionId": "9bdd8417-f506-4a15-94b7-08d5b95ca570",
+                                        "title": "Agradecimento",
+                                        "isDeleted": false,
+                                        "deleterUserId": null,
+                                        "deletionTime": null,
+                                        "lastModificationTime": null,
+                                        "lastModifierUserId": null,
+                                        "creationTime": "2018-05-14T07:41:35.4396208",
+                                        "creatorUserId": 12,
+                                        "id": "5ab29058-239d-445f-0186-08d5b95cb847"
+                                    },
+                                    {
+                                        "sessionId": "9bdd8417-f506-4a15-94b7-08d5b95ca570",
+                                        "title": "Aviso",
+                                        "isDeleted": false,
+                                        "deleterUserId": null,
+                                        "deletionTime": null,
+                                        "lastModificationTime": null,
+                                        "lastModifierUserId": null,
+                                        "creationTime": "2018-05-14T07:41:41.1951537",
+                                        "creatorUserId": 12,
+                                        "id": "2d41b5c2-d98d-446f-0187-08d5b95cb847"
+                                    }
+                                ],
+                                "isDeleted": false,
+                                "deleterUserId": null,
+                                "deletionTime": null,
+                                "lastModificationTime": null,
+                                "lastModifierUserId": null,
+                                "creationTime": "2018-05-14T07:40:56.4535342",
+                                "creatorUserId": 12,
+                                "id": "9bdd8417-f506-4a15-94b7-08d5b95ca570"
+                            }
+                        ],
+                        "isDeleted": false,
+                        "deleterUserId": null,
+                        "deletionTime": null,
+                        "lastModificationTime": null,
+                        "lastModifierUserId": null,
+                        "creationTime": "2018-05-14T07:39:31.8172123",
+                        "creatorUserId": 12,
+                        "id": "2aec0378-c1dc-4125-1557-08d5b95c49b9"
                     }
                 ],
                 "isDeleted": false,
@@ -56,6 +1262,1149 @@
                 "creationTime": "2018-03-23T19:51:49.0951467",
                 "creatorUserId": 3,
                 "id": "dd1ce8b8-d92f-4028-00df-08d590f72661"
+            },
+            {
+                "date": "2018-05-27T00:00:00",
+                "groups": [
+                    {
+                        "scheduleId": "3a679581-f068-4257-a513-08d5b9745dba",
+                        "time": "11:00 am",
+                        "sessions": [
+                            {
+                                "groupId": "2f8b9f3d-82d2-4f96-bb73-08d5b9749bb1",
+                                "name": "Abertura IBC e boas vindas",
+                                "timeStart": "11:00 am",
+                                "timeEnd": "11:05 am",
+                                "location": "PALCO",
+                                "tracks": [
+                                    {
+                                        "sessionId": "7e266dda-ba39-4141-5d58-08d5b974cd47",
+                                        "title": "Abertura",
+                                        "isDeleted": false,
+                                        "deleterUserId": null,
+                                        "deletionTime": null,
+                                        "lastModificationTime": null,
+                                        "lastModifierUserId": null,
+                                        "creationTime": "2018-05-14T08:30:32.0062679",
+                                        "creatorUserId": 12,
+                                        "id": "337f9ecb-ccc6-4503-b067-08d5b974f4f9"
+                                    }
+                                ],
+                                "isDeleted": false,
+                                "deleterUserId": null,
+                                "deletionTime": null,
+                                "lastModificationTime": null,
+                                "lastModifierUserId": null,
+                                "creationTime": "2018-05-14T08:29:25.4066217",
+                                "creatorUserId": 12,
+                                "id": "7e266dda-ba39-4141-5d58-08d5b974cd47"
+                            }
+                        ],
+                        "isDeleted": false,
+                        "deleterUserId": null,
+                        "deletionTime": null,
+                        "lastModificationTime": null,
+                        "lastModifierUserId": null,
+                        "creationTime": "2018-05-14T08:28:02.2177708",
+                        "creatorUserId": 12,
+                        "id": "2f8b9f3d-82d2-4f96-bb73-08d5b9749bb1"
+                    },
+                    {
+                        "scheduleId": "3a679581-f068-4257-a513-08d5b9745dba",
+                        "time": "11:10 am",
+                        "sessions": [
+                            {
+                                "groupId": "25ce73d4-041c-40d7-e75b-08d5b9d6dc28",
+                                "name": "Show - Banda Sem Fama",
+                                "timeStart": "11:10 am",
+                                "timeEnd": "11:45 am",
+                                "location": "PALCO",
+                                "tracks": [
+                                    {
+                                        "sessionId": "1927c6a8-edd0-4461-69a5-08d5b9d72b2e",
+                                        "title": "Show",
+                                        "isDeleted": false,
+                                        "deleterUserId": null,
+                                        "deletionTime": null,
+                                        "lastModificationTime": null,
+                                        "lastModifierUserId": null,
+                                        "creationTime": "2018-05-14T20:14:14.2109653",
+                                        "creatorUserId": 12,
+                                        "id": "08fd83cd-ec70-47d4-d1da-08d5b9d7435e"
+                                    }
+                                ],
+                                "isDeleted": false,
+                                "deleterUserId": null,
+                                "deletionTime": null,
+                                "lastModificationTime": null,
+                                "lastModifierUserId": null,
+                                "creationTime": "2018-05-14T20:13:33.62713",
+                                "creatorUserId": 12,
+                                "id": "1927c6a8-edd0-4461-69a5-08d5b9d72b2e"
+                            }
+                        ],
+                        "isDeleted": false,
+                        "deleterUserId": null,
+                        "deletionTime": null,
+                        "lastModificationTime": null,
+                        "lastModifierUserId": null,
+                        "creationTime": "2018-05-14T20:11:21.0471152",
+                        "creatorUserId": 12,
+                        "id": "25ce73d4-041c-40d7-e75b-08d5b9d6dc28"
+                    },
+                    {
+                        "scheduleId": "3a679581-f068-4257-a513-08d5b9745dba",
+                        "time": "11:30 am",
+                        "sessions": [
+                            {
+                                "groupId": "0b2a151a-0d1a-4fe9-e75c-08d5b9d6dc28",
+                                "name": "CS:GO por Equipe",
+                                "timeStart": "11:30 am",
+                                "timeEnd": "07:40 pm",
+                                "location": "ESPAÇO INFORMÁTICA - ETEC ARRUDA MELLO",
+                                "tracks": [
+                                    {
+                                        "sessionId": "bc7824f1-3ea5-431c-69a6-08d5b9d72b2e",
+                                        "title": "Campeonato",
+                                        "isDeleted": false,
+                                        "deleterUserId": null,
+                                        "deletionTime": null,
+                                        "lastModificationTime": null,
+                                        "lastModifierUserId": null,
+                                        "creationTime": "2018-05-14T20:29:04.2566126",
+                                        "creatorUserId": 12,
+                                        "id": "e2915547-a50a-4cbd-d1db-08d5b9d7435e"
+                                    }
+                                ],
+                                "isDeleted": false,
+                                "deleterUserId": null,
+                                "deletionTime": null,
+                                "lastModificationTime": null,
+                                "lastModifierUserId": null,
+                                "creationTime": "2018-05-14T20:27:06.5026902",
+                                "creatorUserId": 12,
+                                "id": "bc7824f1-3ea5-431c-69a6-08d5b9d72b2e"
+                            }
+                        ],
+                        "isDeleted": false,
+                        "deleterUserId": null,
+                        "deletionTime": null,
+                        "lastModificationTime": null,
+                        "lastModifierUserId": null,
+                        "creationTime": "2018-05-14T20:15:11.763953",
+                        "creatorUserId": 12,
+                        "id": "0b2a151a-0d1a-4fe9-e75c-08d5b9d6dc28"
+                    },
+                    {
+                        "scheduleId": "3a679581-f068-4257-a513-08d5b9745dba",
+                        "time": "12:00 am",
+                        "sessions": [
+                            {
+                                "groupId": "40e83952-6b19-4bd8-e75d-08d5b9d6dc28",
+                                "name": "Campeonato de LOL - Final",
+                                "timeStart": "12:00 am",
+                                "timeEnd": "07:40 pm",
+                                "location": "ESPAÇO INFORMÁTICA - ETEC ARRUDA MELLO",
+                                "tracks": [
+                                    {
+                                        "sessionId": "dca86882-b8cb-4ddb-69a7-08d5b9d72b2e",
+                                        "title": "Campeonato",
+                                        "isDeleted": false,
+                                        "deleterUserId": null,
+                                        "deletionTime": null,
+                                        "lastModificationTime": null,
+                                        "lastModifierUserId": null,
+                                        "creationTime": "2018-05-14T20:31:14.8084227",
+                                        "creatorUserId": 12,
+                                        "id": "0d0c3768-1fb4-4e45-d1dc-08d5b9d7435e"
+                                    }
+                                ],
+                                "isDeleted": false,
+                                "deleterUserId": null,
+                                "deletionTime": null,
+                                "lastModificationTime": null,
+                                "lastModifierUserId": null,
+                                "creationTime": "2018-05-14T20:30:55.5503635",
+                                "creatorUserId": 12,
+                                "id": "dca86882-b8cb-4ddb-69a7-08d5b9d72b2e"
+                            },
+                            {
+                                "groupId": "40e83952-6b19-4bd8-e75d-08d5b9d6dc28",
+                                "name": "Campeonato de Minecraft",
+                                "timeStart": "12:00 am",
+                                "timeEnd": "07:40 pm",
+                                "location": "ESPAÇO FATEC JOGOS",
+                                "tracks": [
+                                    {
+                                        "sessionId": "4846fcaa-8aaa-4011-69a8-08d5b9d72b2e",
+                                        "title": "Campeonato",
+                                        "isDeleted": false,
+                                        "deleterUserId": null,
+                                        "deletionTime": null,
+                                        "lastModificationTime": null,
+                                        "lastModifierUserId": null,
+                                        "creationTime": "2018-05-14T20:33:04.8317732",
+                                        "creatorUserId": 12,
+                                        "id": "94e8ba9d-ca76-4f90-d1dd-08d5b9d7435e"
+                                    }
+                                ],
+                                "isDeleted": false,
+                                "deleterUserId": null,
+                                "deletionTime": null,
+                                "lastModificationTime": null,
+                                "lastModifierUserId": null,
+                                "creationTime": "2018-05-14T20:32:28.4168523",
+                                "creatorUserId": 12,
+                                "id": "4846fcaa-8aaa-4011-69a8-08d5b9d72b2e"
+                            },
+                            {
+                                "groupId": "40e83952-6b19-4bd8-e75d-08d5b9d6dc28",
+                                "name": "Oficina 'Desenho com Tinta Acrílica' - Paulo Alberto",
+                                "timeStart": "12:00 am",
+                                "timeEnd": "01:55 pm",
+                                "location": "ESPAÇO DESENHO",
+                                "tracks": [
+                                    {
+                                        "sessionId": "66df1444-9dec-4312-69aa-08d5b9d72b2e",
+                                        "title": "Desenho",
+                                        "isDeleted": false,
+                                        "deleterUserId": null,
+                                        "deletionTime": null,
+                                        "lastModificationTime": null,
+                                        "lastModifierUserId": null,
+                                        "creationTime": "2018-05-14T20:45:27.5107062",
+                                        "creatorUserId": 12,
+                                        "id": "3b65a794-d01d-422d-d1e0-08d5b9d7435e"
+                                    }
+                                ],
+                                "isDeleted": false,
+                                "deleterUserId": null,
+                                "deletionTime": null,
+                                "lastModificationTime": null,
+                                "lastModifierUserId": null,
+                                "creationTime": "2018-05-14T20:44:41.9735606",
+                                "creatorUserId": 12,
+                                "id": "66df1444-9dec-4312-69aa-08d5b9d72b2e"
+                            }
+                        ],
+                        "isDeleted": false,
+                        "deleterUserId": null,
+                        "deletionTime": null,
+                        "lastModificationTime": null,
+                        "lastModifierUserId": null,
+                        "creationTime": "2018-05-14T20:29:44.4887771",
+                        "creatorUserId": 12,
+                        "id": "40e83952-6b19-4bd8-e75d-08d5b9d6dc28"
+                    },
+                    {
+                        "scheduleId": "3a679581-f068-4257-a513-08d5b9745dba",
+                        "time": "11:50 am",
+                        "sessions": [
+                            {
+                                "groupId": "60cd9d45-65a0-44e3-e75e-08d5b9d6dc28",
+                                "name": "Show - Taiko - Grupo Sansey",
+                                "timeStart": "11:50 am",
+                                "timeEnd": "01:05 pm",
+                                "location": "PALCO",
+                                "tracks": [
+                                    {
+                                        "sessionId": "df82f581-b20b-48c0-69a9-08d5b9d72b2e",
+                                        "title": "Show",
+                                        "isDeleted": false,
+                                        "deleterUserId": null,
+                                        "deletionTime": null,
+                                        "lastModificationTime": null,
+                                        "lastModifierUserId": null,
+                                        "creationTime": "2018-05-14T20:35:54.1902339",
+                                        "creatorUserId": 12,
+                                        "id": "4a485851-a943-4d1f-d1de-08d5b9d7435e"
+                                    },
+                                    {
+                                        "sessionId": "df82f581-b20b-48c0-69a9-08d5b9d72b2e",
+                                        "title": "Taiko",
+                                        "isDeleted": false,
+                                        "deleterUserId": null,
+                                        "deletionTime": null,
+                                        "lastModificationTime": null,
+                                        "lastModifierUserId": null,
+                                        "creationTime": "2018-05-14T20:36:03.7341475",
+                                        "creatorUserId": 12,
+                                        "id": "6276876a-b37f-4b6b-d1df-08d5b9d7435e"
+                                    }
+                                ],
+                                "isDeleted": false,
+                                "deleterUserId": null,
+                                "deletionTime": null,
+                                "lastModificationTime": null,
+                                "lastModifierUserId": null,
+                                "creationTime": "2018-05-14T20:35:21.6881425",
+                                "creatorUserId": 12,
+                                "id": "df82f581-b20b-48c0-69a9-08d5b9d72b2e"
+                            }
+                        ],
+                        "isDeleted": false,
+                        "deleterUserId": null,
+                        "deletionTime": null,
+                        "lastModificationTime": null,
+                        "lastModifierUserId": null,
+                        "creationTime": "2018-05-14T20:33:54.0493965",
+                        "creatorUserId": 12,
+                        "id": "60cd9d45-65a0-44e3-e75e-08d5b9d6dc28"
+                    },
+                    {
+                        "scheduleId": "3a679581-f068-4257-a513-08d5b9745dba",
+                        "time": "01:00 pm",
+                        "sessions": [
+                            {
+                                "groupId": "25d4b819-f005-447f-e75f-08d5b9d6dc28",
+                                "name": "Campeonato de Street Fighter",
+                                "timeStart": "01:00 pm",
+                                "timeEnd": "07:40 pm",
+                                "location": "ESPAÇO FATEC JOGOS",
+                                "tracks": [
+                                    {
+                                        "sessionId": "f220ecd8-b4be-46e6-69ab-08d5b9d72b2e",
+                                        "title": "Campeonato",
+                                        "isDeleted": false,
+                                        "deleterUserId": null,
+                                        "deletionTime": null,
+                                        "lastModificationTime": null,
+                                        "lastModifierUserId": null,
+                                        "creationTime": "2018-05-14T20:53:33.9122019",
+                                        "creatorUserId": 12,
+                                        "id": "73639f5c-f864-4517-d1e1-08d5b9d7435e"
+                                    }
+                                ],
+                                "isDeleted": false,
+                                "deleterUserId": null,
+                                "deletionTime": null,
+                                "lastModificationTime": null,
+                                "lastModifierUserId": null,
+                                "creationTime": "2018-05-14T20:47:28.5220375",
+                                "creatorUserId": 12,
+                                "id": "f220ecd8-b4be-46e6-69ab-08d5b9d72b2e"
+                            },
+                            {
+                                "groupId": "25d4b819-f005-447f-e75f-08d5b9d6dc28",
+                                "name": "Campeonato Card Game Magic",
+                                "timeStart": "01:00 pm",
+                                "timeEnd": "07:40 pm",
+                                "location": "ESPAÇO CARD GAME",
+                                "tracks": [
+                                    {
+                                        "sessionId": "38a606c1-00b9-402f-69ac-08d5b9d72b2e",
+                                        "title": "Card Game",
+                                        "isDeleted": false,
+                                        "deleterUserId": null,
+                                        "deletionTime": null,
+                                        "lastModificationTime": null,
+                                        "lastModifierUserId": null,
+                                        "creationTime": "2018-05-14T21:00:39.5203263",
+                                        "creatorUserId": 12,
+                                        "id": "b76a0d99-0965-421d-d1e2-08d5b9d7435e"
+                                    }
+                                ],
+                                "isDeleted": false,
+                                "deleterUserId": null,
+                                "deletionTime": null,
+                                "lastModificationTime": null,
+                                "lastModifierUserId": null,
+                                "creationTime": "2018-05-14T21:00:10.3673793",
+                                "creatorUserId": 12,
+                                "id": "38a606c1-00b9-402f-69ac-08d5b9d72b2e"
+                            }
+                        ],
+                        "isDeleted": false,
+                        "deleterUserId": null,
+                        "deletionTime": null,
+                        "lastModificationTime": null,
+                        "lastModifierUserId": null,
+                        "creationTime": "2018-05-14T20:46:09.6812736",
+                        "creatorUserId": 12,
+                        "id": "25d4b819-f005-447f-e75f-08d5b9d6dc28"
+                    },
+                    {
+                        "scheduleId": "3a679581-f068-4257-a513-08d5b9745dba",
+                        "time": "01:10 pm",
+                        "sessions": [
+                            {
+                                "groupId": "3d34d143-c5fa-4a5c-e760-08d5b9d6dc28",
+                                "name": "Show - Jupgraves",
+                                "timeStart": "01:10 pm",
+                                "timeEnd": "02:55 pm",
+                                "location": "PALCO",
+                                "tracks": [
+                                    {
+                                        "sessionId": "531f8a28-5ee1-4d1a-69ad-08d5b9d72b2e",
+                                        "title": "Show",
+                                        "isDeleted": false,
+                                        "deleterUserId": null,
+                                        "deletionTime": null,
+                                        "lastModificationTime": null,
+                                        "lastModifierUserId": null,
+                                        "creationTime": "2018-05-14T21:06:10.2739564",
+                                        "creatorUserId": 12,
+                                        "id": "370a0061-40cc-44a2-d1e3-08d5b9d7435e"
+                                    }
+                                ],
+                                "isDeleted": false,
+                                "deleterUserId": null,
+                                "deletionTime": null,
+                                "lastModificationTime": null,
+                                "lastModifierUserId": null,
+                                "creationTime": "2018-05-14T21:05:46.2307887",
+                                "creatorUserId": 12,
+                                "id": "531f8a28-5ee1-4d1a-69ad-08d5b9d72b2e"
+                            }
+                        ],
+                        "isDeleted": false,
+                        "deleterUserId": null,
+                        "deletionTime": null,
+                        "lastModificationTime": null,
+                        "lastModifierUserId": null,
+                        "creationTime": "2018-05-14T21:04:49.1187022",
+                        "creatorUserId": 12,
+                        "id": "3d34d143-c5fa-4a5c-e760-08d5b9d6dc28"
+                    },
+                    {
+                        "scheduleId": "3a679581-f068-4257-a513-08d5b9745dba",
+                        "time": "02:00 pm",
+                        "sessions": [
+                            {
+                                "groupId": "2b867989-fd0f-4745-e761-08d5b9d6dc28",
+                                "name": "Concurso Cosplay Kids",
+                                "timeStart": "02:00 pm",
+                                "timeEnd": "01:40 pm",
+                                "location": "PALCO",
+                                "tracks": [
+                                    {
+                                        "sessionId": "c95b8d0e-1b39-471a-69ae-08d5b9d72b2e",
+                                        "title": "Concurso",
+                                        "isDeleted": false,
+                                        "deleterUserId": null,
+                                        "deletionTime": null,
+                                        "lastModificationTime": null,
+                                        "lastModifierUserId": null,
+                                        "creationTime": "2018-05-14T21:15:15.7926847",
+                                        "creatorUserId": 12,
+                                        "id": "3770fb51-2827-4f14-d1e4-08d5b9d7435e"
+                                    }
+                                ],
+                                "isDeleted": false,
+                                "deleterUserId": null,
+                                "deletionTime": null,
+                                "lastModificationTime": null,
+                                "lastModifierUserId": null,
+                                "creationTime": "2018-05-14T21:10:05.9265018",
+                                "creatorUserId": 12,
+                                "id": "c95b8d0e-1b39-471a-69ae-08d5b9d72b2e"
+                            },
+                            {
+                                "groupId": "2b867989-fd0f-4745-e761-08d5b9d6dc28",
+                                "name": "Oficina 'Como Melhorar Meus Esboços' - Adriano Hideki Tomiyoshi",
+                                "timeStart": "02:00 pm",
+                                "timeEnd": "03:55 pm",
+                                "location": "ESPAÇO DESENHO",
+                                "tracks": [
+                                    {
+                                        "sessionId": "14480e6e-5243-44e9-69af-08d5b9d72b2e",
+                                        "title": "Desenho",
+                                        "isDeleted": false,
+                                        "deleterUserId": null,
+                                        "deletionTime": null,
+                                        "lastModificationTime": null,
+                                        "lastModifierUserId": null,
+                                        "creationTime": "2018-05-14T21:18:10.3293872",
+                                        "creatorUserId": 12,
+                                        "id": "6d0cb643-0689-4c98-d1e5-08d5b9d7435e"
+                                    }
+                                ],
+                                "isDeleted": false,
+                                "deleterUserId": null,
+                                "deletionTime": null,
+                                "lastModificationTime": null,
+                                "lastModifierUserId": null,
+                                "creationTime": "2018-05-14T21:17:39.2003239",
+                                "creatorUserId": 12,
+                                "id": "14480e6e-5243-44e9-69af-08d5b9d72b2e"
+                            },
+                            {
+                                "groupId": "2b867989-fd0f-4745-e761-08d5b9d6dc28",
+                                "name": "Oficina de Origamis - Dani Castaldelli Lopes",
+                                "timeStart": "02:00 pm",
+                                "timeEnd": "07:55 pm",
+                                "location": "ESPAÇO ARTE",
+                                "tracks": [
+                                    {
+                                        "sessionId": "108da86b-c3ef-430d-69b0-08d5b9d72b2e",
+                                        "title": "Arte",
+                                        "isDeleted": false,
+                                        "deleterUserId": null,
+                                        "deletionTime": null,
+                                        "lastModificationTime": null,
+                                        "lastModifierUserId": null,
+                                        "creationTime": "2018-05-14T21:22:13.2153988",
+                                        "creatorUserId": 12,
+                                        "id": "4a2b12fe-f5a8-483b-d1e6-08d5b9d7435e"
+                                    }
+                                ],
+                                "isDeleted": false,
+                                "deleterUserId": null,
+                                "deletionTime": null,
+                                "lastModificationTime": null,
+                                "lastModifierUserId": null,
+                                "creationTime": "2018-05-14T21:21:38.2840237",
+                                "creatorUserId": 12,
+                                "id": "108da86b-c3ef-430d-69b0-08d5b9d72b2e"
+                            }
+                        ],
+                        "isDeleted": false,
+                        "deleterUserId": null,
+                        "deletionTime": null,
+                        "lastModificationTime": null,
+                        "lastModifierUserId": null,
+                        "creationTime": "2018-05-14T21:07:47.8993826",
+                        "creatorUserId": 12,
+                        "id": "2b867989-fd0f-4745-e761-08d5b9d6dc28"
+                    },
+                    {
+                        "scheduleId": "3a679581-f068-4257-a513-08d5b9745dba",
+                        "time": "02:45 pm",
+                        "sessions": [
+                            {
+                                "groupId": "02f788f1-d446-4cdf-e762-08d5b9d6dc28",
+                                "name": "Apresentação - The Geekzens",
+                                "timeStart": "02:45 pm",
+                                "timeEnd": "03:55 pm",
+                                "location": "PALCO",
+                                "tracks": [
+                                    {
+                                        "sessionId": "e7480caf-2d6b-4d44-69b1-08d5b9d72b2e",
+                                        "title": "The Geekzens",
+                                        "isDeleted": false,
+                                        "deleterUserId": null,
+                                        "deletionTime": null,
+                                        "lastModificationTime": null,
+                                        "lastModifierUserId": null,
+                                        "creationTime": "2018-05-14T21:26:29.6024851",
+                                        "creatorUserId": 12,
+                                        "id": "c345e85d-1e97-42d7-d1e7-08d5b9d7435e"
+                                    }
+                                ],
+                                "isDeleted": false,
+                                "deleterUserId": null,
+                                "deletionTime": null,
+                                "lastModificationTime": null,
+                                "lastModifierUserId": null,
+                                "creationTime": "2018-05-14T21:23:58.9970705",
+                                "creatorUserId": 12,
+                                "id": "e7480caf-2d6b-4d44-69b1-08d5b9d72b2e"
+                            }
+                        ],
+                        "isDeleted": false,
+                        "deleterUserId": null,
+                        "deletionTime": null,
+                        "lastModificationTime": null,
+                        "lastModifierUserId": null,
+                        "creationTime": "2018-05-14T21:22:47.9606315",
+                        "creatorUserId": 12,
+                        "id": "02f788f1-d446-4cdf-e762-08d5b9d6dc28"
+                    },
+                    {
+                        "scheduleId": "3a679581-f068-4257-a513-08d5b9745dba",
+                        "time": "03:00 pm",
+                        "sessions": [
+                            {
+                                "groupId": "9d8e7ecf-61e4-4ca8-e763-08d5b9d6dc28",
+                                "name": "Show - Banda Arruda Mello",
+                                "timeStart": "03:00 pm",
+                                "timeEnd": "03:25 pm",
+                                "location": "PALCO",
+                                "tracks": [
+                                    {
+                                        "sessionId": "ab99aa2a-5948-476b-69b2-08d5b9d72b2e",
+                                        "title": "Show",
+                                        "isDeleted": false,
+                                        "deleterUserId": null,
+                                        "deletionTime": null,
+                                        "lastModificationTime": null,
+                                        "lastModifierUserId": null,
+                                        "creationTime": "2018-05-14T21:30:16.8421948",
+                                        "creatorUserId": 12,
+                                        "id": "0b9a5783-4294-4e15-d1e8-08d5b9d7435e"
+                                    }
+                                ],
+                                "isDeleted": false,
+                                "deleterUserId": null,
+                                "deletionTime": null,
+                                "lastModificationTime": null,
+                                "lastModifierUserId": null,
+                                "creationTime": "2018-05-14T21:29:52.8720221",
+                                "creatorUserId": 12,
+                                "id": "ab99aa2a-5948-476b-69b2-08d5b9d72b2e"
+                            }
+                        ],
+                        "isDeleted": false,
+                        "deleterUserId": null,
+                        "deletionTime": null,
+                        "lastModificationTime": null,
+                        "lastModifierUserId": null,
+                        "creationTime": "2018-05-14T21:28:54.2144913",
+                        "creatorUserId": 12,
+                        "id": "9d8e7ecf-61e4-4ca8-e763-08d5b9d6dc28"
+                    },
+                    {
+                        "scheduleId": "3a679581-f068-4257-a513-08d5b9745dba",
+                        "time": "03:30 pm",
+                        "sessions": [
+                            {
+                                "groupId": "1a147cbf-784c-451b-e764-08d5b9d6dc28",
+                                "name": "Premiações dos Campeonatos",
+                                "timeStart": "03:30 pm",
+                                "timeEnd": "03:40 pm",
+                                "location": "PALCO",
+                                "tracks": [
+                                    {
+                                        "sessionId": "9ea0d229-24d4-40e2-ae0b-08d5b9fabca1",
+                                        "title": "Campeonato",
+                                        "isDeleted": false,
+                                        "deleterUserId": null,
+                                        "deletionTime": null,
+                                        "lastModificationTime": null,
+                                        "lastModifierUserId": null,
+                                        "creationTime": "2018-05-15T00:28:57.6688466",
+                                        "creatorUserId": 12,
+                                        "id": "4281ad78-943e-4e3c-9eaf-08d5b9fad905"
+                                    }
+                                ],
+                                "isDeleted": false,
+                                "deleterUserId": null,
+                                "deletionTime": null,
+                                "lastModificationTime": null,
+                                "lastModifierUserId": null,
+                                "creationTime": "2018-05-15T00:28:10.0369196",
+                                "creatorUserId": 12,
+                                "id": "9ea0d229-24d4-40e2-ae0b-08d5b9fabca1"
+                            }
+                        ],
+                        "isDeleted": false,
+                        "deleterUserId": null,
+                        "deletionTime": null,
+                        "lastModificationTime": null,
+                        "lastModifierUserId": null,
+                        "creationTime": "2018-05-14T21:30:50.7478262",
+                        "creatorUserId": 12,
+                        "id": "1a147cbf-784c-451b-e764-08d5b9d6dc28"
+                    },
+                    {
+                        "scheduleId": "3a679581-f068-4257-a513-08d5b9745dba",
+                        "time": "03:45 pm",
+                        "sessions": [
+                            {
+                                "groupId": "a67bfa93-b378-4ab3-3b7d-08d5b9fe2ba3",
+                                "name": "Apresentação - Acrux",
+                                "timeStart": "03:45 pm",
+                                "timeEnd": "03:55 pm",
+                                "location": "PALCO",
+                                "tracks": [
+                                    {
+                                        "sessionId": "950a9544-4e91-4af0-0dad-08d5b9fe8040",
+                                        "title": "Acrux",
+                                        "isDeleted": false,
+                                        "deleterUserId": null,
+                                        "deletionTime": null,
+                                        "lastModificationTime": null,
+                                        "lastModifierUserId": null,
+                                        "creationTime": "2018-05-15T00:55:36.4710492",
+                                        "creatorUserId": 12,
+                                        "id": "0ffb97ae-d5c4-4009-5223-08d5b9fe91fb"
+                                    }
+                                ],
+                                "isDeleted": false,
+                                "deleterUserId": null,
+                                "deletionTime": null,
+                                "lastModificationTime": null,
+                                "lastModifierUserId": null,
+                                "creationTime": "2018-05-15T00:55:06.7229667",
+                                "creatorUserId": 12,
+                                "id": "950a9544-4e91-4af0-0dad-08d5b9fe8040"
+                            }
+                        ],
+                        "isDeleted": false,
+                        "deleterUserId": null,
+                        "deletionTime": null,
+                        "lastModificationTime": null,
+                        "lastModifierUserId": null,
+                        "creationTime": "2018-05-15T00:52:44.7388163",
+                        "creatorUserId": 12,
+                        "id": "a67bfa93-b378-4ab3-3b7d-08d5b9fe2ba3"
+                    },
+                    {
+                        "scheduleId": "3a679581-f068-4257-a513-08d5b9745dba",
+                        "time": "04:00 pm",
+                        "sessions": [
+                            {
+                                "groupId": "7b3118c8-7f15-4cb7-3b7e-08d5b9fe2ba3",
+                                "name": "Campeonato de K-Pop",
+                                "timeStart": "04:00 pm",
+                                "timeEnd": "04:55 pm",
+                                "location": "PALCO",
+                                "tracks": [
+                                    {
+                                        "sessionId": "99d495cf-6ae1-4f48-0dae-08d5b9fe8040",
+                                        "title": "Campeonato",
+                                        "isDeleted": false,
+                                        "deleterUserId": null,
+                                        "deletionTime": null,
+                                        "lastModificationTime": null,
+                                        "lastModifierUserId": null,
+                                        "creationTime": "2018-05-15T01:00:42.1288291",
+                                        "creatorUserId": 12,
+                                        "id": "d011ebce-a0f2-483a-5224-08d5b9fe91fb"
+                                    }
+                                ],
+                                "isDeleted": false,
+                                "deleterUserId": null,
+                                "deletionTime": null,
+                                "lastModificationTime": null,
+                                "lastModifierUserId": null,
+                                "creationTime": "2018-05-15T00:59:41.6800874",
+                                "creatorUserId": 12,
+                                "id": "99d495cf-6ae1-4f48-0dae-08d5b9fe8040"
+                            },
+                            {
+                                "groupId": "7b3118c8-7f15-4cb7-3b7e-08d5b9fe2ba3",
+                                "name": "Oficina 'Técnicas para Desenhar' - Maryana Lima",
+                                "timeStart": "04:00 pm",
+                                "timeEnd": "07:55 pm",
+                                "location": "ESPAÇO DESENHO",
+                                "tracks": [
+                                    {
+                                        "sessionId": "8322f844-45a7-4114-0daf-08d5b9fe8040",
+                                        "title": "Desenho",
+                                        "isDeleted": false,
+                                        "deleterUserId": null,
+                                        "deletionTime": null,
+                                        "lastModificationTime": null,
+                                        "lastModifierUserId": null,
+                                        "creationTime": "2018-05-15T01:04:06.8439033",
+                                        "creatorUserId": 12,
+                                        "id": "f5a5c6cf-ab2d-416d-5225-08d5b9fe91fb"
+                                    }
+                                ],
+                                "isDeleted": false,
+                                "deleterUserId": null,
+                                "deletionTime": null,
+                                "lastModificationTime": null,
+                                "lastModifierUserId": null,
+                                "creationTime": "2018-05-15T01:03:10.3126434",
+                                "creatorUserId": 12,
+                                "id": "8322f844-45a7-4114-0daf-08d5b9fe8040"
+                            },
+                            {
+                                "groupId": "7b3118c8-7f15-4cb7-3b7e-08d5b9fe2ba3",
+                                "name": "Campeonato de Cubo Mágico",
+                                "timeStart": "04:00 pm",
+                                "timeEnd": "07:55 pm",
+                                "location": "ESPAÇO INFORMÁTICA - ETEC ARRUDA MELLO",
+                                "tracks": [
+                                    {
+                                        "sessionId": "d129478a-01bb-432a-0db0-08d5b9fe8040",
+                                        "title": "Campeonato",
+                                        "isDeleted": false,
+                                        "deleterUserId": null,
+                                        "deletionTime": null,
+                                        "lastModificationTime": null,
+                                        "lastModifierUserId": null,
+                                        "creationTime": "2018-05-15T01:06:37.4292899",
+                                        "creatorUserId": 12,
+                                        "id": "e647fa7f-b75e-4970-5226-08d5b9fe91fb"
+                                    }
+                                ],
+                                "isDeleted": false,
+                                "deleterUserId": null,
+                                "deletionTime": null,
+                                "lastModificationTime": null,
+                                "lastModifierUserId": null,
+                                "creationTime": "2018-05-15T01:05:50.6411745",
+                                "creatorUserId": 12,
+                                "id": "d129478a-01bb-432a-0db0-08d5b9fe8040"
+                            }
+                        ],
+                        "isDeleted": false,
+                        "deleterUserId": null,
+                        "deletionTime": null,
+                        "lastModificationTime": null,
+                        "lastModifierUserId": null,
+                        "creationTime": "2018-05-15T00:58:45.5925147",
+                        "creatorUserId": 12,
+                        "id": "7b3118c8-7f15-4cb7-3b7e-08d5b9fe2ba3"
+                    },
+                    {
+                        "scheduleId": "3a679581-f068-4257-a513-08d5b9745dba",
+                        "time": "05:00 pm",
+                        "sessions": [
+                            {
+                                "groupId": "f3d726c2-2502-412b-3b7f-08d5b9fe2ba3",
+                                "name": "Apresentação - Stray Lights",
+                                "timeStart": "05:00 pm",
+                                "timeEnd": "05:10 pm",
+                                "location": "PALCO",
+                                "tracks": [
+                                    {
+                                        "sessionId": "a846e896-e67c-4b23-0db1-08d5b9fe8040",
+                                        "title": "Stray Lights",
+                                        "isDeleted": false,
+                                        "deleterUserId": null,
+                                        "deletionTime": null,
+                                        "lastModificationTime": null,
+                                        "lastModifierUserId": null,
+                                        "creationTime": "2018-05-15T01:14:33.8927306",
+                                        "creatorUserId": 12,
+                                        "id": "8f9be8fd-924b-43bd-5227-08d5b9fe91fb"
+                                    }
+                                ],
+                                "isDeleted": false,
+                                "deleterUserId": null,
+                                "deletionTime": null,
+                                "lastModificationTime": null,
+                                "lastModifierUserId": null,
+                                "creationTime": "2018-05-15T01:11:03.74167",
+                                "creatorUserId": 12,
+                                "id": "a846e896-e67c-4b23-0db1-08d5b9fe8040"
+                            }
+                        ],
+                        "isDeleted": false,
+                        "deleterUserId": null,
+                        "deletionTime": null,
+                        "lastModificationTime": null,
+                        "lastModifierUserId": null,
+                        "creationTime": "2018-05-15T01:07:15.4300811",
+                        "creatorUserId": 12,
+                        "id": "f3d726c2-2502-412b-3b7f-08d5b9fe2ba3"
+                    },
+                    {
+                        "scheduleId": "3a679581-f068-4257-a513-08d5b9745dba",
+                        "time": "05:15 pm",
+                        "sessions": [
+                            {
+                                "groupId": "afc2a9c0-adc0-48bd-3b80-08d5b9fe2ba3",
+                                "name": "Apresentação - Yabai Crew",
+                                "timeStart": "05:15 pm",
+                                "timeEnd": "05:25 pm",
+                                "location": "PALCO",
+                                "tracks": [
+                                    {
+                                        "sessionId": "cee8fdfb-d1bf-4b7c-2955-08d5ba07a87b",
+                                        "title": "Yabai Crew",
+                                        "isDeleted": false,
+                                        "deleterUserId": null,
+                                        "deletionTime": null,
+                                        "lastModificationTime": null,
+                                        "lastModifierUserId": null,
+                                        "creationTime": "2018-05-15T02:01:21.4729043",
+                                        "creatorUserId": 12,
+                                        "id": "74e5e4a0-0fd4-4253-ca9f-08d5ba07c162"
+                                    }
+                                ],
+                                "isDeleted": false,
+                                "deleterUserId": null,
+                                "deletionTime": null,
+                                "lastModificationTime": null,
+                                "lastModifierUserId": null,
+                                "creationTime": "2018-05-15T02:00:39.6871181",
+                                "creatorUserId": 12,
+                                "id": "cee8fdfb-d1bf-4b7c-2955-08d5ba07a87b"
+                            }
+                        ],
+                        "isDeleted": false,
+                        "deleterUserId": null,
+                        "deletionTime": null,
+                        "lastModificationTime": null,
+                        "lastModifierUserId": null,
+                        "creationTime": "2018-05-15T01:16:11.7749505",
+                        "creatorUserId": 12,
+                        "id": "afc2a9c0-adc0-48bd-3b80-08d5b9fe2ba3"
+                    },
+                    {
+                        "scheduleId": "3a679581-f068-4257-a513-08d5b9745dba",
+                        "time": "05:30 pm",
+                        "sessions": [
+                            {
+                                "groupId": "3e69e975-1ce6-4990-3656-08d5ba07cfc6",
+                                "name": "Apresentação - Happy Soul",
+                                "timeStart": "05:30 pm",
+                                "timeEnd": "05:45 pm",
+                                "location": "PALCO",
+                                "tracks": [
+                                    {
+                                        "sessionId": "1615ecbd-798b-4065-2956-08d5ba07a87b",
+                                        "title": "Happy Soul",
+                                        "isDeleted": false,
+                                        "deleterUserId": null,
+                                        "deletionTime": null,
+                                        "lastModificationTime": null,
+                                        "lastModifierUserId": null,
+                                        "creationTime": "2018-05-15T02:04:01.122206",
+                                        "creatorUserId": 12,
+                                        "id": "a2846297-8b3b-4376-caa0-08d5ba07c162"
+                                    }
+                                ],
+                                "isDeleted": false,
+                                "deleterUserId": null,
+                                "deletionTime": null,
+                                "lastModificationTime": null,
+                                "lastModifierUserId": null,
+                                "creationTime": "2018-05-15T02:03:19.0783968",
+                                "creatorUserId": 12,
+                                "id": "1615ecbd-798b-4065-2956-08d5ba07a87b"
+                            }
+                        ],
+                        "isDeleted": false,
+                        "deleterUserId": null,
+                        "deletionTime": null,
+                        "lastModificationTime": null,
+                        "lastModifierUserId": null,
+                        "creationTime": "2018-05-15T02:01:45.6126396",
+                        "creatorUserId": 12,
+                        "id": "3e69e975-1ce6-4990-3656-08d5ba07cfc6"
+                    },
+                    {
+                        "scheduleId": "3a679581-f068-4257-a513-08d5b9745dba",
+                        "time": "05:50 pm",
+                        "sessions": [
+                            {
+                                "groupId": "d936e5aa-11e0-4006-3657-08d5ba07cfc6",
+                                "name": "Apresentação Medieval - Clã Alaisiagae",
+                                "timeStart": "05:50 pm",
+                                "timeEnd": "06:25 pm",
+                                "location": "PALCO",
+                                "tracks": [
+                                    {
+                                        "sessionId": "a43c4127-15c2-4e88-2957-08d5ba07a87b",
+                                        "title": "Medieval",
+                                        "isDeleted": false,
+                                        "deleterUserId": null,
+                                        "deletionTime": null,
+                                        "lastModificationTime": null,
+                                        "lastModifierUserId": null,
+                                        "creationTime": "2018-05-15T02:06:02.8758149",
+                                        "creatorUserId": 12,
+                                        "id": "7981eb13-3127-404a-caa1-08d5ba07c162"
+                                    }
+                                ],
+                                "isDeleted": false,
+                                "deleterUserId": null,
+                                "deletionTime": null,
+                                "lastModificationTime": null,
+                                "lastModifierUserId": null,
+                                "creationTime": "2018-05-15T02:05:36.2828629",
+                                "creatorUserId": 12,
+                                "id": "a43c4127-15c2-4e88-2957-08d5ba07a87b"
+                            }
+                        ],
+                        "isDeleted": false,
+                        "deleterUserId": null,
+                        "deletionTime": null,
+                        "lastModificationTime": null,
+                        "lastModifierUserId": null,
+                        "creationTime": "2018-05-15T02:04:37.5163913",
+                        "creatorUserId": 12,
+                        "id": "d936e5aa-11e0-4006-3657-08d5ba07cfc6"
+                    },
+                    {
+                        "scheduleId": "3a679581-f068-4257-a513-08d5b9745dba",
+                        "time": "06:30 pm",
+                        "sessions": [
+                            {
+                                "groupId": "ea8abaa9-954e-47b4-3658-08d5ba07cfc6",
+                                "name": "Apresentação - The Geekzens",
+                                "timeStart": "06:30 pm",
+                                "timeEnd": "06:40 pm",
+                                "location": "PALCO",
+                                "tracks": [
+                                    {
+                                        "sessionId": "75b7af6d-eecf-4b04-2958-08d5ba07a87b",
+                                        "title": "The Geekzens",
+                                        "isDeleted": false,
+                                        "deleterUserId": null,
+                                        "deletionTime": null,
+                                        "lastModificationTime": null,
+                                        "lastModifierUserId": null,
+                                        "creationTime": "2018-05-15T02:08:09.5003338",
+                                        "creatorUserId": 12,
+                                        "id": "c5d24388-f692-4bc1-caa2-08d5ba07c162"
+                                    }
+                                ],
+                                "isDeleted": false,
+                                "deleterUserId": null,
+                                "deletionTime": null,
+                                "lastModificationTime": null,
+                                "lastModifierUserId": null,
+                                "creationTime": "2018-05-15T02:07:27.8197046",
+                                "creatorUserId": 12,
+                                "id": "75b7af6d-eecf-4b04-2958-08d5ba07a87b"
+                            }
+                        ],
+                        "isDeleted": false,
+                        "deleterUserId": null,
+                        "deletionTime": null,
+                        "lastModificationTime": null,
+                        "lastModifierUserId": null,
+                        "creationTime": "2018-05-15T02:06:30.2035553",
+                        "creatorUserId": 12,
+                        "id": "ea8abaa9-954e-47b4-3658-08d5ba07cfc6"
+                    },
+                    {
+                        "scheduleId": "3a679581-f068-4257-a513-08d5b9745dba",
+                        "time": "06:45 pm",
+                        "sessions": [
+                            {
+                                "groupId": "0bab995a-78bd-48f3-3659-08d5ba07cfc6",
+                                "name": "Concurso Cosplay por Equipe",
+                                "timeStart": "06:45 pm",
+                                "timeEnd": "07:40 pm",
+                                "location": "PALCO",
+                                "tracks": [
+                                    {
+                                        "sessionId": "0b795068-6bd2-48d6-2959-08d5ba07a87b",
+                                        "title": "Concurso",
+                                        "isDeleted": false,
+                                        "deleterUserId": null,
+                                        "deletionTime": null,
+                                        "lastModificationTime": null,
+                                        "lastModifierUserId": null,
+                                        "creationTime": "2018-05-15T02:10:12.3354222",
+                                        "creatorUserId": 12,
+                                        "id": "26bf41b5-d86b-4311-caa3-08d5ba07c162"
+                                    }
+                                ],
+                                "isDeleted": false,
+                                "deleterUserId": null,
+                                "deletionTime": null,
+                                "lastModificationTime": null,
+                                "lastModifierUserId": null,
+                                "creationTime": "2018-05-15T02:09:27.8892698",
+                                "creatorUserId": 12,
+                                "id": "0b795068-6bd2-48d6-2959-08d5ba07a87b"
+                            }
+                        ],
+                        "isDeleted": false,
+                        "deleterUserId": null,
+                        "deletionTime": null,
+                        "lastModificationTime": null,
+                        "lastModifierUserId": null,
+                        "creationTime": "2018-05-15T02:08:39.2796941",
+                        "creatorUserId": 12,
+                        "id": "0bab995a-78bd-48f3-3659-08d5ba07cfc6"
+                    },
+                    {
+                        "scheduleId": "3a679581-f068-4257-a513-08d5b9745dba",
+                        "time": "07:45 pm",
+                        "sessions": [
+                            {
+                                "groupId": "502f2167-4ec2-4267-365a-08d5ba07cfc6",
+                                "name": "Premiações dos Campeonatos",
+                                "timeStart": "07:45 pm",
+                                "timeEnd": "07:55 pm",
+                                "location": "PALCO",
+                                "tracks": [
+                                    {
+                                        "sessionId": "8e3a318a-9dfa-4c97-295a-08d5ba07a87b",
+                                        "title": "Campeonato",
+                                        "isDeleted": false,
+                                        "deleterUserId": null,
+                                        "deletionTime": null,
+                                        "lastModificationTime": null,
+                                        "lastModifierUserId": null,
+                                        "creationTime": "2018-05-15T02:12:09.6735646",
+                                        "creatorUserId": 12,
+                                        "id": "fdaf11e2-c62f-44ea-caa4-08d5ba07c162"
+                                    }
+                                ],
+                                "isDeleted": false,
+                                "deleterUserId": null,
+                                "deletionTime": null,
+                                "lastModificationTime": null,
+                                "lastModifierUserId": null,
+                                "creationTime": "2018-05-15T02:11:27.2360169",
+                                "creatorUserId": 12,
+                                "id": "8e3a318a-9dfa-4c97-295a-08d5ba07a87b"
+                            }
+                        ],
+                        "isDeleted": false,
+                        "deleterUserId": null,
+                        "deletionTime": null,
+                        "lastModificationTime": null,
+                        "lastModifierUserId": null,
+                        "creationTime": "2018-05-15T02:10:36.4335088",
+                        "creatorUserId": 12,
+                        "id": "502f2167-4ec2-4267-365a-08d5ba07cfc6"
+                    },
+                    {
+                        "scheduleId": "3a679581-f068-4257-a513-08d5b9745dba",
+                        "time": "08:00 pm",
+                        "sessions": [
+                            {
+                                "groupId": "2063fe77-3b01-4c6f-365b-08d5ba07cfc6",
+                                "name": "Agradecimentos e Encerramento do Evento",
+                                "timeStart": "08:00 pm",
+                                "timeEnd": "08:05 pm",
+                                "location": "PALCO",
+                                "tracks": [
+                                    {
+                                        "sessionId": "0349cb6a-0bfc-45ef-295b-08d5ba07a87b",
+                                        "title": "Agradecimento",
+                                        "isDeleted": false,
+                                        "deleterUserId": null,
+                                        "deletionTime": null,
+                                        "lastModificationTime": null,
+                                        "lastModifierUserId": null,
+                                        "creationTime": "2018-05-15T02:27:28.4732785",
+                                        "creatorUserId": 12,
+                                        "id": "dadf79b3-086e-4107-caa5-08d5ba07c162"
+                                    },
+                                    {
+                                        "sessionId": "0349cb6a-0bfc-45ef-295b-08d5ba07a87b",
+                                        "title": "Aviso",
+                                        "isDeleted": false,
+                                        "deleterUserId": null,
+                                        "deletionTime": null,
+                                        "lastModificationTime": null,
+                                        "lastModifierUserId": null,
+                                        "creationTime": "2018-05-15T02:27:42.0140807",
+                                        "creatorUserId": 12,
+                                        "id": "f2a28cc1-8f93-4247-caa6-08d5ba07c162"
+                                    }
+                                ],
+                                "isDeleted": false,
+                                "deleterUserId": null,
+                                "deletionTime": null,
+                                "lastModificationTime": null,
+                                "lastModifierUserId": null,
+                                "creationTime": "2018-05-15T02:26:43.0194461",
+                                "creatorUserId": 12,
+                                "id": "0349cb6a-0bfc-45ef-295b-08d5ba07a87b"
+                            }
+                        ],
+                        "isDeleted": false,
+                        "deleterUserId": null,
+                        "deletionTime": null,
+                        "lastModificationTime": null,
+                        "lastModifierUserId": null,
+                        "creationTime": "2018-05-15T02:25:37.684172",
+                        "creatorUserId": 12,
+                        "id": "2063fe77-3b01-4c6f-365b-08d5ba07cfc6"
+                    }
+                ],
+                "isDeleted": false,
+                "deleterUserId": null,
+                "deletionTime": null,
+                "lastModificationTime": null,
+                "lastModifierUserId": null,
+                "creationTime": "2018-05-14T08:26:18.2170772",
+                "creatorUserId": 12,
+                "id": "3a679581-f068-4257-a513-08d5b9745dba"
             }
         ]
     },
