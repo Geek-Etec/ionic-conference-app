@@ -92,7 +92,7 @@ export class ConferenceData {
             });
           }          
         }).catch(() => {
-          resolve(this.data);
+          this.load(false, true);
         });          
       }
     });

@@ -5,7 +5,9 @@ import {
   ActionSheetController,
   ActionSheetOptions,
   Config,
-  NavController
+  NavController,
+  Refresher,
+  ToastController
 } from 'ionic-angular';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 
@@ -20,7 +22,7 @@ export interface ActionSheetButton {
   role?: string;
   icon?: string;
   cssClass?: string;
-  handler?: () => boolean|void;
+  handler?: () => boolean | void;
 };
 
 @Component({
@@ -36,8 +38,9 @@ export class SpeakerListPage {
     public navCtrl: NavController,
     public confData: ConferenceData,
     public config: Config,
-    public inAppBrowser: InAppBrowser
-  ) {}
+    public inAppBrowser: InAppBrowser,
+    public toastCtrl: ToastController
+  ) { }
 
   ionViewDidLoad() {
     this.confData.getSpeakers().subscribe((speakers: any[]) => {
@@ -68,7 +71,7 @@ export class SpeakerListPage {
           text: 'Copy Link',
           handler: () => {
             console.log('Copy link clicked on https://twitter.com/' + speaker.twitter);
-            if ( (window as any)['cordova'] && (window as any)['cordova'].plugins.clipboard) {
+            if ((window as any)['cordova'] && (window as any)['cordova'].plugins.clipboard) {
               (window as any)['cordova'].plugins.clipboard.copy(
                 'https://twitter.com/' + speaker.twitter
               );
@@ -112,5 +115,23 @@ export class SpeakerListPage {
     } as ActionSheetOptions);
 
     actionSheet.present();
+  }
+
+  doRefresh(refresher: Refresher) {
+    this.confData.getSpeakers().subscribe((speakers: any[]) => {
+      this.speakers = speakers;
+
+      // simulate a network request that would take longer
+      // than just pulling from out local json file
+      setTimeout(() => {
+        refresher.complete();
+
+        const toast = this.toastCtrl.create({
+          message: 'as postagens do feed foram atualizadas.',
+          duration: 3000
+        });
+        toast.present();
+      }, 1000);
+    });
   }
 }

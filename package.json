@@ -59,6 +59,7 @@
     },
     "devDependencies": {
         "@ionic/app-scripts": "3.1.5",
+        "@ionic/cli-plugin-proxy": "1.5.8",
         "@types/crypto-js": "^3.1.38",
         "typescript": "~2.4.2"
     },
