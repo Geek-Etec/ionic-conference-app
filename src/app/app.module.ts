@@ -4,9 +4,10 @@ import { NgModule, ErrorHandler } from '@angular/core';
 
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 
+
 import { SocialSharing } from '@ionic-native/social-sharing';
 import { FilePath } from '@ionic-native/file-path';
-
+import { AppAvailability } from '@ionic-native/app-availability';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -111,7 +112,8 @@ import { ThinkEventBase } from '../providers/think-event-base';
     InAppBrowser,
     SplashScreen,
     SocialSharing,    
-    FilePath
+    FilePath,
+    AppAvailability
   ]
 })
 export class AppModule { }
