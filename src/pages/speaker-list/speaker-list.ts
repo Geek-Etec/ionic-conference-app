@@ -7,7 +7,9 @@ import {
   Config,
   NavController,
   Refresher,
-  ToastController
+  ToastController,
+  AlertController,
+  LoadingController
 } from 'ionic-angular';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 
@@ -15,6 +17,7 @@ import { ConferenceData } from '../../providers/conference-data';
 
 import { SessionDetailPage } from '../session-detail/session-detail';
 import { SpeakerDetailPage } from '../speaker-detail/speaker-detail';
+import { ThinkEventBase } from '../../providers/think-event-base';
 
 // TODO remove
 export interface ActionSheetButton {
@@ -29,18 +32,22 @@ export interface ActionSheetButton {
   selector: 'page-speaker-list',
   templateUrl: 'speaker-list.html'
 })
-export class SpeakerListPage {
+export class SpeakerListPage extends ThinkEventBase {
   actionSheet: ActionSheet;
   speakers: any[] = [];
 
   constructor(
+    public alertCtrl: AlertController,
+    public loadingCtrl: LoadingController,
     public actionSheetCtrl: ActionSheetController,
     public navCtrl: NavController,
     public confData: ConferenceData,
     public config: Config,
     public inAppBrowser: InAppBrowser,
     public toastCtrl: ToastController
-  ) { }
+  ) { 
+    super(loadingCtrl, alertCtrl);
+  }
 
   ionViewDidLoad() {
     this.confData.getSpeakers().subscribe((speakers: any[]) => {
