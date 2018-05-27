@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
-import { NavController, AlertController, LoadingController } from 'ionic-angular';
+import { NavController, AlertController, LoadingController, Platform } from 'ionic-angular';
 
 import { UserData } from '../../providers/user-data';
 
@@ -18,8 +18,8 @@ import { AuthBase } from '../../providers/auth-base';
   templateUrl: 'signup.html'
 })
 export class SignupPage extends AuthBase {
-  signup: UserOptions = { 
-    userName: '', 
+  signup: UserOptions = {
+    userName: '',
     name: '',
     surname: '',
     emailAddress: '',
@@ -28,15 +28,16 @@ export class SignupPage extends AuthBase {
       "User"
     ],
     password: '',
-    token: '' 
+    token: ''
   };
   submitted = false;
 
   constructor(private thinkEventService: ThinkEventService,
-              public navCtrl: NavController, 
-              loadingCtrl: LoadingController,
-              alertCtrl: AlertController,
-              public userData: UserData) {
+    public navCtrl: NavController,
+    loadingCtrl: LoadingController,
+    alertCtrl: AlertController,
+    public userData: UserData,
+    private platform: Platform) {
     super(loadingCtrl, alertCtrl);
   }
 
@@ -46,28 +47,31 @@ export class SignupPage extends AuthBase {
     this.submitted = true;
 
     if (form.valid) {
-      try{
+      try {
         this.thinkEventService.getToken(true).then((token: string) => {
           this.userData.setToken(token).then(() => {
-            this.signup.userName = this.signup.userName.toLowerCase();
-            this.signup.emailAddress = this.signup.emailAddress.toLowerCase();
+            let password: string = "";
+            
+            if (this.platform.is('android'))
+              password = this.signup.password;
+            else
+              password = this.encrypt("AES", this.signup.password, "scrt-key-" + this.signup.userName.toLowerCase());
 
-            let password: string = this.encrypt("AES", this.signup.password, "scrt-key-" + this.signup.userName);
             this.thinkEventService.userCreate({
-              userName: this.signup.userName,
+              userName: this.signup.userName.toLowerCase(),
               name: this.signup.name,
               surname: this.signup.surname,
-              emailAddress: this.signup.emailAddress,
+              emailAddress: this.signup.emailAddress.toLowerCase(),
               password: password,
               fullname: this.signup.name + ' ' + this.signup.surname,
               token: token
             }).then(() => {
               this.userData.set({
-                userName: this.signup.userName,
+                userName: this.signup.userName.toLowerCase(),
                 name: this.signup.name,
                 surname: this.signup.surname,
-                fullname: this.signup.name + ' ' + this.signup.surname,                
-                emailAddress: this.signup.emailAddress
+                fullname: this.signup.name + ' ' + this.signup.surname,
+                emailAddress: this.signup.emailAddress.toLowerCase()
               });
               this.userData.signup(this.signup.userName);
               this.loading.dismiss();
@@ -78,10 +82,10 @@ export class SignupPage extends AuthBase {
               if (res.unAuthorizedRequest)
                 this.onSignup(form);
               else
-                this.show(res.error.message, res.error.details);    
-            });  
+                this.show(res.error.message, res.error.details);
+            });
           });
-        });  
+        });
       } catch (ex) {
         this.loading.dismiss();
         console.log(ex);

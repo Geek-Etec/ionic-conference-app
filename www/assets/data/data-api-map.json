@@ -1,0 +1,88 @@
+{
+    "result": {
+        "map": [
+            {
+                "name": "IBC - Centro de Eventos",
+                "lat": -22.114808,
+                "lng": -51.3792586
+            },
+            {
+                "name": "Assim",
+                "lat": -22.115210,
+                "lng": -51.378850
+            },
+            {
+                "name": "Dacho Restaurante",
+                "lat": -22.115210,
+                "lng": -51.378950
+            },
+            {
+                "name": "Etec Arruda Mello",
+                "lat": -22.115110,
+                "lng": -51.378950
+            },
+            {
+                "name": "Fatec PP",
+                "lat": -22.115110,
+                "lng": -51.378850,
+                "center": true
+            },
+            {
+                "name": "Seinenbu Hansoro",
+                "lat": -22.115010,
+                "lng": -51.378850
+            },
+            {
+                "name": "IBL",
+                "lat": -22.115010,
+                "lng": -51.378950
+            },
+            {
+                "name": "Inova Prudente",
+                "lat": -22.114910,
+                "lng": -51.378950
+            },
+            {
+                "name": "Sorveteria Napolitana",
+                "lat": -22.114910,
+                "lng": -51.378850,
+                "center": true
+            },
+            {
+                "name": "Moviecom Pres Prudente",
+                "lat": -22.114810,
+                "lng": -51.378850
+            },
+            {
+                "name": "Unicesumar",
+                "lat": -22.114810,
+                "lng": -51.378950
+            },
+            {
+                "name": "Think A.M.",
+                "lat": -22.114710,
+                "lng": -51.378850
+            },
+            {
+                "name": "AllPets",
+                "lat": -22.114710,
+                "lng": -51.378950
+            },
+            {
+                "name": "SakumaVet.",
+                "lat": -22.114610,
+                "lng": -51.378850
+            },
+            {
+                "name": "GreenWolf",
+                "lat": -22.114610,
+                "lng": -51.378950
+            }                                                                                                                       
+        ]
+    },
+    "targetUrl": null,
+    "success": true,
+    "error": null,
+    "unAuthorizedRequest": false,
+    "__abp": true
+}

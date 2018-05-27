@@ -1,9 +1,11 @@
 {
   "name": "geeketec",
   "app_id": "",
-  "type": "geeketec",
+  "type": "ionic-angular",
   "integrations": {
-    "cordova": {}
+    "cordova": {
+
+    }
   },
   "proxies": [
     {

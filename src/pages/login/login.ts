@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
-import { NavController, AlertController, LoadingController } from 'ionic-angular';
+import { NavController, AlertController, LoadingController, Platform } from 'ionic-angular';
 
 import { UserData } from '../../providers/user-data';
 
@@ -26,7 +26,8 @@ export class LoginPage extends AuthBase {
               loadingCtrl: LoadingController,
               alertCtrl: AlertController,
               public navCtrl: NavController, 
-              public userData: UserData) { 
+              public userData: UserData,
+              private platform: Platform) { 
     super(loadingCtrl, alertCtrl);
 
     // Exemplo de criptografia usada na senha
@@ -42,15 +43,17 @@ export class LoginPage extends AuthBase {
 
     if (form.valid) {
       try {       
-        let userDTO: UserOptions = { userName: '', password: '' };
-        
-        this.login.userName = this.login.userName.toLowerCase();
+        let userDTO: UserOptions = { userName: '', password: '' };        
 
-        userDTO.password = this.encrypt("AES", this.login.password, "scrt-key-" + this.login.userName);
-        userDTO.userName = this.login.userName;
+        if (this.platform.is('android'))
+          userDTO.password = this.login.password;
+        else
+          userDTO.password = this.encrypt("AES", this.login.password, "scrt-key-" + this.login.userName.toLowerCase());
+
+        userDTO.userName = this.login.userName.toLowerCase();
                 
         this.thinkEventService.login(userDTO).then(() => {
-          this.userData.login(this.login.userName);
+          this.userData.login(this.login.userName.toLowerCase());
           this.loading.dismiss();
           this.navCtrl.push(TabsPage);    
         })
