@@ -44,6 +44,8 @@ export class LoginPage extends AuthBase {
       try {       
         let userDTO: UserOptions = { userName: '', password: '' };
         
+        this.login.userName = this.login.userName.toLowerCase();
+
         userDTO.password = this.encrypt("AES", this.login.password, "scrt-key-" + this.login.userName);
         userDTO.userName = this.login.userName;
                 

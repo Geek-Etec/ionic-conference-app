@@ -40,15 +40,18 @@ export class SignupPage extends AuthBase {
     super(loadingCtrl, alertCtrl);
   }
 
-  onSignup(form: NgForm, force: boolean = false) {
+  onSignup(form: NgForm) {
     this.showLoading();
 
     this.submitted = true;
 
     if (form.valid) {
       try{
-        this.thinkEventService.getToken(force).then((token: string) => {
+        this.thinkEventService.getToken(true).then((token: string) => {
           this.userData.setToken(token).then(() => {
+            this.signup.userName = this.signup.userName.toLowerCase();
+            this.signup.emailAddress = this.signup.emailAddress.toLowerCase();
+
             let password: string = this.encrypt("AES", this.signup.password, "scrt-key-" + this.signup.userName);
             this.thinkEventService.userCreate({
               userName: this.signup.userName,
@@ -73,7 +76,7 @@ export class SignupPage extends AuthBase {
               this.loading.dismiss();
 
               if (res.unAuthorizedRequest)
-                this.onSignup(form, true);
+                this.onSignup(form);
               else
                 this.show(res.error.message, res.error.details);    
             });  

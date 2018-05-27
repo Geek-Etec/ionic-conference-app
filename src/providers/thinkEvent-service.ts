@@ -84,7 +84,8 @@ export class ThinkEventService {
     return new Promise((resolve: any, reject: any) => {
       this.http.post(this.baseApiUrl + "TokenAuth/Authenticate", {
         userNameOrEmailAddress: user.userName,
-        password: user.password
+        password: user.password,
+        tenantId: this.tenantId
       })
         .map(res => res.json())
         ._catch(error => reject(error.json()))
@@ -113,13 +114,12 @@ export class ThinkEventService {
           "User"
         ],
         "password": user.password,
-        "fullname": user.fullname,
         "tenantId": this.tenantId
       }, this.options)
         .map(res => res.json())
         ._catch(error => reject(error.json()))
         .subscribe((res: any) => {
-          resolve(res.data);
+          resolve(res);
         });
     })
   }
